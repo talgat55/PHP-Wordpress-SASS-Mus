@@ -50,21 +50,12 @@ function th_scripts()
     wp_enqueue_style('main-style', get_theme_file_uri('/assets/css/style.css'), array(), '5');
 
 
-    // wp_enqueue_style( 'owl.theme.default.min', get_theme_file_uri(  '/assets/css/owl.theme.default.min.css'),array(), '' );
-
-    //	wp_enqueue_style( 'datepicker.min', get_theme_file_uri(  '/assets/css/datepicker.min.css'),array(), '' );
-    //  wp_enqueue_style( 'jquery.fancybox.min', get_theme_file_uri(  '/assets/css/jquery.fancybox.min.css'),array(), '' );
-    //  wp_enqueue_style( 'jquery-ui.min', get_theme_file_uri(  '/assets/css/jquery-ui.min.css'),array(), '' );
-
 
     wp_enqueue_script('jquery', get_theme_file_uri('/assets/js/jquery-3.2.1.min.js'), array(), '');
     wp_enqueue_script('slick.min', get_theme_file_uri('/assets/js/slick.min.js'), array(), '');
-    wp_enqueue_script('js.cookie.min', get_theme_file_uri('/assets/js/js.cookie.min.js'), array(), '');
+    wp_enqueue_script('lazy', get_theme_file_uri('/assets/js/jquery.lazy.min.js'), array(), '');
     wp_enqueue_script('jquery.matchHeight', get_theme_file_uri('/assets/js/jquery.matchHeight.js'), array(), '');
 
-//    wp_enqueue_style('select2.min.css','https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css', array(), '');
-//    wp_enqueue_script('select2.min.js','https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js', array(), '');
-//
 
 //    wp_enqueue_script('jquery.query-object', get_theme_file_uri('/assets/js/jquery.query-object.js'), array(), '');
     wp_enqueue_script('lightgallery.min', get_theme_file_uri('/assets/js/lightgallery.min.js'), array(), '');
@@ -88,16 +79,6 @@ function th_scripts()
 add_action('wp_enqueue_scripts', 'th_scripts');
 
 
-function admin_style() {
-    echo '
-    <style>
-    .post-type-docs .preview.button{
-        display: none;
-    }
-    </style>
-    ';
-}
-add_action('admin_enqueue_scripts', 'admin_style');
 /*
 *  Rgister Post Type  Docs
 */
@@ -194,34 +175,29 @@ function post_type_media()
     register_post_type('media', $args);
 }
 
-
 /*
-*  Rgister Post Type Slider
+*  Register Post Type Settings
 */
-//
-//add_action('init', 'post_type_slider');
-//
-//function post_type_slider()
-//{
-//    $labels = array(
-//        'name' => 'Слайдер',
-//        'singular_name' => 'Слайдер',
-//        'all_items' => 'Слайдер',
-//        'menu_name' => 'Слайдер' // ссылка в меню в админке
-//    );
-//    $args = array(
-//        'labels' => $labels,
-//        'public' => true,
-//        'menu_position' => 5,
-//        'has_archive' => true,
-//        'query_var' => "slider",
-//        'supports' => array(
-//            'title',
-//            'editor',
-//            'thumbnail'
-//        ),
-//        'taxonomies' => array('category')
-//    );
-//    register_post_type('slider', $args);
-//}
+if (function_exists('acf_add_options_page')) {
+
+    // Let's add our Options Page
+    acf_add_options_page(array(
+        'page_title' => 'Настройки Темы',
+        'menu_title' => 'Настройки Темы',
+        'menu_slug' => 'theme-options',
+        'capability' => 'edit_posts'
+    ));
+
+
+}
+/**
+ * Replace symbols for phone
+ * @param $phone
+ * @return mixed
+ */
+function PregPhone($phone){
+
+    return  str_replace(['+','(', ')' , '-' , ' ' ], "", $phone);
+
+}
 

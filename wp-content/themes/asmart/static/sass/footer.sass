@@ -1,34 +1,26 @@
 footer
-  background-color: $text_color
-  padding: 23px 0
+  background-color: #383634
+  padding: 30px 0
+  .footer-main-container
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
+      padding-left: 30px
+      a
+        font-size: 13px
+        color: #fff
+        text-transform: uppercase
 
-.footer-main-container
-  padding: 0
-  margin: 0
-  a
+    li:first-child
+      padding-left: 0
+  .bootom-copyright
+    margin-top: 15px
     color: #fff
     text-decoration: none
-    &:hover
-      color: #fff
-      text-decoration: underline
-
-  li
-    padding-right: 48px
     display: inline-block
-
-.bootom-copyright
-  color: #fff
-  span
-    color: #5bee1a
-  &:hover
-    color: #fff
-
-
-.bottom-footer
-  padding-top: 20px
-
-footer
-  .current-menu-item a
-    background: transparent
-  .current-menu-item a::after
-    display: none
+    span
+      font-family: $font_bold
+      color: #b98d5e
+    &:hover
+      text-decoration: underline

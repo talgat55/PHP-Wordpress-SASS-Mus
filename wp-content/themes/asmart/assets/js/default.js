@@ -1,21 +1,7 @@
 // ---------------------------------------------------------
 // !!!!!!!!!!!!!!!!!document ready!!!!!!!!!!!!!!!!!!!!!!!!!!
 // ---------------------------------------------------------
-document.addEventListener('wpcf7mailsent', function(event) {
 
-
-
-    jQuery('.modal-succcess-send').addClass('show-modal');
-    jQuery('.custom-modal ,  .custom-modal2').removeClass('show-modal');
-
-    setTimeout(function(){
-        jQuery('.modal-succcess-send, .modal-overlay').removeClass('show-modal');
-
-
-    },2000);
-
-
-}, false);
 jQuery(document).ready(function () {
     "use strict";
 
@@ -30,36 +16,6 @@ jQuery(document).ready(function () {
     jQuery('.site-content').css('min-height', сh); // применяем посчитанную высоту
 
 
-    // jQuery('body').on('click', '.home-text-slider .slider-text-walpaper',function(){
-    //
-    //     var currentIndex = jQuery(this).index();
-    //
-    //     jQuery('.home-image-slider').slick('slickGoTo', currentIndex);
-    //
-    // });
-    /*
-    * Replace test search in menu for mobile
-     */
-
-
-    // jQuery('.responsive-menu-search-box').attr("placeholder", "Поиск");
-    /*
-    *   modal
-    */
-    // jQuery('body').on('click', '.modal-main i, .overlay-modal-layer',function(){
-    //
-    //     jQuery('.modal-main').fadeOut();
-    //     jQuery('.overlay-modal-layer').fadeOut();
-    //
-    // });
-    //
-    // jQuery('body').on('click', '.call-link',function(){
-    //
-    //     jQuery('.modal-main').fadeIn();
-    //     jQuery('.overlay-modal-layer').fadeIn();
-    //     return false;
-    //
-    // });
 
     jQuery('.lightgallery .carousel').lightGallery({
         thumbnail:true
@@ -181,7 +137,7 @@ jQuery(document).ready(function () {
 
     HoverEffectsMedia();
     PartnersCarousel();
-    Accordion();
+    LasyLoad();
 
     //
     //  Modal
@@ -284,16 +240,19 @@ function PartnersCarousel() {
         ]
     });
 }
-/*
-*   Document
-*/
+//----------------------------------
+//   Lasyload
+//---------------------------------------
 
-function Accordion() {
+function LasyLoad() {
+    "use strict";
 
-    jQuery('.list-docs li').find('.title-accordion').click(function () {
-        jQuery(this).next().stop().slideToggle();
-        jQuery(this).parent().parent().toggleClass("accordion-open");
-    }).next().stop().hide();
+    var LasyClass =  '.lazy';
+
+    if(jQuery(LasyClass).length){
+        jQuery(LasyClass).lazy();
+    }
+
 
 }
 
