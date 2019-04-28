@@ -17,31 +17,86 @@
 .relative {
   position: relative; }
 
-header .bg-block {
+.hide-title {
+  margin: 0;
+  height: 0;
+  overflow: hidden; }
+
+.bg-block {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%; }
-  header .bg-block .col-xs-12 {
+  .bg-block .col-xs-12 {
     position: absolute;
     height: 100%;
     padding: 0; }
-    header .bg-block .col-xs-12 .header-bg-two,
-    header .bg-block .col-xs-12 .header-bg-one {
+    .bg-block .col-xs-12 .header-bg-two,
+    .bg-block .col-xs-12 .header-bg-one {
       height: 100%;
       background-repeat: no-repeat !important;
       -webkit-background-size: cover !important;
               background-size: cover !important;
       background-position: center center !important; }
-    header .bg-block .col-xs-12 .header-bg-one {
+    .bg-block .col-xs-12 .header-bg-one {
       background-color: #2e2d2b; }
-    header .bg-block .col-xs-12 .header-bg-two {
+    .bg-block .col-xs-12 .header-bg-two {
       background-color: #587c4a; }
-  header .bg-block .col-sm-5 {
+  .bg-block .col-sm-5 {
     left: 0; }
-  header .bg-block .col-sm-7 {
+  .bg-block .col-sm-7 {
     right: 0; }
+
+.background {
+  height: 100%;
+  position: absolute;
+  width: 100%; }
+
+.sub-title {
+  margin-top: 0;
+  font-family: "Museo Sans Cyrl 900";
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative; }
+  .sub-title.left:after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 14px; }
+
+.home .about .bg-block .col-sm-5 {
+  background-color: #557a46; }
+
+.home .about .sub-title:after {
+  right: -195px; }
+
+.home .about .col-sm-5 .content {
+  padding: 40px 0 40px 30px; }
+  .home .about .col-sm-5 .content .about {
+    color: #fff;
+    width: 80%;
+    margin-top: 50px; }
+  .home .about .col-sm-5 .content .link-about {
+    margin-top: 50px;
+    display: inline-block; }
+
+.home .about .col-sm-7 .content {
+  padding-top: 20px; }
+  .home .about .col-sm-7 .content .images img {
+    -webkit-box-shadow: 5px 8px 13px 0 #e0e0e0;
+            box-shadow: 5px 8px 13px 0 #e0e0e0;
+    margin-left: 3%;
+    float: left;
+    width: 47%; }
+  .home .about .col-sm-7 .content .description {
+    margin-top: 20px;
+    margin-left: 3%; }
 
 header .content-block {
   padding: 25px 0; }
