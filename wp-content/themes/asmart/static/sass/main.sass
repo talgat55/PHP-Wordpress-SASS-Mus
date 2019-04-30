@@ -7,11 +7,11 @@
 .home
   .about
     .bg-block
-      .col-sm-5
+      .col-sm-4
         background-color: $main_color
     .sub-title:after
       right: -195px
-    .col-sm-5
+    .col-sm-4
 
       .content
         padding: 40px 0 40px 30px
@@ -25,7 +25,7 @@
         .link-about
           margin-top: 50px
           display: inline-block
-    .col-sm-7
+    .col-sm-8
       .content
         padding-top: 20px
         .images
@@ -34,17 +34,20 @@
             margin-left: 3%
             float: left
             width: 47%
+            height: 236px
+            background-color: #eee
         .description
           margin-top: 20px
           margin-left: 3%
   .bg-block.invert
-    .col-sm-7
+    .col-sm-8
       left: 0
       right: auto
-    .col-sm-5
+    .col-sm-4
       right: 0
       left: auto
   .events
+    background-color: #fefdf8
     .link-events
       display: inline-block
       color: #fff
@@ -53,10 +56,105 @@
       border: 2px solid #fff
       padding: 7px 18px
       margin-top: 60px
-    .col-sm-5
+      &:hover
+        border-color: $main_color
+        color: #fff
+        background-color: $main_color
+        text-decoration: none
+
+
+    .col-sm-9
+      padding: 0
+    .col-sm-3
       .content
         position: absolute
         top: 50%
         right: 0
         transform: translateY(-50%)
+    .list-events
+      margin: 0
+      padding: 0
+      z-index: 9
+      li
+        list-style: none
+        margin-left: 41px
+      .item
+        .col-sm-7,
+        .col-sm-5
+          padding: 0
+
+        .img-block
+          position: relative
+          img
+            width: 100%
+            object-fit: cover
+            height: 348px
+            width: 348.5px
+
+        &.even
+          background: #edece6
+          .triangle
+            width: 0
+            height: 0
+            border-top: 15px solid transparent
+            border-bottom: 15px solid transparent
+            border-right: 32px solid #edece6
+            position: absolute
+            bottom: 4px
+            right: -1px
+        &.odd
+            .triangle
+              width: 0
+              height: 0
+              border-top: 15px solid transparent
+              border-bottom: 15px solid transparent
+              border-left: 32px solid #fefdf8
+              position: absolute
+              bottom: 4px
+              left: -1px
+
+    .text-block
+          > div
+            padding: 25px 40px
+          .title-event
+
+            font-size: 16px
+            font-family: $font_semibold
+            text-transform: uppercase
+            margin-top: 0
+            a
+              color: #383634
+              text-decoration: none
+              transition: all .3s
+              &:hover
+                color: $main_color
+                text-decoration: none
+
+
+          .date
+            color: #7f7e7d
+            font-size: 12.5px
+            font-family: $font_100
+            display: inline-block
+            margin-bottom: 15px
+          .content
+            color: #383634
+            font-size: 14px
+
+          .link-more
+            color: #b98d5e
+            font-size: 14px
+            font-family: $font_semibold
+            text-transform: uppercase
+            margin-top: 40px
+            display: inline-block
+            transition: all .3s
+            &:hover
+              color: $main_color
+              text-decoration: none
+
+
+
+
+
 

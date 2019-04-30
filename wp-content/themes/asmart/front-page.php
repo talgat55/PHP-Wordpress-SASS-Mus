@@ -10,7 +10,7 @@ get_header(); ?>
                     <div class="content-block">
                         <div class="container">
                             <div class="row">
-                                <div class="col-sm-5 col-xs-12">
+                                <div class="col-sm-4 col-xs-12">
                                     <div class="background lazy   right" data-src="<?php echo get_theme_file_uri('/assets/images/bg2.jpg') ?>"></div>
                                     <div class="content">
                                         <h2 class="sub-title  left">
@@ -32,12 +32,12 @@ get_header(); ?>
                                     </div>
 
                                 </div>
-                                <div class="col-sm-7 col-xs-12 relative">
+                                <div class="col-sm-8 col-xs-12 relative">
                                     <div class="content">
                                         <div class="images clearfix">
                                             <?php
                                             foreach (get_field('images_about_home', 'option') as $value){
-                                                echo '<img src="'.$value["url"].'" alt="изображение" />';
+                                                echo '<img class="lazy"  src="'.get_theme_file_uri("/assets/images/sprite.jpg").'"  data-src="'.$value["url"].'" alt="изображение" />';
 
                                             }
                                             ?>
@@ -46,12 +46,6 @@ get_header(); ?>
                                             <?=get_field('text2_about_home', 'option'); ?>
                                         </div>
                                     </div>
-
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
@@ -68,22 +62,30 @@ get_header(); ?>
                         <div class="container">
                             <div class="row flex">
 
-                                <div class="col-sm-7 col-xs-12 relative">
+                                <div class="col-sm-9 col-xs-12 relative">
                                     <div class="content">
-                                        <div class="images clearfix">
-                                            <?php
-                                            foreach (get_field('images_about_home', 'option') as $value){
-                                                echo '<img src="'.$value["url"].'" alt="изображение" />';
+                                        <ul class="list-events clearfix relative">
+                                        <?php
 
-                                            }
-                                            ?>
-                                        </div>
-                                        <div class="description">
-                                            <?=get_field('text2_about_home', 'option'); ?>
-                                        </div>
+                                        $arg = array(
+                                            'posts_per_page' => 2,
+                                            'post_type' => 'events',
+                                            'status' => 'publish'
+                                        );
+
+                                        $the_query = new WP_Query($arg);
+                                        $i = 0;
+                                        while ($the_query->have_posts()) :
+                                            $the_query->the_post();
+                                            set_query_var( 'count',$i);
+                                            get_template_part( 'inc/item', 'event' );
+
+                                            $i++;
+                                        endwhile;  ?>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="col-sm-5 col-xs-12">
+                                <div class="col-sm-3 col-xs-12">
                                     <div class="background lazy" data-src="<?php echo get_theme_file_uri('/assets/images/bg3.jpg') ?>"></div>
                                     <div class="content">
                                         <h2 class="sub-title  right">
