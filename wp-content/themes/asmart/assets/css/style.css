@@ -22,36 +22,37 @@
   height: 0;
   overflow: hidden; }
 
-.bg-block {
+.header-bg-two,
+.header-bg-one {
+  height: 100%;
+  background-repeat: no-repeat !important;
+  -webkit-background-size: cover !important;
+          background-size: cover !important;
+  background-position: center center !important;
   position: absolute;
-  top: 0;
+  width: 200%;
+  top: 0; }
+
+.header-bg-one {
+  right: 0;
+  background-color: #2d2c2a; }
+
+.header-bg-two {
   left: 0;
-  width: 100%;
-  height: 100%; }
-  .bg-block .col-xs-12 {
-    position: absolute;
-    height: 100%;
-    padding: 0; }
-    .bg-block .col-xs-12 .header-bg-two,
-    .bg-block .col-xs-12 .header-bg-one {
-      height: 100%;
-      background-repeat: no-repeat !important;
-      -webkit-background-size: cover !important;
-              background-size: cover !important;
-      background-position: center center !important; }
-    .bg-block .col-xs-12 .header-bg-one {
-      background-color: #2e2d2b; }
-    .bg-block .col-xs-12 .header-bg-two {
-      background-color: #587c4a; }
-  .bg-block .col-sm-5 {
-    left: 0; }
-  .bg-block .col-sm-7 {
-    right: 0; }
+  background-color: #14130e; }
 
 .background {
   height: 100%;
   position: absolute;
-  width: 100%; }
+  width: 200%;
+  top: 0;
+  background-color: #557a46;
+  left: 0;
+  -webkit-background-size: cover !important;
+          background-size: cover !important; }
+  .background.lazy.right {
+    right: 0;
+    left: auto; }
 
 .sub-title {
   margin-top: 0;
@@ -69,6 +70,24 @@
     position: absolute;
     right: 0;
     top: 14px; }
+  .sub-title.right:after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 50vh;
+    background-color: #fff;
+    position: absolute;
+    right: 180px;
+    top: 14px; }
+
+.main section {
+  overflow: hidden; }
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .home .about .bg-block .col-sm-5 {
   background-color: #557a46; }
@@ -77,7 +96,8 @@
   right: -195px; }
 
 .home .about .col-sm-5 .content {
-  padding: 40px 0 40px 30px; }
+  padding: 40px 0 40px 30px;
+  position: relative; }
   .home .about .col-sm-5 .content .about {
     color: #fff;
     width: 80%;
@@ -98,26 +118,55 @@
     margin-top: 20px;
     margin-left: 3%; }
 
-header .content-block {
-  padding: 25px 0; }
-  header .content-block .top-block {
-    margin: 0;
-    padding: 0; }
-    header .content-block .top-block li {
-      list-style: none;
-      line-height: 33px;
-      display: block; }
-      header .content-block .top-block li a {
-        text-decoration: none;
-        font-family: "Museo Sans Cyrl 100";
-        font-size: 13px;
-        color: #fff; }
-        header .content-block .top-block li a:hover {
-          color: #557a46; }
-      header .content-block .top-block li p {
-        display: inline-block;
-        margin-bottom: 0;
-        padding-left: 20px; }
+.home .bg-block.invert .col-sm-7 {
+  left: 0;
+  right: auto; }
+
+.home .bg-block.invert .col-sm-5 {
+  right: 0;
+  left: auto; }
+
+.home .events .link-events {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Museo Sans Cyrl 700";
+  border: 2px solid #fff;
+  padding: 7px 18px;
+  margin-top: 60px; }
+
+.home .events .col-sm-5 .content {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+header .content-block .top-block {
+  margin: 25px 0 0 0;
+  padding: 0;
+  position: relative; }
+  header .content-block .top-block li {
+    list-style: none;
+    line-height: 33px;
+    display: block; }
+    header .content-block .top-block li a {
+      text-decoration: none;
+      font-family: "Museo Sans Cyrl 100";
+      font-size: 13px;
+      color: #fff; }
+      header .content-block .top-block li a:hover {
+        color: #557a46; }
+    header .content-block .top-block li p {
+      display: inline-block;
+      margin-bottom: 0;
+      padding-left: 20px; }
+
+header .content-block .top-bar {
+  position: relative;
+  margin-top: 25px;
+  padding-left: 5px; }
   header .content-block .top-bar .list-switch-lang {
     margin: 0;
     padding: 0;
@@ -148,51 +197,58 @@ header .content-block {
         font-size: 20px; }
         header .content-block .top-bar .bvi-controller li i:hover {
           color: #557a46; }
-  header .content-block .main-content {
-    margin-top: 150px; }
-    header .content-block .main-content .soс-links {
-      padding: 0;
-      margin: 0; }
-      header .content-block .main-content .soс-links li {
-        display: inline-block; }
-        header .content-block .main-content .soс-links li a {
-          display: inline-block;
-          background-color: #3e3c3b;
-          text-decoration: none;
-          text-align: center;
-          margin-left: 12px;
-          -webkit-transition: all .3s;
-          -o-transition: all .3s;
-          transition: all .3s; }
-          header .content-block .main-content .soс-links li a:hover {
-            background-color: #557a46; }
-          header .content-block .main-content .soс-links li a i {
-            color: #000;
-            font-size: 18px;
-            padding: 3px;
-            vertical-align: middle; }
-        header .content-block .main-content .soс-links li .gos-catalog-link {
-          text-decoration: none;
+
+header .content-block .main-content {
+  position: relative;
+  margin-top: 150px;
+  padding-left: 5px; }
+  header .content-block .main-content .soс-links {
+    padding: 0;
+    margin: 0; }
+    header .content-block .main-content .soс-links li {
+      display: inline-block; }
+      header .content-block .main-content .soс-links li a {
+        display: inline-block;
+        background-color: #3e3c3b;
+        text-decoration: none;
+        text-align: center;
+        margin-left: 12px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s; }
+        header .content-block .main-content .soс-links li a:hover {
+          background-color: #557a46; }
+        header .content-block .main-content .soс-links li a i {
           color: #000;
-          text-transform: uppercase;
-          font-family: "Museo Sans Cyrl 700";
-          padding: 0 8px; }
-      header .content-block .main-content .soс-links li:first-child a {
-        margin-left: 0; }
-    header .content-block .main-content .description {
-      font-family: "Museo Sans Cyrl 100";
-      font-size: 17px;
-      color: #fff;
-      background-color: #2e2c2b;
-      border-left: 6px solid #557a46;
-      display: inline-block;
-      margin-top: 24px;
-      padding: 12px 20px; }
-      header .content-block .main-content .description span {
-        display: block;
-        font-family: "Museo Sans Cyrl 900"; }
+          font-size: 18px;
+          padding: 3px;
+          vertical-align: middle; }
+      header .content-block .main-content .soс-links li .gos-catalog-link {
+        text-decoration: none;
+        color: #000;
+        text-transform: uppercase;
+        font-family: "Museo Sans Cyrl 700";
+        padding: 0 8px; }
+    header .content-block .main-content .soс-links li:first-child a {
+      margin-left: 0; }
+  header .content-block .main-content .description {
+    font-family: "Museo Sans Cyrl 100";
+    font-size: 17px;
+    color: #fff;
+    background-color: #2e2c2b;
+    border-left: 6px solid #557a46;
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 20px;
+    margin-left: -20px; }
+    header .content-block .main-content .description span {
+      display: block;
+      font-family: "Museo Sans Cyrl 900"; }
+
+header .content-block nav {
+  position: relative; }
   header .content-block nav ul {
-    margin: 25px 0 0 0;
+    margin: 25px 0 25px 0;
     padding: 0; }
     header .content-block nav ul li {
       list-style: none; }
@@ -214,6 +270,8 @@ header .content-block {
           position: absolute;
           top: 13px;
           left: 0; }
+      header .content-block nav ul li:last-child a {
+        margin-bottom: 0; }
 
 footer {
   background-color: #383634;

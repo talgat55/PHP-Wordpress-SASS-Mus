@@ -37,23 +37,14 @@
 
     ?>
     <div class="clearfix relative">
-        <div class="bg-block">
-            <div class="row">
-                <div class="col-sm-5 col-xs-12">
-                    <div class="header-bg-one lazy"
-                         data-src="<?php echo get_theme_file_uri('/assets/images/bg1.jpg') ?>"></div>
-                </div>
-                <div class="col-sm-7 col-xs-12">
-                    <div class="header-bg-two lazy"
-                         data-src="<?php echo get_theme_file_uri('/assets/images/slide.jpg') ?>"></div>
-                </div>
-            </div>
-        </div>
+
         <div class="clearfix">
             <div class="content-block">
                 <div class="container">
-                    <div class="row">
+                    <div class="row flex">
                         <div class="col-sm-5 col-xs-12">
+                            <div class="header-bg-one lazy"
+                                 data-src="<?php echo get_theme_file_uri('/assets/images/bg1.jpg') ?>"></div>
                             <ul class="top-block">
                                 <li>
                                     <a href="">
@@ -77,6 +68,8 @@
                             <?php wp_nav_menu('container=nav&menu_id=menu-main&menu_class=top-main-container clearfix&theme_location=top_menu'); ?>
                         </div>
                         <div class="col-sm-7 col-xs-12 relative">
+                            <div class="header-bg-two lazy"
+                                 data-src="<?php echo get_theme_file_uri('/assets/images/slide.jpg') ?>"></div>
                             <div class="top-bar">
                                 <ul class="list-switch-lang">
                                     <li>

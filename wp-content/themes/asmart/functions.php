@@ -83,50 +83,16 @@ add_action('wp_enqueue_scripts', 'th_scripts');
 *  Rgister Post Type  Docs
 */
 
-add_action('init', 'post_type_docs');
-
-function post_type_docs()
-{
-
-    $labels = array(
-        'name' => 'Документы',
-        'singular_name' => 'Документы',
-        'all_items' => 'Документы',
-        'menu_name' => 'Документы' // ссылка в меню в админке
-    );
-
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'menu_position' => 5,
-        'has_archive' => true,
-        'query_var' => "docs",
-        'supports' => array(
-            'title',
-            'editor',
-            'thumbnail'
-        )
-    );
-    register_post_type('docs', $args);
-}
-
-
-
-
-/*
-*  Rgister Post Type  Events
-*/
-
 add_action('init', 'post_type_events');
 
 function post_type_events()
 {
 
     $labels = array(
-        'name' => 'Мероприятия',
-        'singular_name' => 'Мероприятия',
-        'all_items' => 'Мероприятия',
-        'menu_name' => 'Мероприятия' // ссылка в меню в админке
+        'name' => 'События',
+        'singular_name' => 'События',
+        'all_items' => 'События',
+        'menu_name' => 'События' // ссылка в меню в админке
     );
 
     $args = array(
@@ -143,6 +109,9 @@ function post_type_events()
     );
     register_post_type('events', $args);
 }
+
+
+
 
 
 

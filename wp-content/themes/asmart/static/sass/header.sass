@@ -1,11 +1,10 @@
 header
 
   .content-block
-    padding: 25px 0
-
     .top-block
-      margin: 0
+      margin: 25px 0 0 0
       padding: 0
+      position: relative
       li
         list-style: none
         line-height: 33px
@@ -22,6 +21,9 @@ header
           margin-bottom: 0
           padding-left: 20px
     .top-bar
+      position: relative
+      margin-top: 25px
+      padding-left: 5px
       .list-switch-lang
         margin: 0
         padding: 0
@@ -55,7 +57,9 @@ header
             &:hover
               color: $main_color
     .main-content
+      position: relative
       margin-top: 150px
+      padding-left: 5px
       .soс-links
         padding: 0
         margin: 0
@@ -94,22 +98,14 @@ header
         display: inline-block
         margin-top: 24px
         padding: 12px 20px
+        margin-left: -20px
         span
           display: block
           font-family: $font_bold
-
-
-
-
-
-
-
-
-
-
     nav
+      position: relative
       ul
-        margin: 25px 0 0 0
+        margin: 25px 0 25px 0
         padding: 0
         li
 
@@ -134,6 +130,9 @@ header
               top: 13px
               left: 0
 
+          &:last-child
+            a
+              margin-bottom: 0
 
 
 

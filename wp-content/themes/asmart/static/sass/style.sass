@@ -28,34 +28,32 @@ $doc_color: #707070
   height: 0
   overflow: hidden
 
-.bg-block
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
+.header-bg-two,
+.header-bg-one
   height: 100%
-  .col-xs-12
-    position: absolute
-    height: 100%
-    padding: 0
-    .header-bg-two,
-    .header-bg-one
-      height: 100%
-      background-repeat: no-repeat!important
-      background-size: cover!important
-      background-position: center center!important
-    .header-bg-one
-      background-color: #2e2d2b
-    .header-bg-two
-      background-color: #587c4a
-  .col-sm-5
-    left: 0
-  .col-sm-7
+  background-repeat: no-repeat!important
+  background-size: cover!important
+  background-position: center center!important
+  position: absolute
+  width: 200%
+  top: 0
+.header-bg-one
     right: 0
+    background-color: #2d2c2a
+.header-bg-two
+  left: 0
+  background-color: #14130e
 .background
   height: 100%
   position: absolute
-  width: 100%
+  width: 200%
+  top: 0
+  background-color: $main_color
+  left: 0
+  background-size: cover!important
+  &.lazy.right
+    right: 0
+    left: auto
 .sub-title
   margin-top: 0
   font-family: $font_bold
@@ -73,9 +71,21 @@ $doc_color: #707070
       position: absolute
       right: 0
       top: 14px
-
-
-
+  &.right
+    &:after
+      content: ""
+      display: block
+      height: 4px
+      width: 50vh
+      background-color: #fff
+      position: absolute
+      right: 180px
+      top: 14px
+.main
+  section
+    overflow: hidden
+.flex
+  display: flex
 //@media  (min-width: 1000px)
 
 
