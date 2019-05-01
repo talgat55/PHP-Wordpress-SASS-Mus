@@ -251,6 +251,19 @@ function ExposureCarousel() {
             jQuery(this).parent().parent().parent().find('.carousel-exposure').slick('slickNext');
         });
         jQuery(CarouselClass).on("afterChange", function (event, slick, currentSlide) {
+            var currentSlideCount = parseInt(currentSlide + 1);
+
+            if(currentSlideCount !='1' && currentSlideCount != slick.slideCount ){
+
+                jQuery(this).parent().find('.custom-pagination .prev, .custom-pagination .next').removeClass('disable');
+            }else if(slick.slideCount == currentSlideCount){
+
+             jQuery(this).parent().find('.custom-pagination .next').addClass('disable');
+
+            }else{
+                jQuery(this).parent().find('.custom-pagination .prev').addClass('disable');
+            }
+
             jQuery(this).parent().find('.custom-pagination .paginaiton span').html(' ').html(currentSlide + 1);
 
         });

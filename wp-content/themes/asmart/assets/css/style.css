@@ -282,6 +282,9 @@
           .home .exposure .list-exposures .item .custom-pagination .arrow .prev:hover,
           .home .exposure .list-exposures .item .custom-pagination .arrow .next:hover {
             opacity: .5; }
+          .home .exposure .list-exposures .item .custom-pagination .arrow .prev.disable,
+          .home .exposure .list-exposures .item .custom-pagination .arrow .next.disable {
+            opacity: .5; }
         .home .exposure .list-exposures .item .custom-pagination .arrow .next {
           padding-left: 5px; }
       .home .exposure .list-exposures .item .custom-pagination .paginaiton {
@@ -314,7 +317,8 @@
       height: 415px;
       -webkit-background-size: cover !important;
               background-size: cover !important;
-      background-position: center center !important; }
+      background-position: center center !important;
+      background-color: #eee; }
       .home .exposure .list-exposures .item .carousel-exposure .item-carousel button {
         display: none !important; }
     .home .exposure .list-exposures .item:nth-of-type(3n+2) .top-block {

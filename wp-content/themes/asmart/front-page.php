@@ -172,17 +172,16 @@ get_header(); ?>
                                                 <div class="carousel-exposure">
                                                     <?php
 
-
                                                     foreach ($imagesArray as $item){
 
-                                                        echo '<div class="item-carousel" style="background: url('.$item["url"].') no-repeat; " > </div>';
+                                                        echo '<div class="item-carousel lazy"   data-src="'.$item["url"].'"> </div>';
                                                     }
 
                                                     ?>
                                                 </div>
                                                 <div class="custom-pagination">
                                                     <div class="arrow">
-                                                        <a href="#" class="prev" >
+                                                        <a href="#" class="prev  disable" >
                                                             <img class="icon" src="<?php echo get_theme_file_uri('/assets/images/exposure-arrow.png') ?>"   alt="Иконка" />
                                                         </a>
                                                     </div>
