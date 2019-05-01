@@ -80,7 +80,7 @@ add_action('wp_enqueue_scripts', 'th_scripts');
 
 
 /*
-*  Rgister Post Type  Docs
+*  Register Post Type  Events
 */
 
 add_action('init', 'post_type_events');
@@ -111,37 +111,33 @@ function post_type_events()
 }
 
 
-
-
-
-
 /*
-*  Rgister Post Type  Qa
+*  Register Post Type  Exposure
 */
 
-add_action('init', 'post_type_media');
+add_action('init', 'post_type_exposure');
 
-function post_type_media()
+function post_type_exposure()
 {
     $labels = array(
-        'name' => 'Медиа',
-        'singular_name' => 'Медиа',
-        'all_items' => 'Медиа',
-        'menu_name' => 'Медиа' // ссылка в меню в админке
+        'name' => 'Экспозиция',
+        'singular_name' => 'Экспозиция',
+        'all_items' => 'Экспозиция',
+        'menu_name' => 'Экспозиция' // ссылка в меню в админке
     );
     $args = array(
         'labels' => $labels,
         'public' => true,
         'menu_position' => 5,
         'has_archive' => true,
-        'query_var' => "media",
+        'query_var' => "exposure",
         'supports' => array(
             'title',
             'editor',
             'thumbnail'
         )
     );
-    register_post_type('media', $args);
+    register_post_type('exposure', $args);
 }
 
 /*

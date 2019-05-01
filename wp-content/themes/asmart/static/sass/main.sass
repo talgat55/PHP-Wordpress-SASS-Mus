@@ -46,6 +46,7 @@
     .col-sm-4
       right: 0
       left: auto
+
   .events
     background-color: #fefdf8
     .link-events
@@ -154,7 +155,92 @@
               text-decoration: none
 
 
+//
+// Exposure
+//
+.home
+  .exposure
+    .list-exposures
+      margin: 0
+      padding: 0
+      .item
+        list-style: none
+        display: inline-block
+        height: 415px
+        padding: 0
+        position: relative
+        .custom-pagination
+          bottom: 0
+          position: absolute
+          width: 100%
+          right: 0
+          text-align: right
+          padding: 9px
+          > div
+            display: inline-block
+            vertical-align: middle
+          .arrow
+            height: 27px
+            .prev
+              padding-right: 5px
+              .icon
+                position: relative
+                transform: rotateZ(180deg)
+            .prev,
+            .next
+              height: 27px
+              vertical-align: middle
+              transition: all .3s
+              display: inline-block
+              &:hover
+                opacity: .5
+            .next
+              padding-left: 5px
+
+          .paginaiton
+            font-size: 18px
+            color: #fff
+            width: 30px
+            font-family: $font_500
+            span
+              font-family: $font_semibold
+              font-size: 22px
 
 
+        .top-block
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          z-index: 9
+          background-color: #383634
+          padding: 17px
+          .title,
+          img
+            display: inline-block
+          .title
+            font-size: 12px
+            color: #fff
+            font-family: $font_semibold
+            text-transform: uppercase
+            margin: 0
+            padding-left: 9px
 
+        .carousel-exposure
+          .item-carousel
+            height: 415px
+            background-size: cover!important
+            background-position: center center!important
+            button
+              display: none!important
+
+        &:nth-of-type(3n+2)
+          .top-block
+            background-color: $main_color
+    .sub-title.left:after
+      right: auto
+      left: 229px
+
+    .col-sm-8
+      padding: 0
 

@@ -136,7 +136,7 @@ jQuery(document).ready(function () {
 
 
     HoverEffectsMedia();
-    PartnersCarousel();
+    ExposureCarousel();
     LasyLoad();
 
     //
@@ -208,38 +208,7 @@ function HoverEffectsMedia() {
 
 }
 
-//
-//  Parthers Carousel
-//
-function PartnersCarousel() {
 
-    jQuery('.partners-carousel').slick({
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        dots: false,
-        autoplay: true,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    });
-}
 //----------------------------------
 //   Lasyload
 //---------------------------------------
@@ -256,3 +225,35 @@ function LasyLoad() {
 
 }
 
+//----------------------------------
+//   Carousel Expouse
+//---------------------------------------
+
+
+function ExposureCarousel() {
+    var CarouselClass = '.carousel-exposure';
+    if(jQuery(CarouselClass).length){
+        jQuery(CarouselClass).slick({
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false
+
+         //   autoplay: true,
+        });
+        jQuery('.custom-pagination  .prev').click(function(e) {
+            e.preventDefault();
+            jQuery(this).parent().parent().parent().find('.carousel-exposure').slick('slickPrev');
+        });
+        jQuery('.custom-pagination  .next').click(function(e) {
+            e.preventDefault();
+            jQuery(this).parent().parent().parent().find('.carousel-exposure').slick('slickNext');
+        });
+        jQuery(CarouselClass).on("afterChange", function (event, slick, currentSlide) {
+            jQuery(this).parent().find('.custom-pagination .paginaiton span').html(' ').html(currentSlide + 1);
+
+        });
+    }
+
+}

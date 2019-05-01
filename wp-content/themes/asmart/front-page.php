@@ -81,7 +81,9 @@ get_header(); ?>
                                             get_template_part( 'inc/item', 'event' );
 
                                             $i++;
-                                        endwhile;  ?>
+                                        endwhile;
+                                        wp_reset_query();
+                                        ?>
                                         </ul>
                                     </div>
                                 </div>
@@ -104,7 +106,113 @@ get_header(); ?>
                 </div>
 
         </section>
+        <section class="exposure">
 
+            <div class="clearfix">
+                <div class="content-block">
+                    <div class="container">
+                        <div class="row flex">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="background lazy   right" data-src="<?php echo get_theme_file_uri('/assets/images/bg4.jpg') ?>"></div>
+                                <div class="content vertical-align left">
+                                    <h2 class="sub-title  left">
+                                        Экспозиции
+                                    </h2>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-sm-8 col-xs-12 relative">
+                                <div class="content">
+                                    <ul class="list-exposures clearfix relative">
+                                        <?php
+
+                                        $arg = array(
+                                            'posts_per_page' => 3,
+                                            'post_type' => 'exposure',
+                                            'status' => 'publish'
+                                        );
+
+                                        $the_query = new WP_Query($arg);
+                                        $i = 0;
+                                        while ($the_query->have_posts()) :
+                                            $the_query->the_post();
+                                            $post_id        = $the_query->post->ID;
+                                            $imagesArray    = get_field('gallery_explosure', $post_id);
+                                            $typeArray      = get_field('type_explosure', $post_id);
+                                            switch ($typeArray):
+                                                case 'barracks':
+                                                    $redyTopblock = 'Казарма Омского острога';
+                                                    break;
+                                                case 'dostsib':
+                                                    $redyTopblock = 'Достоевский и Сибирь';
+                                                    break;
+                                                case 'writeomsk':
+                                                    $redyTopblock = 'Писатели - Омичи';
+                                                    break;
+                                                default:
+                                                    $redyTopblock = '';
+                                                    break;
+                                            endswitch;
+
+
+
+
+                                        ?>
+                                            <li class="item  col-sm-4 col-xs-12" >
+                                                <div class="top-block">
+
+                                                    <img src="<?php echo get_theme_file_uri('/assets/images/exposure-icon.png') ?>"   alt="Иконка" />
+                                                    <h4 class="title">
+                                                        <?=$redyTopblock; ?>
+                                                    </h4>
+                                                </div>
+
+                                                <div class="carousel-exposure">
+                                                    <?php
+
+
+                                                    foreach ($imagesArray as $item){
+
+                                                        echo '<div class="item-carousel" style="background: url('.$item["url"].') no-repeat; " > </div>';
+                                                    }
+
+                                                    ?>
+                                                </div>
+                                                <div class="custom-pagination">
+                                                    <div class="arrow">
+                                                        <a href="#" class="prev" >
+                                                            <img class="icon" src="<?php echo get_theme_file_uri('/assets/images/exposure-arrow.png') ?>"   alt="Иконка" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="paginaiton">
+                                                         <span>1</span>/<?=count($imagesArray); ?>
+                                                    </div>
+                                                    <div class="arrow">
+                                                        <a href="#" class="next" >
+                                                            <img class="icon" src="<?php echo get_theme_file_uri('/assets/images/exposure-arrow.png') ?>"   alt="Иконка" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+
+                                        <?php
+                                        $i++;
+                                        endwhile;
+                                        wp_reset_query();
+                                        ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
     </div>
 
 <?php get_footer();
