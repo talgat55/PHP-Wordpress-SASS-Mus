@@ -139,6 +139,36 @@ function post_type_exposure()
     );
     register_post_type('exposure', $args);
 }
+/*
+*  Register Post Type  Exhinitions
+*/
+
+add_action('init', 'post_type_exhibitions');
+
+function post_type_exhibitions()
+{
+    $labels = array(
+        'name' => 'Выставки',
+        'singular_name' => 'Выставки',
+        'all_items' => 'Выставки',
+        'menu_name' => 'Выставки' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "exhibitions",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('exhibitions', $args);
+}
+
+
 
 /*
 *  Register Post Type Settings

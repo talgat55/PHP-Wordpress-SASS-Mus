@@ -212,6 +212,112 @@ get_header(); ?>
             </div>
 
         </section>
+        <section class="exhibitions">
+
+            <div class="clearfix">
+                <div class="content-block">
+                    <div class="container">
+                        <div class="row flex">
+                            <div class="col-sm-8 col-xs-12 relative">
+                                <div class="content">
+                                    <ul class="list-exposures clearfix relative">
+                                        <?php
+
+                                        $arg = array(
+                                            'posts_per_page' => 2,
+                                            'post_type' => 'exhibitions',
+                                            'status' => 'publish'
+                                        );
+
+                                        $the_query = new WP_Query($arg);
+                                        $i = 0;
+                                        while ($the_query->have_posts()) :
+                                            $the_query->the_post();
+                                            $post_id        = $the_query->post->ID;
+                                            $imagesArray    = get_field('gallery_exhibitions', $post_id);
+
+
+
+
+
+                                            ?>
+                                            <li class="item  col-sm-6 col-xs-12" >
+
+
+                                                <div class="carousel-exposure">
+                                                    <?php
+
+                                                    foreach ($imagesArray as $item){
+
+                                                        echo '<div class="item-carousel lazy"   data-src="'.$item["url"].'"> 
+
+                                                                <div class="overlay-link">
+                                                                <a href="'.get_the_permalink($post_id).'" class="link" >
+                                                                    подробнее
+                                                                </a>
+                                                                </div>
+                                                                
+                                                                </div>';
+                                                    }
+
+                                                    ?>
+                                                </div>
+                                                <div class="custom-pagination">
+                                                    <div class="arrow">
+                                                        <a href="#" class="prev  disable" >
+                                                            <img class="icon" src="<?php echo get_theme_file_uri('/assets/images/exposure-arrow.png') ?>"   alt="Иконка" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="paginaiton">
+                                                        <span>1</span>/<?=count($imagesArray); ?>
+                                                    </div>
+                                                    <div class="arrow">
+                                                        <a href="#" class="next" >
+                                                            <img class="icon" src="<?php echo get_theme_file_uri('/assets/images/exposure-arrow.png') ?>"   alt="Иконка" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+
+                                            <?php
+                                            $i++;
+                                        endwhile;
+                                        wp_reset_query();
+                                        ?>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="background lazy   left" data-src="<?php echo get_theme_file_uri('/assets/images/bg5.jpg') ?>"></div>
+                                <div class="content vertical-align left">
+                                    <h2 class="sub-title text-right  right">
+                                        Действующие
+                                        выставки
+                                    </h2>
+                                    <a href="#" class="link-events"  title="Перейти на страницу Событий" >
+                                        Читать больше
+                                    </a>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
     </div>
 
 <?php get_footer();
