@@ -168,6 +168,35 @@ function post_type_exhibitions()
     register_post_type('exhibitions', $args);
 }
 
+/*
+*  Register Post Type  Educations Events
+*/
+
+add_action('init', 'post_type_educations_events');
+
+function post_type_educations_events()
+{
+    $labels = array(
+        'name' => 'Образовательные мероприятия',
+        'singular_name' => 'Образовательные мероприятия',
+        'all_items' => 'Образовательные мероприятия',
+        'menu_name' => 'Образовательные мероприятия' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "edu_events",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('edu_events', $args);
+}
+
 
 
 /*
@@ -190,7 +219,7 @@ if (function_exists('acf_add_options_page')) {
  * @param $phone
  * @return mixed
  */
-function PregPhone($phone){
+function pregPhone($phone){
 
     return  str_replace(['+','(', ')' , '-' , ' ' ], "", $phone);
 

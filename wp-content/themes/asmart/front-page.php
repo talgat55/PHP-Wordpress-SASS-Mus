@@ -296,7 +296,7 @@ get_header(); ?>
                                         выставки
                                     </h2>
                                     <a href="#" class="link-events"  title="Перейти на страницу Событий" >
-                                        Читать больше
+                                        Показать еще
                                     </a>
 
 
@@ -312,7 +312,104 @@ get_header(); ?>
 
         </section>
 
+        <section class="edu-events">
 
+            <div class="clearfix">
+                <div class="content-block">
+                    <div class="container">
+                        <div class="row flex">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="background lazy    right" data-src="<?php echo get_theme_file_uri('/assets/images/bg6.jpg') ?>"></div>
+                                <div class="content vertical-align left">
+                                    <h2 class="sub-title  left">
+                                        Культурно —
+                                        образовательные
+                                        мероприятия
+                                    </h2>
+                                    <p>
+                                        Для школьников и студентов
+                                    </p>
+                                    <a href="#" class="link-events"  title="Перейти на страницу Событий" >
+                                        Показать еще
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            <div class="col-sm-8 col-xs-12 relative">
+                                <div class="content">
+                                    <ul class="list-exposures clearfix relative">
+                                        <?php
+
+                                        $arg = array(
+                                            'posts_per_page' => 3,
+                                            'post_type' => 'edu_events',
+                                            'status' => 'publish'
+                                        );
+
+                                        $the_query = new WP_Query($arg);
+                                        $i = 0;
+                                        while ($the_query->have_posts()) :
+                                            $the_query->the_post();
+                                            $post_id        = $the_query->post->ID;
+                                            $imagesArray    = get_field('gallery_edu_events', $post_id);
+
+
+
+
+
+                                            ?>
+                                            <li class="item  col-sm-4 col-xs-12 relative" >
+                                                <div class="overlay-link">
+                                                    <a href="<?=get_the_permalink($post_id);?>" class="link" >
+                                                        подробнее
+                                                    </a>
+                                                </div>
+                                                <div class="carousel-exposure">
+                                                    <?php
+
+                                                    foreach ($imagesArray as $item){
+
+                                                        echo '<div class="item-carousel " ><img  class="lazy" data-src="'.$item["url"].'" alt="Изображение" />
+                                                                
+                                                            </div>';
+                                                    }
+
+                                                    ?>
+                                                </div>
+                                                <div class="custom-pagination">
+                                                    <div class="arrow">
+                                                        <a href="#" class="prev  disable" >
+                                                            <img class="icon" src="<?php echo get_theme_file_uri('/assets/images/exposure-arrow.png') ?>"   alt="Иконка" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="paginaiton">
+                                                        <span>1</span>/<?=count($imagesArray); ?>
+                                                    </div>
+                                                    <div class="arrow">
+                                                        <a href="#" class="next" >
+                                                            <img class="icon" src="<?php echo get_theme_file_uri('/assets/images/exposure-arrow.png') ?>"   alt="Иконка" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+
+                                            <?php
+                                            $i++;
+                                        endwhile;
+                                        wp_reset_query();
+                                        ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
 
 
 

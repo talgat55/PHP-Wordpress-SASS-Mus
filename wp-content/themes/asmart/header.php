@@ -31,7 +31,7 @@
     <?php
     $phone = get_field('phone_theme', 'option');
     $adress = get_field('adress_theme', 'option');
-    $redyPhone = $phone ? PregPhone($phone) : '';
+    $redyPhone = $phone ? pregPhone($phone) : '';
     $redyAdress = $adress ? $adress : '';
 
 

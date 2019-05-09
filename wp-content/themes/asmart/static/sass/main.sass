@@ -156,44 +156,6 @@
         height: 415px
         padding: 0
         position: relative
-        .custom-pagination
-          bottom: 0
-          position: absolute
-          width: 100%
-          right: 0
-          text-align: right
-          padding: 9px
-          > div
-            display: inline-block
-            vertical-align: middle
-          .arrow
-            height: 27px
-            .prev
-              padding-right: 5px
-              .icon
-                position: relative
-                transform: rotateZ(180deg)
-            .prev,
-            .next
-              height: 27px
-              vertical-align: middle
-              transition: all .3s
-              display: inline-block
-              &:hover
-                opacity: .5
-              &.disable
-                opacity: .5
-            .next
-              padding-left: 5px
-
-          .paginaiton
-            font-size: 18px
-            color: #fff
-            width: 30px
-            font-family: $font_500
-            span
-              font-family: $font_semibold
-              font-size: 22px
 
 
         .top-block
@@ -260,36 +222,40 @@
         background-position: center center!important
         background-size: cover!important
         position: relative
-        .overlay-link
-          position: absolute
-          top: 0
-          left: 0
-          width: 100%
-          height: 100%
-          background: rgba(48,47,45,.7)
-          opacity: 0
-          transition: all .3s
-          .link
-            position: absolute
-            top: 50%
-            left: 50%
-            transform:  translateY(-50%) translateX(-50%)
-            display: inline-block
-            color: #fff
-            text-transform: uppercase
-            font-family: $font_semibold
-            border: 2px solid #fff
-            padding: 7px 18px
-            &:hover
-              border-color: $main_color
-              color: #fff
-              background-color: $main_color
-              text-decoration: none
-        &:hover
-          .overlay-link
-            opacity: 1
 
 
+
+
+//
+// Edu events
+//
+.edu-events
+  .sub-title.left:after
+    display: none
+  .content
+    p
+      margin-bottom: 0
+      font-size: 15px
+      color: #fff
+      font-family: $font_500
+  .col-sm-8
+    padding: 0
+    .item-carousel
+      img
+        width: 100%
+    .list-exposures
+      margin: 0
+      padding: 0
+      .item
+        padding: 0
+
+
+
+
+
+.exposure,
+.exhibitions,
+.edu-events
       .custom-pagination
         bottom: 0
         position: absolute
@@ -297,6 +263,7 @@
         right: 0
         text-align: right
         padding: 9px
+        z-index: 100
         > div
           display: inline-block
           vertical-align: middle
@@ -332,10 +299,36 @@
 
 
 
-
-
-
-
-
-
+.exhibitions,
+.edu-events
+  .overlay-link
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(48,47,45,.7)
+    opacity: 0
+    transition: all .3s
+    z-index: 99
+    .link
+      position: absolute
+      top: 50%
+      left: 50%
+      transform:  translateY(-50%) translateX(-50%)
+      display: inline-block
+      color: #fff
+      text-transform: uppercase
+      font-family: $font_semibold
+      border: 2px solid #fff
+      padding: 7px 18px
+      &:hover
+        border-color: $main_color
+        color: #fff
+        background-color: $main_color
+        text-decoration: none
+  .item:hover,
+  .item-carousel:hover
+    .overlay-link
+      opacity: 1
 
