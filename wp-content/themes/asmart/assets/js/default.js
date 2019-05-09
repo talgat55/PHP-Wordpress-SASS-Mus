@@ -17,24 +17,16 @@ jQuery(document).ready(function () {
 
 
 
-    jQuery('.lightgallery .carousel').lightGallery({
-        thumbnail:true
-    });
+    // jQuery('.lightgallery .carousel').lightGallery({
+    //     thumbnail:true
+    // });
     /*
     * Input telephone mask
     */
 
-    jQuery('.one-but-phone, #billing_phone, #tel').inputmask({"mask": "+7 (999) 999-9999"});
+    // jQuery('.one-but-phone, #billing_phone, #tel').inputmask({"mask": "+7 (999) 999-9999"});
 
-    // Accordion();
-    /*
-    *  Match height
-    */
-    jQuery('.block-event-text-block,  .block-event-walp , .match-height, .news-img-block ').matchHeight();
-    jQuery(' .block-event-text-block h3').matchHeight();
-    jQuery('.block-event-img').matchHeight();
 
-// end redy function
 //----------------------------------
 // Map
 //------------------------------------
@@ -135,14 +127,23 @@ jQuery(document).ready(function () {
      }
 
 
-    HoverEffectsMedia();
-    ExposureCarousel();
-    LasyLoad();
+    exposureCarousel();
+    lasyLoad();
+    modal();
 
-    //
-    //  Modal
-    //
 
+
+
+
+
+
+    // end redy function
+});
+//
+//  Modal
+//
+function modal() {
+    "use strict";
 
     jQuery('.modal-overlay, .img-close-modal').click(function () {
 
@@ -150,9 +151,6 @@ jQuery(document).ready(function () {
 
         return false;
     });
-
-
-
     jQuery('.link-to-call.slider').click(function () {
         if(jQuery(this).hasClass('link-registration')){
             jQuery('.custom-modal2, .modal-overlay').addClass('show-modal');
@@ -167,61 +165,20 @@ jQuery(document).ready(function () {
 
     });
 
-
-
-
-});
-
-//
-//  Hover event for  media block in home page
-//
-function HoverEffectsMedia() {
-    jQuery(".media-block-bg-walp-content").hover(
-        function () {
-            var $index = jQuery(this).index();
-            if ($index == '1') {
-                jQuery(".media-block-bg").eq($index).addClass('media-zindex');
-                jQuery(".media-block-bg-walp-content").eq($index).addClass('media-zindex');
-            }
-
-        }, function () {
-            jQuery(this).removeClass('media-zindex');
-            jQuery(".media-block-bg").removeClass('media-zindex');
-
-        }
-    );
-    jQuery(".media-block-bg.second").hover(
-        function () {
-            jQuery(this).addClass('media-zindex');
-            var $index = jQuery(this).index();
-
-            jQuery('.section-media-block').find('.media-block-bg-walp-content').eq($index).addClass('media-zindex');
-
-
-        }, function () {
-            jQuery('.media-block-bg-walp-content').removeClass('media-zindex');
-            jQuery(".media-block-bg").removeClass('media-zindex');
-
-        }
-    );
-
-
 }
+
 
 
 //----------------------------------
 //   Lasyload
 //---------------------------------------
 
-function LasyLoad() {
+function lasyLoad() {
     "use strict";
-
-    var LasyClass =  '.lazy';
-
-    if(jQuery(LasyClass).length){
-        jQuery(LasyClass).lazy();
+    var lasyClass =  '.lazy';
+    if(jQuery(lasyClass).length){
+        jQuery(lasyClass).lazy();
     }
-
 
 }
 
@@ -230,10 +187,11 @@ function LasyLoad() {
 //---------------------------------------
 
 
-function ExposureCarousel() {
-    var CarouselClass = '.carousel-exposure';
-    if(jQuery(CarouselClass).length){
-        jQuery(CarouselClass).slick({
+function exposureCarousel() {
+    "use strict";
+    var carouselClass = '.carousel-exposure';
+    if(jQuery(carouselClass).length){
+        jQuery(carouselClass).slick({
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -250,7 +208,7 @@ function ExposureCarousel() {
             e.preventDefault();
             jQuery(this).parent().parent().parent().find('.carousel-exposure').slick('slickNext');
         });
-        jQuery(CarouselClass).on("afterChange", function (event, slick, currentSlide) {
+        jQuery(carouselClass).on("afterChange", function (event, slick, currentSlide) {
             var currentSlideCount = parseInt(currentSlide + 1);
 
             if(currentSlideCount !='1' && currentSlideCount != slick.slideCount ){
