@@ -24,14 +24,11 @@ if (function_exists('register_nav_menus')) {
 * Add Feature Imagee
 **/
 add_theme_support('post-thumbnails');
-add_image_size( 'product-item', 244, 300, true );
-add_image_size( 'product-item-thumb', 50, 62, true );
 add_image_size( 'product', 260, 200, false );
-add_image_size( 'woocommerce_single', 260, 200, false);
 add_image_size( 'event-img', 260, 110, false);
 add_image_size( 'news-img', 400, 250, false);
 add_image_size( 'news-img-recent', 278, 80, true);
-
+add_image_size( 'partners-img', 216, 97, false);
 /**
  * Enqueue scripts and styles.
  */
@@ -45,7 +42,7 @@ function th_scripts()
     wp_enqueue_style('fontawesome-all', get_theme_file_uri('/assets/css/fontawesome-all.css'), array(), '');
     wp_enqueue_style('normalize', get_theme_file_uri('/assets/css/normalize.css'), array(), '');
     wp_enqueue_style('slick', get_theme_file_uri('/assets/css/slick.css'), array(), '');
-    wp_enqueue_style('lightgallery', get_theme_file_uri('/assets/css/lightgallery.css'), array(), '');
+//    wp_enqueue_style('lightgallery', get_theme_file_uri('/assets/css/lightgallery.css'), array(), '');
     wp_enqueue_style('slick-theme', get_theme_file_uri('/assets/css/slick-theme.css'), array(), '');
     wp_enqueue_style('main-style', get_theme_file_uri('/assets/css/style.css'), array(), '5');
 
@@ -54,22 +51,26 @@ function th_scripts()
     wp_enqueue_script('jquery', get_theme_file_uri('/assets/js/jquery-3.2.1.min.js'), array(), '');
     wp_enqueue_script('slick.min', get_theme_file_uri('/assets/js/slick.min.js'), array(), '');
     wp_enqueue_script('lazy', get_theme_file_uri('/assets/js/jquery.lazy.min.js'), array(), '');
-    wp_enqueue_script('jquery.matchHeight', get_theme_file_uri('/assets/js/jquery.matchHeight.js'), array(), '');
+//    wp_enqueue_script('jquery.matchHeight', get_theme_file_uri('/assets/js/jquery.matchHeight.js'), array(), '');
 
 
 //    wp_enqueue_script('jquery.query-object', get_theme_file_uri('/assets/js/jquery.query-object.js'), array(), '');
-    wp_enqueue_script('lightgallery.min', get_theme_file_uri('/assets/js/lightgallery.min.js'), array(), '');
-    wp_enqueue_script('lg-fullscreen.min', get_theme_file_uri('/assets/js/lg-fullscreen.min.js'), array(), '');
-    wp_enqueue_script('lg-hash.min', get_theme_file_uri('/assets/js/lg-hash.min.js'), array(), '');
-    wp_enqueue_script('jquery.inputmask', get_theme_file_uri('/assets/js/jquery.inputmask.js'), array(), '');
-    wp_enqueue_script('lg-thumbnail.min', get_theme_file_uri('/assets/js/lg-thumbnail.min.js'), array(), '');
+//    wp_enqueue_script('lightgallery.min', get_theme_file_uri('/assets/js/lightgallery.min.js'), array(), '');
+//    wp_enqueue_script('lg-fullscreen.min', get_theme_file_uri('/assets/js/lg-fullscreen.min.js'), array(), '');
+//    wp_enqueue_script('lg-hash.min', get_theme_file_uri('/assets/js/lg-hash.min.js'), array(), '');
+//    wp_enqueue_script('jquery.inputmask', get_theme_file_uri('/assets/js/jquery.inputmask.js'), array(), '');
+//    wp_enqueue_script('lg-thumbnail.min', get_theme_file_uri('/assets/js/lg-thumbnail.min.js'), array(), '');
 //    wp_enqueue_script('functions', get_theme_file_uri('/assets/js/functions.js'), array(), '');
     wp_enqueue_script('default', get_theme_file_uri('/assets/js/default.js'), array(), '4');
 
     if (is_home()  ||  is_page_template('page-about.php')) {
 
-        wp_enqueue_script('yandex-maps', '//api-maps.yandex.ru/2.1/?lang=ru_RU', array(), '');
-
+        if (get_locale() == 'en_US') {
+            $lang = 'en';
+        } else {
+            $lang = 'ru';
+        }
+        wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkewQZi7iY6eOtlXajXXHFWHECGYWqfMs&language=' . $lang, array(), '2');
     }
 
 
@@ -197,7 +198,34 @@ function post_type_educations_events()
     register_post_type('edu_events', $args);
 }
 
+/*
+*  Register Post Type  Partners
+*/
 
+add_action('init', 'post_type_partners');
+
+function post_type_partners()
+{
+    $labels = array(
+        'name' => 'Партнеры',
+        'singular_name' => 'Партнеры',
+        'all_items' => 'Партнеры',
+        'menu_name' => 'Партнеры' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "slider_partners",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('slider_partners', $args);
+}
 
 /*
 *  Register Post Type Settings

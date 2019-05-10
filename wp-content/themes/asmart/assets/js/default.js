@@ -16,7 +16,6 @@ jQuery(document).ready(function () {
     jQuery('.site-content').css('min-height', сh); // применяем посчитанную высоту
 
 
-
     // jQuery('.lightgallery .carousel').lightGallery({
     //     thumbnail:true
     // });
@@ -27,114 +26,11 @@ jQuery(document).ready(function () {
     // jQuery('.one-but-phone, #billing_phone, #tel').inputmask({"mask": "+7 (999) 999-9999"});
 
 
-//----------------------------------
-// Map
-//------------------------------------
-     if(jQuery('.page-template-page-about #map').length){
-         ymaps.ready(function () {
-             var myMap = new ymaps.Map('map', {
-                     center: [54.992441, 73.367044],
-                     zoom: 15,
-                     controls: []
-                 }, {
-                     // searchControlProvider: 'yandex#search'
-                 }),
-
-                 // Создаём макет содержимого.
-                 /*  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                       '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-                   ),*/
-
-                 myPlacemark = new ymaps.Placemark([54.992441, 73.367044], {
-                     id: '1'
-                 }, {
-
-                     // Опции.
-                     // Необходимо указать данный тип макета.
-                     iconLayout: 'default#image',
-                     // Своё изображение иконки метки.
-                     //
-                     iconImageHref: 'http://xn--55-6kcpecta3ahjucld1b2m.xn--p1ai/wp-content/themes/asmart/assets/images/marker.png',
-                     // // Размеры метки.
-                     iconImageSize: [27, 37],
-                     // // Смещение левого верхнего угла иконки относительно
-                     // // её "ножки" (точки привязки).
-                     iconImageOffset: [-14, -37]
-                 });
-
-
-             myMap.geoObjects
-
-                 .add(myPlacemark);
-
-             myMap.behaviors.disable('scrollZoom');
-             myMap.behaviors.disable('multiTouch');
-             if(jQuery(window).width() < 769){
-                 myMap.behaviors.disable('drag');
-             }
-
-
-
-         });
-
-    } else if (jQuery('#map').length) {
-
-         ymaps.ready(function () {
-             var myMap = new ymaps.Map('map', {
-                     center: [54.992441, 73.367044],
-                     zoom: 15,
-                     controls: ['zoomControl']
-                 }, {
-                     // searchControlProvider: 'yandex#search'
-                 }),
-
-                 // Создаём макет содержимого.
-                 /*  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                       '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-                   ),*/
-
-                 myPlacemark = new ymaps.Placemark([54.992441, 73.367044], {
-                     id: '1'
-                 }, {
-
-                     // Опции.
-                     // Необходимо указать данный тип макета.
-                     iconLayout: 'default#image',
-                     // Своё изображение иконки метки.
-                     //
-                     iconImageHref: 'http://xn--55-6kcpecta3ahjucld1b2m.xn--p1ai/wp-content/themes/asmart/assets/images/marker.png',
-                     // // Размеры метки.
-                     iconImageSize: [27, 37],
-                     // // Смещение левого верхнего угла иконки относительно
-                     // // её "ножки" (точки привязки).
-                     iconImageOffset: [-14, -37]
-                 });
-
-
-             myMap.geoObjects
-
-                 .add(myPlacemark);
-
-             myMap.behaviors.disable('scrollZoom');
-             myMap.behaviors.disable('multiTouch');
-
-         if(jQuery(window).width() < 769){
-             myMap.behaviors.disable('drag');
-         }
-
-
-         });
-     }
-
-
     exposureCarousel();
     lasyLoad();
     modal();
-
-
-
-
-
+    carouselParthers();
+    map();
 
 
     // end redy function
@@ -152,10 +48,10 @@ function modal() {
         return false;
     });
     jQuery('.link-to-call.slider').click(function () {
-        if(jQuery(this).hasClass('link-registration')){
+        if (jQuery(this).hasClass('link-registration')) {
             jQuery('.custom-modal2, .modal-overlay').addClass('show-modal');
 
-        }else{
+        } else {
             jQuery('.custom-modal, .modal-overlay').addClass('show-modal');
 
         }
@@ -168,15 +64,14 @@ function modal() {
 }
 
 
-
 //----------------------------------
 //   Lasyload
 //---------------------------------------
 
 function lasyLoad() {
     "use strict";
-    var lasyClass =  '.lazy';
-    if(jQuery(lasyClass).length){
+    var lasyClass = '.lazy';
+    if (jQuery(lasyClass).length) {
         jQuery(lasyClass).lazy();
     }
 
@@ -190,7 +85,7 @@ function lasyLoad() {
 function exposureCarousel() {
     "use strict";
     var carouselClass = '.carousel-exposure';
-    if(jQuery(carouselClass).length){
+    if (jQuery(carouselClass).length) {
         jQuery(carouselClass).slick({
             infinite: false,
             slidesToShow: 1,
@@ -198,27 +93,27 @@ function exposureCarousel() {
             arrows: false,
             dots: false
 
-         //   autoplay: true,
+            //   autoplay: true,
         });
-        jQuery('.custom-pagination  .prev').click(function(e) {
+        jQuery('.custom-pagination  .prev').click(function (e) {
             e.preventDefault();
             jQuery(this).parent().parent().parent().find('.carousel-exposure').slick('slickPrev');
         });
-        jQuery('.custom-pagination  .next').click(function(e) {
+        jQuery('.custom-pagination  .next').click(function (e) {
             e.preventDefault();
             jQuery(this).parent().parent().parent().find('.carousel-exposure').slick('slickNext');
         });
         jQuery(carouselClass).on("afterChange", function (event, slick, currentSlide) {
             var currentSlideCount = parseInt(currentSlide + 1);
 
-            if(currentSlideCount !='1' && currentSlideCount != slick.slideCount ){
+            if (currentSlideCount != '1' && currentSlideCount != slick.slideCount) {
 
                 jQuery(this).parent().find('.custom-pagination .prev, .custom-pagination .next').removeClass('disable');
-            }else if(slick.slideCount == currentSlideCount){
+            } else if (slick.slideCount == currentSlideCount) {
 
-             jQuery(this).parent().find('.custom-pagination .next').addClass('disable');
+                jQuery(this).parent().find('.custom-pagination .next').addClass('disable');
 
-            }else{
+            } else {
                 jQuery(this).parent().find('.custom-pagination .prev').addClass('disable');
             }
 
@@ -227,4 +122,153 @@ function exposureCarousel() {
         });
     }
 
+}
+
+//----------------------------------
+//   Carousel Partners
+//---------------------------------------
+function carouselParthers() {
+    "use strict";
+    var carouselClass = jQuery('.list-partners');
+    if (carouselClass.length) {
+        carouselClass.slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            nextArrow: jQuery('.partner-arrow .next'),
+            prevArrow: jQuery('.partner-arrow .prev'),
+            dots: true
+
+            //   autoplay: true,
+        });
+
+    }
+
+}
+
+
+//----------------------------------
+// Map
+//------------------------------------
+function map() {
+    "use strict";
+    let $map = jQuery('#map');
+
+
+    if ($map.length) {
+
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 15,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(54.983693, 73.368633), // New York
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{
+                    "featureType": "all",
+                    "elementType": "geometry",
+                    "stylers": [{"gamma": "0.82"}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"gamma": "1.21"}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels",
+                    "stylers": [{"lightness": "-60"}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text",
+                    "stylers": [{"gamma": "5.37"}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#557a46"}, {"lightness": "-39"}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"visibility": "on"}, {"color": "#ffffff"}, {"lightness": 16}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.icon",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#fefefe"}, {"lightness": 20}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#f5f5f5"}, {"lightness": 20}]
+                }, {
+                    "featureType": "landscape.natural",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"saturation": "0"}]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#f5f5f5"}, {"lightness": 21}]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#dedede"}, {"lightness": 21}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#ffffff"}, {"lightness": 17}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#ffffff"}, {"lightness": 29}, {"weight": 0.2}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#ffffff"}, {"lightness": 18}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#ffffff"}, {"lightness": 16}]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#f2f2f2"}, {"lightness": 19}]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#e9e9e9"}, {"lightness": 17}]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#42738d"}, {"gamma": "5.37"}]
+                }]
+            };
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(54.983693, 73.368633),
+                map: map,
+                title: 'Музей'
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', init);
+
+    }
 }

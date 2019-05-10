@@ -117,6 +117,10 @@
     background-color: #557a46;
     text-decoration: none; }
 
+#map {
+  width: 100%;
+  height: 450px; }
+
 .home .about .bg-block .col-sm-4 {
   background-color: #557a46; }
 
@@ -518,6 +522,145 @@
       transition: all .3s; }
       .contact-section .form-contact_us .policy a:hover {
         color: #fff; }
+
+section.partners {
+  background-color: #edece6; }
+  section.partners .list-partners {
+    margin: 0;
+    padding: 40px 0; }
+    section.partners .list-partners li {
+      list-style: none;
+      float: left; }
+      section.partners .list-partners li img {
+        margin: 0 auto; }
+    section.partners .list-partners .slick-dots {
+      right: 196px;
+      width: auto;
+      bottom: -20px; }
+      section.partners .list-partners .slick-dots li {
+        width: 6px;
+        height: 6px; }
+        section.partners .list-partners .slick-dots li button {
+          border: 1px solid #000;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          padding: 4px;
+          margin: 0;
+          width: 6px;
+          height: 6px; }
+          section.partners .list-partners .slick-dots li button:before {
+            display: none; }
+        section.partners .list-partners .slick-dots li.slick-active button {
+          background-color: #000; }
+  section.partners .partner-arrow {
+    margin: 0 0 0 auto;
+    padding: 0;
+    display: table;
+    position: relative;
+    z-index: 10; }
+    section.partners .partner-arrow li {
+      display: table-cell; }
+      section.partners .partner-arrow li .prev img {
+        position: relative;
+        -webkit-transform: rotateZ(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotateZ(180deg); }
+      section.partners .partner-arrow li a {
+        background-color: #3e3c3b;
+        display: inline-block;
+        padding: 10px 35px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s; }
+        section.partners .partner-arrow li a:hover {
+          opacity: .5; }
+
+.maps-section .bg-maps {
+  background: url(../images/bg-map.jpg);
+  background-repeat: no-repeat !important;
+  -webkit-background-size: cover !important;
+          background-size: cover !important;
+  height: 450px; }
+
+.maps-section .col-sm-6:first-child {
+  padding: 0; }
+
+.maps-section .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 450px; }
+  .maps-section .content .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .maps-section .content .contact-info-block {
+    height: 450px;
+    vertical-align: middle;
+    display: table-cell;
+    padding-left: 40px; }
+    .maps-section .content .contact-info-block .list-info {
+      margin: 0;
+      padding: 0;
+      display: inline-block; }
+      .maps-section .content .contact-info-block .list-info li {
+        list-style: none;
+        font-family: "Museo Sans Cyrl 500";
+        font-size: 17px;
+        color: #fff;
+        margin-bottom: 25px; }
+        .maps-section .content .contact-info-block .list-info li span {
+          font-family: "Museo Sans Cyrl 700"; }
+        .maps-section .content .contact-info-block .list-info li a {
+          color: #fff; }
+        .maps-section .content .contact-info-block .list-info li p {
+          margin-bottom: 0;
+          display: inline-block;
+          vertical-align: top; }
+    .maps-section .content .contact-info-block .soс-links {
+      padding: 0;
+      margin: 0;
+      text-align: right;
+      display: inline-block; }
+      .maps-section .content .contact-info-block .soс-links li {
+        list-style: none; }
+        .maps-section .content .contact-info-block .soс-links li a {
+          display: inline-block;
+          background-color: #fff;
+          text-decoration: none;
+          text-align: center;
+          margin-left: 12px;
+          -webkit-transition: all .3s;
+          -o-transition: all .3s;
+          transition: all .3s;
+          min-width: 27px;
+          margin-bottom: 13px; }
+          .maps-section .content .contact-info-block .soс-links li a:hover {
+            background-color: #557a46; }
+            .maps-section .content .contact-info-block .soс-links li a:hover i {
+              color: #fff !important; }
+          .maps-section .content .contact-info-block .soс-links li a i {
+            color: #557a46;
+            font-size: 18px;
+            padding: 3px;
+            vertical-align: middle; }
+        .maps-section .content .contact-info-block .soс-links li .gos-catalog-link {
+          text-decoration: none;
+          color: #557a46;
+          text-transform: uppercase;
+          font-family: "Museo Sans Cyrl 700";
+          padding: 0 8px; }
+          .maps-section .content .contact-info-block .soс-links li .gos-catalog-link:hover {
+            color: #fff; }
+      .maps-section .content .contact-info-block .soс-links li.last-soc-title {
+        text-transform: uppercase;
+        font-size: 15px;
+        font-family: "Museo Sans Cyrl 500";
+        color: #fff;
+        padding-right: 9px; }
 
 header .content-block .top-block {
   margin: 25px 0 0 0;
