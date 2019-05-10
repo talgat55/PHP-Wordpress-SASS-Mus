@@ -446,6 +446,79 @@
 .edu-events .item-carousel:hover .overlay-link {
   opacity: 1; }
 
+.contact-section {
+  background: url(../images/bg-contact.jpg);
+  background-repeat: no-repeat !important;
+  -webkit-background-size: cover !important;
+          background-size: cover !important; }
+  .contact-section .contact-block {
+    padding: 70px; }
+    .contact-section .contact-block .content {
+      padding: 15px 0 0 70px; }
+      .contact-section .contact-block .content .sub-title {
+        font-family: "Museo Sans Cyrl 900";
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 30px; }
+      .contact-section .contact-block .content p {
+        margin-bottom: 0;
+        font-size: 16px;
+        font-family: "Museo Sans Cyrl 700";
+        color: #fff; }
+  .contact-section .form-contact_us input {
+    background: #1f1e1d;
+    border: none;
+    text-align: center;
+    font-family: "Museo Sans Cyrl 500";
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px; }
+    .contact-section .form-contact_us input::-webkit-input-placeholder {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 16px;
+      color: #fff;
+      text-align: center; }
+    .contact-section .form-contact_us input:-moz-placeholder {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 16px;
+      color: #fff;
+      text-align: center; }
+    .contact-section .form-contact_us input::-moz-placeholder {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 16px;
+      color: #fff;
+      text-align: center; }
+    .contact-section .form-contact_us input:-ms-input-placeholder {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 16px;
+      color: #fff;
+      text-align: center; }
+  .contact-section .form-contact_us input[type=submit] {
+    width: auto;
+    border: 2px solid #fff;
+    display: block;
+    text-transform: uppercase;
+    background: transparent;
+    margin: 30px auto 0;
+    padding: 12px 45px; }
+    .contact-section .form-contact_us input[type=submit]:hover {
+      background: #557a46;
+      border-color: #557a46; }
+  .contact-section .form-contact_us .policy {
+    color: #fff; }
+    .contact-section .form-contact_us .policy a {
+      text-decoration: underline;
+      color: #557a46;
+      font-size: 15px;
+      font-family: "Museo Sans Cyrl 500";
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .contact-section .form-contact_us .policy a:hover {
+        color: #fff; }
+
 header .content-block .top-block {
   margin: 25px 0 0 0;
   padding: 0;
