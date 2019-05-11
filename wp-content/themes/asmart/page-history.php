@@ -65,7 +65,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-
+        <?php  get_template_part('inc/form'); ?>
     </div>
 
 <?php get_footer();
