@@ -121,6 +121,11 @@
   width: 100%;
   height: 450px; }
 
+.content-area .row.flex .col-sm-8 {
+  padding-left: 0; }
+  .content-area .row.flex .col-sm-8 > .content {
+    padding: 55px 50px 35px; }
+
 .home .about .bg-block .col-sm-4 {
   background-color: #557a46; }
 
@@ -671,9 +676,6 @@ section.partners {
 .page-history .mobile-carousel {
   display: none; }
 
-.page-history .content {
-  padding: 35px 50px; }
-
 .page-history .history-carousel {
   padding-left: 30px;
   padding-top: 60px; }
@@ -736,6 +738,41 @@ section.partners {
               transform: rotateZ(90deg); }
     .page-history .history-arrow a:hover {
       background-color: #557a46; }
+
+.page-administration .sub-title {
+  margin-top: 37px; }
+  .page-administration .sub-title.left:after {
+    left: 300px; }
+
+.page-administration .list-administrations {
+  margin: 0;
+  padding: 0; }
+  .page-administration .list-administrations li.item {
+    background-color: #edece6;
+    list-style: none;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-align-items: center;
+    -ms-flex-align: start;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-bottom: 35px; }
+    .page-administration .list-administrations li.item .img-block img {
+      width: 330px; }
+    .page-administration .list-administrations li.item .text {
+      padding: 0 30px; }
+      .page-administration .list-administrations li.item .text .name {
+        color: #383634;
+        font-family: "Museo Sans Cyrl 700";
+        text-transform: uppercase;
+        margin-top: 0;
+        font-size: 15px;
+        font-weight: 400; }
+      .page-administration .list-administrations li.item .text .position {
+        font-size: 13px;
+        padding: 11px 0 15px; }
 
 header .content-block .top-block {
   margin: 25px 0 0 0;

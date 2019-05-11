@@ -30,6 +30,9 @@ add_image_size( 'news-img', 400, 250, false);
 add_image_size( 'news-img-recent', 278, 80, true);
 add_image_size( 'partners-img', 216, 97, false);
 add_image_size( 'history-img', 266, 165, true);
+add_image_size( 'administration-img', 330, 310, true);
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -236,6 +239,35 @@ function post_type_partners()
         )
     );
     register_post_type('slider_partners', $args);
+}
+
+/*
+*  Register Post Type  Admisitrations
+*/
+
+add_action('init', 'post_type_administrations');
+
+function post_type_administrations()
+{
+    $labels = array(
+        'name' => 'Администрация',
+        'singular_name' => 'Администрация',
+        'all_items' => 'Администрация',
+        'menu_name' => 'Администрация' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "administrations",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('administrations', $args);
 }
 
 /*

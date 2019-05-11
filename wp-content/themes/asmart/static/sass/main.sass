@@ -550,8 +550,6 @@ section.partners
 
   .mobile-carousel
     display: none
-  .content
-    padding: 35px 50px
   .history-carousel
     padding-left: 30px
     padding-top: 60px
@@ -583,18 +581,9 @@ section.partners
             text-transform: uppercase
             color: #fff
 
-
-
-
-
       &:hover
         a
           opacity: 1
-
-
-
-
-
   .slick-slide
     margin: 15px 0
 
@@ -616,6 +605,45 @@ section.partners
         transform: rotateZ(90deg)
       &:hover
         background-color: $main_color
+
+//
+//  Page administration
+//
+.page-administration
+  .sub-title
+    margin-top: 37px
+    &.left:after
+      left: 300px
+  .list-administrations
+    margin: 0
+    padding: 0
+    li.item
+      background-color: #edece6
+      list-style: none
+      display: flex
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      -webkit-align-items: center
+      -ms-flex-align: start
+      align-items: center
+      margin-bottom: 35px
+      .img-block
+
+        img
+          width: 330px
+      .text
+        padding: 0 30px
+        .name
+          color: #383634
+          font-family: $font_semibold
+          text-transform: uppercase
+          margin-top: 0
+          font-size: 15px
+          font-weight: 400
+        .position
+          font-size: 13px
+          padding: 11px 0 15px
 
 
 
