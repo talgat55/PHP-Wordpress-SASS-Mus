@@ -662,6 +662,81 @@ section.partners {
         color: #fff;
         padding-right: 9px; }
 
+.page-history .sub-title {
+  margin-top: 30px; }
+  .page-history .sub-title.left:after {
+    left: 275px;
+    top: 18px; }
+
+.page-history .mobile-carousel {
+  display: none; }
+
+.page-history .content {
+  padding: 35px 50px; }
+
+.page-history .history-carousel {
+  padding-left: 30px;
+  padding-top: 60px; }
+  .page-history .history-carousel .item {
+    position: relative; }
+    .page-history .history-carousel .item .link-full {
+      cursor: pointer; }
+    .page-history .history-carousel .item a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      width: 266px; }
+      .page-history .history-carousel .item a div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+            -ms-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%); }
+        .page-history .history-carousel .item a div img {
+          margin: 0 auto; }
+        .page-history .history-carousel .item a div p {
+          margin-bottom: 0;
+          font-size: 13px;
+          font-family: "Museo Sans Cyrl 700";
+          text-transform: uppercase;
+          color: #fff; }
+    .page-history .history-carousel .item:hover a {
+      opacity: 1; }
+
+.page-history .slick-slide {
+  margin: 15px 0; }
+
+.page-history .slick-list {
+  margin: -15px 0; }
+
+.page-history .history-arrow {
+  position: relative;
+  width: 297px;
+  text-align: center;
+  padding-left: 31px;
+  padding-top: 35px; }
+  .page-history .history-arrow a {
+    padding: 10px 30px;
+    background-color: #b98d5e;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .page-history .history-arrow a img {
+      position: relative;
+      -webkit-transform: rotateZ(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotateZ(90deg); }
+    .page-history .history-arrow a:hover {
+      background-color: #557a46; }
+
 header .content-block .top-block {
   margin: 25px 0 0 0;
   padding: 0;

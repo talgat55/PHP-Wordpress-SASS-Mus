@@ -29,6 +29,7 @@ add_image_size( 'event-img', 260, 110, false);
 add_image_size( 'news-img', 400, 250, false);
 add_image_size( 'news-img-recent', 278, 80, true);
 add_image_size( 'partners-img', 216, 97, false);
+add_image_size( 'history-img', 266, 165, true);
 /**
  * Enqueue scripts and styles.
  */
@@ -42,7 +43,11 @@ function th_scripts()
     wp_enqueue_style('fontawesome-all', get_theme_file_uri('/assets/css/fontawesome-all.css'), array(), '');
     wp_enqueue_style('normalize', get_theme_file_uri('/assets/css/normalize.css'), array(), '');
     wp_enqueue_style('slick', get_theme_file_uri('/assets/css/slick.css'), array(), '');
-//    wp_enqueue_style('lightgallery', get_theme_file_uri('/assets/css/lightgallery.css'), array(), '');
+
+    if (  is_page_template('page-history.php')) {
+
+        wp_enqueue_style('lightgallery', get_theme_file_uri('/assets/css/lightgallery.css'), array(), '');
+    }
     wp_enqueue_style('slick-theme', get_theme_file_uri('/assets/css/slick-theme.css'), array(), '');
     wp_enqueue_style('main-style', get_theme_file_uri('/assets/css/style.css'), array(), '5');
 
@@ -55,13 +60,16 @@ function th_scripts()
 
 
 //    wp_enqueue_script('jquery.query-object', get_theme_file_uri('/assets/js/jquery.query-object.js'), array(), '');
-//    wp_enqueue_script('lightgallery.min', get_theme_file_uri('/assets/js/lightgallery.min.js'), array(), '');
-//    wp_enqueue_script('lg-fullscreen.min', get_theme_file_uri('/assets/js/lg-fullscreen.min.js'), array(), '');
-//    wp_enqueue_script('lg-hash.min', get_theme_file_uri('/assets/js/lg-hash.min.js'), array(), '');
+
 //    wp_enqueue_script('jquery.inputmask', get_theme_file_uri('/assets/js/jquery.inputmask.js'), array(), '');
-//    wp_enqueue_script('lg-thumbnail.min', get_theme_file_uri('/assets/js/lg-thumbnail.min.js'), array(), '');
+
 //    wp_enqueue_script('functions', get_theme_file_uri('/assets/js/functions.js'), array(), '');
-    wp_enqueue_script('default', get_theme_file_uri('/assets/js/default.js'), array(), '4');
+    if (  is_page_template('page-history.php')) {
+        wp_enqueue_script('lg-thumbnail.min', get_theme_file_uri('/assets/js/lg-thumbnail.min.js'), array(), '');
+        wp_enqueue_script('lightgallery.min', get_theme_file_uri('/assets/js/lightgallery.min.js'), array(), '');
+        wp_enqueue_script('lg-fullscreen.min', get_theme_file_uri('/assets/js/lg-fullscreen.min.js'), array(), '');
+        wp_enqueue_script('lg-hash.min', get_theme_file_uri('/assets/js/lg-hash.min.js'), array(), '');
+    }
 
     if (is_home()  ||  is_page_template('page-about.php')) {
 
@@ -72,6 +80,9 @@ function th_scripts()
         }
         wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkewQZi7iY6eOtlXajXXHFWHECGYWqfMs&language=' . $lang, array(), '2');
     }
+    wp_enqueue_script('default', get_theme_file_uri('/assets/js/default.js'), array(), '4');
+
+
 
 
 

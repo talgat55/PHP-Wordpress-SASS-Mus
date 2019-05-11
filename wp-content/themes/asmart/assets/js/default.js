@@ -31,7 +31,8 @@ jQuery(document).ready(function () {
     modal();
     carouselParthers();
     map();
-
+    carouselHistorry();
+    galleryHistory();
 
     // end redy function
 });
@@ -272,3 +273,48 @@ function map() {
 
     }
 }
+
+//----------------------------------
+//   Carousel in history page
+//---------------------------------------
+function carouselHistorry() {
+    "use strict";
+    var carouselClass = jQuery('.history-carousel');
+    if (carouselClass.length) {
+        carouselClass.slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            nextArrow: jQuery('.history-arrow .next'),
+            prevArrow: jQuery('.history-arrow .prev'),
+            dots: false,
+            lazyLoad: 'ondemand',
+            vertical: true,
+            verticalSwiping: true
+
+            //   autoplay: true,
+        });
+
+    }
+
+}
+
+
+//----------------------------------
+//   gallery history page
+//---------------------------------------
+function galleryHistory() {
+    "use strict";
+    var historyClass = jQuery('.history-carousel');
+    if (historyClass.length) {
+        historyClass.lightGallery({
+            selector: '.link-full'
+        });
+
+    }
+
+}
+
+
+
+

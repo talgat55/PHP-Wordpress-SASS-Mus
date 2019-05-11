@@ -31,7 +31,8 @@ get_header(); ?>
 
                         the_content();
 
-                    endwhile;  ?>
+                    endwhile;
+                    ?>
                 </div>
             </div>
         </div>

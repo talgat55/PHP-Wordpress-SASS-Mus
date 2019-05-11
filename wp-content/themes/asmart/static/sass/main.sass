@@ -538,5 +538,87 @@ section.partners
 
 
 
+//
+// Page history
+//
+.page-history
+  .sub-title
+    margin-top: 30px
+    &.left:after
+      left: 275px
+      top: 18px
+
+  .mobile-carousel
+    display: none
+  .content
+    padding: 35px 50px
+  .history-carousel
+    padding-left: 30px
+    padding-top: 60px
+    .item
+      position: relative
+      .link-full
+        cursor: pointer
+      a
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        background: rgba(0,0,0,.5)
+        opacity: 0
+        transition: all .3s
+        width: 266px
+        div
+          position: absolute
+          top: 50%
+          left: 50%
+          text-align: center
+          transform: translateY(-50%) translateX(-50%)
+          img
+            margin: 0 auto
+          p
+            margin-bottom: 0
+            font-size: 13px
+            font-family: $font_semibold
+            text-transform: uppercase
+            color: #fff
+
+
+
+
+
+      &:hover
+        a
+          opacity: 1
+
+
+
+
+
+  .slick-slide
+    margin: 15px 0
+
+  .slick-list
+    margin: -15px 0
+
+  .history-arrow
+    position: relative
+    width: 297px
+    text-align: center
+    padding-left: 31px
+    padding-top: 35px
+    a
+      padding: 10px 30px
+      background-color: #b98d5e
+      transition: all .3s
+      img
+        position: relative
+        transform: rotateZ(90deg)
+      &:hover
+        background-color: $main_color
+
+
+
+
 
 
