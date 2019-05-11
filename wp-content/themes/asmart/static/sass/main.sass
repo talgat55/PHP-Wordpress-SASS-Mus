@@ -646,6 +646,59 @@ section.partners
           padding: 11px 0 15px
 
 
+//
+// Page docs
+//
+.page-docs
+  .sub-title
+    margin-top: 37px
+    &.left:after
+      left: 230px
+
+  .list-docs
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      &.item
+        margin-bottom: 45px
+        .link-item
+          color: #383634
+          text-decoration: none
+          display: flex
+          display: -webkit-box
+          display: -webkit-flex
+          display: -ms-flexbox
+          -webkit-align-items: center
+          -ms-flex-align: start
+          align-items: center
+          .img-block
+            .hover
+              display: none
+          .text
+            padding-left: 35px
+            .title
+              font-family: $font_500
+              font-size: 16px
+              margin-top: 0
+              margin-bottom: 0
+
+
+      &:hover
+        .img-block
+          .hover
+            display: inline-block!important
+          .main
+            display: none
+        .text
+          .title
+            color: $main_color
+
+
+
+
+
+
 
 
 

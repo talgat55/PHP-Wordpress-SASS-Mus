@@ -269,6 +269,32 @@ function post_type_administrations()
     );
     register_post_type('administrations', $args);
 }
+/*
+*  Register Post Type  Documents
+*/
+
+add_action('init', 'post_type_dpcuments');
+
+function post_type_dpcuments()
+{
+    $labels = array(
+        'name' => 'Документы',
+        'singular_name' => 'Документы',
+        'all_items' => 'Документы',
+        'menu_name' => 'Документы' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "docs",
+        'supports' => array(
+            'title'
+        )
+    );
+    register_post_type('docs', $args);
+}
 
 /*
 *  Register Post Type Settings
