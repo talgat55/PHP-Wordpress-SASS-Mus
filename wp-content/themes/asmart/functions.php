@@ -295,6 +295,32 @@ function post_type_dpcuments()
     );
     register_post_type('docs', $args);
 }
+/*
+*  Register Post Type Scientific work
+*/
+
+add_action('init', 'post_type_scientific_work');
+
+function post_type_scientific_work()
+{
+    $labels = array(
+        'name' => 'Научная жизнь',
+        'singular_name' => 'Научная жизнь',
+        'all_items' => 'Научная жизнь',
+        'menu_name' => 'Научная жизнь' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "scientific_works",
+        'supports' => array(
+            'title'
+        )
+    );
+    register_post_type('scientific_works', $args);
+}
 
 /*
 *  Register Post Type Settings
@@ -322,3 +348,16 @@ function pregPhone($phone){
 
 }
 
+/**
+ * Group array by value
+ * @param $array
+ * @param $key
+ * @return array
+ */
+function groupBy($array, $key) {
+    $resultArr = array();
+    foreach($array as $val) {
+        $resultArr[$val[$key]][] = $val;
+    }
+    return $resultArr;
+}

@@ -854,6 +854,76 @@ section.partners {
   padding-right: 5px;
   padding-bottom: 40px; }
 
+.page-scients-works .sub-title {
+  margin-top: 37px; }
+  .page-scients-works .sub-title.left:after {
+    left: 285px; }
+
+.page-scients-works .content {
+  padding: 0 !important; }
+
+.page-scients-works .scients-life-block {
+  margin-bottom: 60px;
+  height: 320px;
+  -webkit-box-shadow: 2px 7px 7px 0px #eee;
+          box-shadow: 2px 7px 7px 0px #eee; }
+  .page-scients-works .scients-life-block .title-block {
+    width: 34%;
+    background-color: #383634;
+    padding: 40px 20px; }
+    .page-scients-works .scients-life-block .title-block .title {
+      font-family: "Museo Sans Cyrl 700";
+      color: #fff;
+      text-transform: uppercase;
+      margin-top: 0; }
+    .page-scients-works .scients-life-block .title-block .text {
+      color: #fff;
+      font-size: 13px; }
+  .page-scients-works .scients-life-block .text {
+    width: 66%;
+    overflow-y: auto; }
+    .page-scients-works .scients-life-block .text::-webkit-scrollbar {
+      width: 10px; }
+    .page-scients-works .scients-life-block .text::-webkit-scrollbar-track {
+      background: #dfded9; }
+    .page-scients-works .scients-life-block .text::-webkit-scrollbar-thumb {
+      background: #3e3c3b; }
+    .page-scients-works .scients-life-block .text::-webkit-scrollbar-thumb:hover {
+      background: #3e3c3b; }
+    .page-scients-works .scients-life-block .text .list {
+      padding: 13px 41px;
+      margin: 0; }
+      .page-scients-works .scients-life-block .text .list li {
+        list-style: none; }
+        .page-scients-works .scients-life-block .text .list li.item {
+          margin-bottom: 45px; }
+          .page-scients-works .scients-life-block .text .list li.item .link-item {
+            color: #383634;
+            text-decoration: none;
+            display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            -webkit-align-items: center;
+            -ms-flex-align: start;
+            -webkit-box-align: center;
+                    align-items: center; }
+            .page-scients-works .scients-life-block .text .list li.item .link-item .img-block .hover {
+              display: none; }
+            .page-scients-works .scients-life-block .text .list li.item .link-item .text {
+              padding-left: 35px; }
+              .page-scients-works .scients-life-block .text .list li.item .link-item .text .title {
+                font-family: "Museo Sans Cyrl 500";
+                font-size: 16px;
+                margin-top: 0;
+                margin-bottom: 0; }
+        .page-scients-works .scients-life-block .text .list li:hover .img-block .hover {
+          display: inline-block !important; }
+        .page-scients-works .scients-life-block .text .list li:hover .img-block .main {
+          display: none; }
+        .page-scients-works .scients-life-block .text .list li:hover .text .title {
+          color: #557a46; }
+
 header .content-block .top-block {
   margin: 25px 0 0 0;
   padding: 0;

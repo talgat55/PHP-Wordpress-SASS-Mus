@@ -85,10 +85,7 @@ get_header(); ?>
 
 
             </div>
-            <div class="row">
-                <div class=" col-xs-12  mobile-carousel">
-                </div>
-            </div>
+
         </div>
         <div id="map"></div>
     </div>

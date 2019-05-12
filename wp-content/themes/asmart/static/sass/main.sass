@@ -600,6 +600,7 @@ section.partners
   .list-docs
     margin: 0
     padding: 0
+
     li
       list-style: none
       &.item
@@ -624,7 +625,6 @@ section.partners
               font-size: 16px
               margin-top: 0
               margin-bottom: 0
-
 
       &:hover
         .img-block
@@ -723,4 +723,83 @@ section.partners
     display: block
     padding-right: 5px
     padding-bottom: 40px
+
+//
+// Page scients life
+//
+.page-scients-works
+
+  .sub-title
+    margin-top: 37px
+    &.left:after
+      left: 285px
+  .content
+    padding: 0!important
+  .scients-life-block
+    margin-bottom: 60px
+    height: 320px
+    box-shadow: 2px 7px 7px 0px #eee
+
+    .title-block
+      width: 34%
+      background-color: #383634
+      padding: 40px 20px
+      .title
+        font-family: $font_semibold
+        color: #fff
+        text-transform: uppercase
+        margin-top: 0
+      .text
+        color: #fff
+        font-size: 13px
+    .text
+      width: 66%
+      overflow-y: auto
+      &::-webkit-scrollbar
+        width: 10px
+      &::-webkit-scrollbar-track
+        background: #dfded9
+      &::-webkit-scrollbar-thumb
+        background: #3e3c3b
+      &::-webkit-scrollbar-thumb:hover
+        background: #3e3c3b
+      .list
+        padding: 13px 41px
+        margin: 0
+        li
+          list-style: none
+          &.item
+            margin-bottom: 45px
+            .link-item
+              color: #383634
+              text-decoration: none
+              display: flex
+              display: -webkit-box
+              display: -webkit-flex
+              display: -ms-flexbox
+              -webkit-align-items: center
+              -ms-flex-align: start
+              align-items: center
+              .img-block
+                .hover
+                  display: none
+              .text
+                padding-left: 35px
+                .title
+                  font-family: $font_500
+                  font-size: 16px
+                  margin-top: 0
+                  margin-bottom: 0
+
+          &:hover
+            .img-block
+              .hover
+                display: inline-block!important
+              .main
+                display: none
+            .text
+              .title
+                color: $main_color
+
+
 
