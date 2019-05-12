@@ -607,65 +607,6 @@ section.partners {
     vertical-align: middle;
     display: table-cell;
     padding-left: 40px; }
-    .maps-section .content .contact-info-block .list-info {
-      margin: 0;
-      padding: 0;
-      display: inline-block; }
-      .maps-section .content .contact-info-block .list-info li {
-        list-style: none;
-        font-family: "Museo Sans Cyrl 500";
-        font-size: 17px;
-        color: #fff;
-        margin-bottom: 25px; }
-        .maps-section .content .contact-info-block .list-info li span {
-          font-family: "Museo Sans Cyrl 700"; }
-        .maps-section .content .contact-info-block .list-info li a {
-          color: #fff; }
-        .maps-section .content .contact-info-block .list-info li p {
-          margin-bottom: 0;
-          display: inline-block;
-          vertical-align: top; }
-    .maps-section .content .contact-info-block .soс-links {
-      padding: 0;
-      margin: 0;
-      text-align: right;
-      display: inline-block; }
-      .maps-section .content .contact-info-block .soс-links li {
-        list-style: none; }
-        .maps-section .content .contact-info-block .soс-links li a {
-          display: inline-block;
-          background-color: #fff;
-          text-decoration: none;
-          text-align: center;
-          margin-left: 12px;
-          -webkit-transition: all .3s;
-          -o-transition: all .3s;
-          transition: all .3s;
-          min-width: 27px;
-          margin-bottom: 13px; }
-          .maps-section .content .contact-info-block .soс-links li a:hover {
-            background-color: #557a46; }
-            .maps-section .content .contact-info-block .soс-links li a:hover i {
-              color: #fff !important; }
-          .maps-section .content .contact-info-block .soс-links li a i {
-            color: #557a46;
-            font-size: 18px;
-            padding: 3px;
-            vertical-align: middle; }
-        .maps-section .content .contact-info-block .soс-links li .gos-catalog-link {
-          text-decoration: none;
-          color: #557a46;
-          text-transform: uppercase;
-          font-family: "Museo Sans Cyrl 700";
-          padding: 0 8px; }
-          .maps-section .content .contact-info-block .soс-links li .gos-catalog-link:hover {
-            color: #fff; }
-      .maps-section .content .contact-info-block .soс-links li.last-soc-title {
-        text-transform: uppercase;
-        font-size: 15px;
-        font-family: "Museo Sans Cyrl 500";
-        color: #fff;
-        padding-right: 9px; }
 
 .page-history .sub-title {
   margin-top: 30px; }
@@ -812,6 +753,106 @@ section.partners {
       display: none; }
     .page-docs .list-docs li:hover .text .title {
       color: #557a46; }
+
+.page-contacts .list-info,
+.maps-section .list-info {
+  margin: 0;
+  padding: 0;
+  display: inline-block; }
+  .page-contacts .list-info li,
+  .maps-section .list-info li {
+    list-style: none;
+    font-family: "Museo Sans Cyrl 500";
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 25px; }
+    .page-contacts .list-info li span,
+    .maps-section .list-info li span {
+      font-family: "Museo Sans Cyrl 700"; }
+    .page-contacts .list-info li a,
+    .maps-section .list-info li a {
+      color: #fff; }
+    .page-contacts .list-info li p,
+    .maps-section .list-info li p {
+      margin-bottom: 0;
+      display: inline-block;
+      vertical-align: top; }
+
+.page-contacts .soс-links,
+.maps-section .soс-links {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  display: inline-block; }
+  .page-contacts .soс-links li,
+  .maps-section .soс-links li {
+    list-style: none; }
+    .page-contacts .soс-links li a,
+    .maps-section .soс-links li a {
+      display: inline-block;
+      background-color: #fff;
+      text-decoration: none;
+      text-align: center;
+      margin-left: 12px;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      min-width: 27px;
+      margin-bottom: 13px; }
+      .page-contacts .soс-links li a:hover,
+      .maps-section .soс-links li a:hover {
+        background-color: #557a46; }
+        .page-contacts .soс-links li a:hover i,
+        .maps-section .soс-links li a:hover i {
+          color: #fff !important; }
+      .page-contacts .soс-links li a i,
+      .maps-section .soс-links li a i {
+        color: #557a46;
+        font-size: 18px;
+        padding: 3px;
+        vertical-align: middle; }
+    .page-contacts .soс-links li .gos-catalog-link,
+    .maps-section .soс-links li .gos-catalog-link {
+      text-decoration: none;
+      color: #557a46;
+      text-transform: uppercase;
+      font-family: "Museo Sans Cyrl 700";
+      padding: 0 8px; }
+      .page-contacts .soс-links li .gos-catalog-link:hover,
+      .maps-section .soс-links li .gos-catalog-link:hover {
+        color: #fff; }
+  .page-contacts .soс-links li.last-soc-title,
+  .maps-section .soс-links li.last-soc-title {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Museo Sans Cyrl 500";
+    color: #fff;
+    padding-right: 9px; }
+
+.page-contacts .sub-title {
+  margin-top: 37px; }
+  .page-contacts .sub-title.left:after {
+    left: 195px; }
+
+.page-contacts .content {
+  padding: 44px 120px !important; }
+
+.page-contacts .list-info span,
+.page-contacts .list-info li,
+.page-contacts .list-info p {
+  color: #383634; }
+
+.page-contacts .list-info a {
+  color: #383634 !important; }
+
+.page-contacts .list-info span {
+  text-transform: uppercase; }
+
+.page-contacts .soс-links {
+  position: relative;
+  display: block;
+  padding-right: 5px;
+  padding-bottom: 40px; }
 
 header .content-block .top-block {
   margin: 25px 0 0 0;
