@@ -142,9 +142,9 @@ get_header(); ?>
                                         $i = 0;
                                         while ($the_query->have_posts()) :
                                             $the_query->the_post();
-                                            $post_id = $the_query->post->ID;
-                                            $imagesArray = get_field('gallery_explosure', $post_id);
-                                            $typeArray = get_field('type_explosure', $post_id);
+                                            $post_id        = $the_query->post->ID;
+                                            $imagesArray    = get_field('gallery_explosure', $post_id);
+                                            $typeArray      = get_field('type_explosure', $post_id);
                                             switch ($typeArray):
                                                 case 'barracks':
                                                     $redyTopblock = 'Казарма Омского острога';

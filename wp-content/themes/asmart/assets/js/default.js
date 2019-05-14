@@ -33,6 +33,7 @@ jQuery(document).ready(function () {
     map();
     carouselHistorry();
     galleryHistory();
+    sliderCollectionPage();
 
     // end redy function
 });
@@ -316,5 +317,26 @@ function galleryHistory() {
 }
 
 
+//----------------------------------
+//   Slider in page collection
+//---------------------------------------
+function sliderCollectionPage() {
+    "use strict";
+    var carouselClass = jQuery('.slider-collection');
+    if (carouselClass.length) {
+        carouselClass.slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            nextArrow: jQuery('.arrow-collection .next'),
+            prevArrow: jQuery('.arrow-collection .prev'),
+            dots: false,
+
+            //   autoplay: true,
+        });
+
+    }
+
+}
 
 

@@ -1009,6 +1009,87 @@ section.partners {
       width: auto !important;
       height: auto !important; }
 
+.page-collection .sub-title {
+  margin-top: 37px; }
+  .page-collection .sub-title.left:after {
+    left: 185px; }
+
+.page-collection .bottom-block .slider-wrapper {
+  position: relative; }
+  .page-collection .bottom-block .slider-wrapper .arrow-collection {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2; }
+    .page-collection .bottom-block .slider-wrapper .arrow-collection .next,
+    .page-collection .bottom-block .slider-wrapper .arrow-collection .prev {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      padding: 27px 12px;
+      background-color: #b98d5e;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      display: inline-block;
+      cursor: pointer; }
+      .page-collection .bottom-block .slider-wrapper .arrow-collection .next:hover,
+      .page-collection .bottom-block .slider-wrapper .arrow-collection .prev:hover {
+        background-color: #557a46; }
+    .page-collection .bottom-block .slider-wrapper .arrow-collection .prev {
+      -webkit-transform: translateY(-50%) rotateZ(180deg);
+          -ms-transform: translateY(-50%) rotate(180deg);
+              transform: translateY(-50%) rotateZ(180deg); }
+    .page-collection .bottom-block .slider-wrapper .arrow-collection .next {
+      right: 0; }
+
+.page-collection .bottom-block .title {
+  margin-top: 0;
+  background-color: #557a46;
+  color: #fff;
+  padding: 14px 20px 14px 55px;
+  margin-bottom: 0;
+  display: inline-block; }
+
+.page-collection .bottom-block .slider-collection {
+  margin: 0;
+  padding: 0; }
+  .page-collection .bottom-block .slider-collection li {
+    display: inline-block;
+    float: left;
+    background-color: #383634; }
+    .page-collection .bottom-block .slider-collection li img {
+      width: 100%;
+      height: 400px;
+      -o-object-fit: cover;
+         object-fit: cover; }
+    .page-collection .bottom-block .slider-collection li .text {
+      font-family: "Museo Sans Cyrl 700";
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      padding: 10px; }
+    .page-collection .bottom-block .slider-collection li .col-sm-6 {
+      padding: 0; }
+    .page-collection .bottom-block .slider-collection li .flex {
+      -webkit-align-items: center;
+      -ms-flex-align: start;
+      -webkit-box-align: center;
+      align-items: center; }
+
+.page-collection .arrow-collection {
+  margin: 0;
+  padding: 0; }
+  .page-collection .arrow-collection li {
+    list-style: none; }
+    .page-collection .arrow-collection li a {
+      display: inline-block; }
+
 header .content-block .top-block {
   margin: 25px 0 0 0;
   padding: 0;

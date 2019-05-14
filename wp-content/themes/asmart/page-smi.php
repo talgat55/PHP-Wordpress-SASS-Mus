@@ -48,10 +48,7 @@ get_header(); ?>
 
 
             </div>
-            <div class="row">
-                <div class=" col-xs-12  mobile-carousel">
-                </div>
-            </div>
+
         </div>
         <?php get_template_part('inc/form'); ?>
     </div>
