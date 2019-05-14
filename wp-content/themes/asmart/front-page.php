@@ -475,7 +475,9 @@ get_header(); ?>
             <div class="row">
                 <div class="col-sm-6 colxs-12 ">
                     <div id="map"></div>
-                </div>
+                </div>￼
+
+
                 <div class="col-sm-6 colxs-12 bg-maps ">
 
                 </div>

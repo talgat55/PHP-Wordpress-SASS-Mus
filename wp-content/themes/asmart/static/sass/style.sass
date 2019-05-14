@@ -134,6 +134,58 @@ $doc_color: #707070
       padding-left: 0
       > .content
         padding: 55px 50px 35px
+div
+  &.wpcf7-validation-errors,
+  &.wpcf7-acceptance-missing
+    color: #fff
+//
+// Pagination
+//
+.pagination
+  margin: 0
+  padding: 0
+  width: 100%
+  display: inline
+  ul
+    margin: 0
+    padding: 0
+    display: table
+    width: 100%
+    li
+      display: table-cell
+
+      background-color: #b98d5e
+      text-align: center
+      a
+        color: #fff
+        padding: 15px
+        text-decoration: none
+        display: inline-block
+        width: 100%
+        transition: all .3s
+        font-family: $font_semibold
+        font-size: 13px
+        text-transform: uppercase
+        &:hover
+          background-color: #000
+        i
+
+          border: 1.5px solid #fff
+          border-radius: 50%
+          padding: 1px 5px
+          vertical-align: bottom
+          display: inline-block
+      &.active
+        background-color: #a47c52
+    .link-prev
+      background-color: #383634
+      i
+        margin-right: 5px
+    .link-next
+      background-color: $main_color
+      i
+        margin-left: 5px
+
 
 //@media  (min-width: 1000px)
 

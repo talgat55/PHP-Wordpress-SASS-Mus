@@ -29,10 +29,10 @@ $i = get_query_var( 'count' );
 
     $text       = '
         <div>
-            <h3 class="title-event"><a href="'.get_the_permalink($id).'" title="Перейти на страницу события" >'.$title.'</a></h3>
+            <h3 class="title-event"><a href="'.get_the_permalink($id).'" title="Перейти на  детальную страницу " >'.$title.'</a></h3>
             <div class="date">'.$date.'</div>
             <div class="content">'.mb_strimwidth(strip_tags($content), 0, 280, "...").'</div>
-            <a href="'.get_the_permalink($id).'" class="link-more" title="Перейти на страницу события" >Читать далее</a>
+            <a href="'.get_the_permalink($id).'" class="link-more" title="Перейти на детальную страницу  " >Читать далее</a>
         </div> 
     ';
 
@@ -41,7 +41,7 @@ $i = get_query_var( 'count' );
 
     <?php if($left){  ?>
         <div class="<?=$imgClass; ?> col-sm-5 col-xs-12">
-            <a href="<?=get_the_permalink($id); ?>"  title="Перейти на страницу события" >
+            <a href="<?=get_the_permalink($id); ?>"  title="Перейти на детальную страницу" >
                 <?=$image; ?>
             </a>
             <span class="triangle"></span>
@@ -54,7 +54,7 @@ $i = get_query_var( 'count' );
             <?=$text; ?>
         </div>
         <div class="<?=$imgClass; ?> col-sm-5 col-xs-12">
-            <a href="<?=get_the_permalink($id); ?>"  title="Перейти на страницу события" >
+            <a href="<?=get_the_permalink($id); ?>"  title="Перейти на детальную страницу" >
                 <?=$image; ?>
             </a>
             <span class="triangle"></span>

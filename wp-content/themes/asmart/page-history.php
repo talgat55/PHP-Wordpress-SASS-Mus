@@ -13,7 +13,7 @@ get_header(); ?>
                     <div class="background lazy   right"
                          data-src="<?php echo get_theme_file_uri('/assets/images/bg2.jpg') ?>"></div>
                     <h1 class="sub-title  left">
-                       истроия музея
+                       <?= get_the_title(); ?>
                     </h1>
 
                     <div class="history-carousel">

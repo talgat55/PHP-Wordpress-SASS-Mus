@@ -126,6 +126,55 @@
   .content-area .row.flex .col-sm-8 > .content {
     padding: 55px 50px 35px; }
 
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+  color: #fff; }
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: inline; }
+  .pagination ul {
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%; }
+    .pagination ul li {
+      display: table-cell;
+      background-color: #b98d5e;
+      text-align: center; }
+      .pagination ul li a {
+        color: #fff;
+        padding: 15px;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        font-family: "Museo Sans Cyrl 700";
+        font-size: 13px;
+        text-transform: uppercase; }
+        .pagination ul li a:hover {
+          background-color: #000; }
+        .pagination ul li a i {
+          border: 1.5px solid #fff;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          padding: 1px 5px;
+          vertical-align: bottom;
+          display: inline-block; }
+      .pagination ul li.active {
+        background-color: #a47c52; }
+    .pagination ul .link-prev {
+      background-color: #383634; }
+      .pagination ul .link-prev i {
+        margin-right: 5px; }
+    .pagination ul .link-next {
+      background-color: #557a46; }
+      .pagination ul .link-next i {
+        margin-left: 5px; }
+
 .home .about .bg-block .col-sm-4 {
   background-color: #557a46; }
 
@@ -176,82 +225,6 @@
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-  .home .events .list-events {
-    margin: 0;
-    padding: 0;
-    z-index: 9; }
-    .home .events .list-events li {
-      list-style: none;
-      margin-left: 41px; }
-    .home .events .list-events .item .col-sm-7,
-    .home .events .list-events .item .col-sm-5 {
-      padding: 0; }
-    .home .events .list-events .item .img-block {
-      position: relative; }
-      .home .events .list-events .item .img-block img {
-        width: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        height: 348px;
-        width: 348.5px; }
-    .home .events .list-events .item.even {
-      background: #edece6; }
-      .home .events .list-events .item.even .triangle {
-        width: 0;
-        height: 0;
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
-        border-right: 32px solid #edece6;
-        position: absolute;
-        bottom: 4px;
-        right: -1px; }
-    .home .events .list-events .item.odd .triangle {
-      width: 0;
-      height: 0;
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
-      border-left: 32px solid #fefdf8;
-      position: absolute;
-      bottom: 4px;
-      left: -1px; }
-  .home .events .text-block > div {
-    padding: 25px 40px; }
-  .home .events .text-block .title-event {
-    font-size: 16px;
-    font-family: "Museo Sans Cyrl 700";
-    text-transform: uppercase;
-    margin-top: 0; }
-    .home .events .text-block .title-event a {
-      color: #383634;
-      text-decoration: none;
-      -webkit-transition: all .3s;
-      -o-transition: all .3s;
-      transition: all .3s; }
-      .home .events .text-block .title-event a:hover {
-        color: #557a46;
-        text-decoration: none; }
-  .home .events .text-block .date {
-    color: #7f7e7d;
-    font-size: 12.5px;
-    font-family: "Museo Sans Cyrl 100";
-    display: inline-block;
-    margin-bottom: 15px; }
-  .home .events .text-block .content {
-    color: #383634;
-    font-size: 14px; }
-  .home .events .text-block .link-more {
-    color: #b98d5e;
-    font-size: 14px;
-    font-family: "Museo Sans Cyrl 700";
-    text-transform: uppercase;
-    margin-top: 40px;
-    display: inline-block;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s; }
-    .home .events .text-block .link-more:hover {
-      color: #557a46;
-      text-decoration: none; }
 
 .home .exposure .list-exposures {
   margin: 0;
@@ -924,6 +897,118 @@ section.partners {
         .page-scients-works .scients-life-block .text .list li:hover .text .title {
           color: #557a46; }
 
+.page-smi .content-block .list-events,
+.home .events .list-events {
+  margin: 0;
+  padding: 0;
+  z-index: 9; }
+  .page-smi .content-block .list-events li,
+  .home .events .list-events li {
+    list-style: none;
+    margin-left: 41px; }
+  .page-smi .content-block .list-events .item .col-sm-7,
+  .page-smi .content-block .list-events .item .col-sm-5,
+  .home .events .list-events .item .col-sm-7,
+  .home .events .list-events .item .col-sm-5 {
+    padding: 0; }
+  .page-smi .content-block .list-events .item .img-block,
+  .home .events .list-events .item .img-block {
+    position: relative; }
+    .page-smi .content-block .list-events .item .img-block img,
+    .home .events .list-events .item .img-block img {
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: 348px;
+      width: 348.5px; }
+  .page-smi .content-block .list-events .item.even,
+  .home .events .list-events .item.even {
+    background: #edece6; }
+    .page-smi .content-block .list-events .item.even .triangle,
+    .home .events .list-events .item.even .triangle {
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 32px solid #edece6;
+      position: absolute;
+      bottom: 4px;
+      right: -1px; }
+  .page-smi .content-block .list-events .item.odd .triangle,
+  .home .events .list-events .item.odd .triangle {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 32px solid #fefdf8;
+    position: absolute;
+    bottom: 4px;
+    left: -1px; }
+
+.page-smi .content-block .text-block > div,
+.home .events .text-block > div {
+  padding: 25px 40px; }
+
+.page-smi .content-block .text-block .title-event,
+.home .events .text-block .title-event {
+  font-size: 16px;
+  font-family: "Museo Sans Cyrl 700";
+  text-transform: uppercase;
+  margin-top: 0; }
+  .page-smi .content-block .text-block .title-event a,
+  .home .events .text-block .title-event a {
+    color: #383634;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .page-smi .content-block .text-block .title-event a:hover,
+    .home .events .text-block .title-event a:hover {
+      color: #557a46;
+      text-decoration: none; }
+
+.page-smi .content-block .text-block .date,
+.home .events .text-block .date {
+  color: #7f7e7d;
+  font-size: 12.5px;
+  font-family: "Museo Sans Cyrl 100";
+  display: inline-block;
+  margin-bottom: 15px; }
+
+.page-smi .content-block .text-block .content,
+.home .events .text-block .content {
+  color: #383634;
+  font-size: 14px; }
+
+.page-smi .content-block .text-block .link-more,
+.home .events .text-block .link-more {
+  color: #b98d5e;
+  font-size: 14px;
+  font-family: "Museo Sans Cyrl 700";
+  text-transform: uppercase;
+  margin-top: 40px;
+  display: inline-block;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .page-smi .content-block .text-block .link-more:hover,
+  .home .events .text-block .link-more:hover {
+    color: #557a46;
+    text-decoration: none; }
+
+.page-smi .sub-title {
+  margin-top: 37px; }
+  .page-smi .sub-title.left:after {
+    left: 185px; }
+
+.page-smi .content-block .list-events li {
+  margin-left: 0; }
+  .page-smi .content-block .list-events li .img-block {
+    overflow: hidden; }
+    .page-smi .content-block .list-events li .img-block img {
+      width: auto !important;
+      height: auto !important; }
+
 header .content-block .top-block {
   margin: 25px 0 0 0;
   padding: 0;
@@ -951,7 +1036,7 @@ header .content-block .top-bar {
   header .content-block .top-bar .list-switch-lang {
     margin: 0;
     padding: 0;
-    display: inline-block; }
+    display: inline; }
     header .content-block .top-bar .list-switch-lang li {
       display: table-cell; }
       header .content-block .top-bar .list-switch-lang li a {
@@ -968,11 +1053,13 @@ header .content-block .top-bar {
           color: #fff;
           background-color: #557a46; }
   header .content-block .top-bar .bvi-controller {
-    float: right;
     margin: 0;
-    padding: 9px 0; }
+    padding: 0 0 0 15px;
+    display: inline;
+    vertical-align: middle; }
     header .content-block .top-bar .bvi-controller li {
-      display: inline-block; }
+      display: inline;
+      vertical-align: middle; }
       header .content-block .top-bar .bvi-controller li i {
         color: #706e6e;
         font-size: 20px; }

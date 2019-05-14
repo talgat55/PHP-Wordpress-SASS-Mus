@@ -49,8 +49,6 @@
 
   .events
     background-color: #fefdf8
-
-
     .col-sm-9
       padding: 0
     .col-sm-3
@@ -59,88 +57,6 @@
         top: 50%
         right: 0
         transform: translateY(-50%)
-    .list-events
-      margin: 0
-      padding: 0
-      z-index: 9
-      li
-        list-style: none
-        margin-left: 41px
-      .item
-        .col-sm-7,
-        .col-sm-5
-          padding: 0
-
-        .img-block
-          position: relative
-          img
-            width: 100%
-            object-fit: cover
-            height: 348px
-            width: 348.5px
-
-        &.even
-          background: #edece6
-          .triangle
-            width: 0
-            height: 0
-            border-top: 15px solid transparent
-            border-bottom: 15px solid transparent
-            border-right: 32px solid #edece6
-            position: absolute
-            bottom: 4px
-            right: -1px
-        &.odd
-            .triangle
-              width: 0
-              height: 0
-              border-top: 15px solid transparent
-              border-bottom: 15px solid transparent
-              border-left: 32px solid #fefdf8
-              position: absolute
-              bottom: 4px
-              left: -1px
-
-    .text-block
-          > div
-            padding: 25px 40px
-          .title-event
-
-            font-size: 16px
-            font-family: $font_semibold
-            text-transform: uppercase
-            margin-top: 0
-            a
-              color: #383634
-              text-decoration: none
-              transition: all .3s
-              &:hover
-                color: $main_color
-                text-decoration: none
-
-
-          .date
-            color: #7f7e7d
-            font-size: 12.5px
-            font-family: $font_100
-            display: inline-block
-            margin-bottom: 15px
-          .content
-            color: #383634
-            font-size: 14px
-
-          .link-more
-            color: #b98d5e
-            font-size: 14px
-            font-family: $font_semibold
-            text-transform: uppercase
-            margin-top: 40px
-            display: inline-block
-            transition: all .3s
-            &:hover
-              color: $main_color
-              text-decoration: none
-
 
 //
 // Exposure
@@ -800,6 +716,102 @@ section.partners
             .text
               .title
                 color: $main_color
+//
+//
+//
+.page-smi .content-block,
+.home .events
+  .list-events
+    margin: 0
+    padding: 0
+    z-index: 9
+    li
+      list-style: none
+      margin-left: 41px
+    .item
+      .col-sm-7,
+      .col-sm-5
+        padding: 0
+      .img-block
+        position: relative
+        img
+          width: 100%
+          object-fit: cover
+          height: 348px
+          width: 348.5px
+      &.even
+        background: #edece6
+        .triangle
+          width: 0
+          height: 0
+          border-top: 15px solid transparent
+          border-bottom: 15px solid transparent
+          border-right: 32px solid #edece6
+          position: absolute
+          bottom: 4px
+          right: -1px
+      &.odd
+        .triangle
+          width: 0
+          height: 0
+          border-top: 15px solid transparent
+          border-bottom: 15px solid transparent
+          border-left: 32px solid #fefdf8
+          position: absolute
+          bottom: 4px
+          left: -1px
+  .text-block
+    > div
+      padding: 25px 40px
+    .title-event
+      font-size: 16px
+      font-family: $font_semibold
+      text-transform: uppercase
+      margin-top: 0
+      a
+        color: #383634
+        text-decoration: none
+        transition: all .3s
+        &:hover
+          color: $main_color
+          text-decoration: none
+    .date
+      color: #7f7e7d
+      font-size: 12.5px
+      font-family: $font_100
+      display: inline-block
+      margin-bottom: 15px
+    .content
+      color: #383634
+      font-size: 14px
+    .link-more
+      color: #b98d5e
+      font-size: 14px
+      font-family: $font_semibold
+      text-transform: uppercase
+      margin-top: 40px
+      display: inline-block
+      transition: all .3s
+      &:hover
+        color: $main_color
+        text-decoration: none
 
 
 
+//
+// Page SMI
+//
+.page-smi
+  .sub-title
+    margin-top: 37px
+    &.left:after
+      left: 185px
+  .content-block
+    .list-events
+      li
+        margin-left: 0
+        .img-block
+          overflow: hidden
+          img
+            width: auto!important
+            height: auto!important
