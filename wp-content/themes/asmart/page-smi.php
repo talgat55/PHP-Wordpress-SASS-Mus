@@ -33,7 +33,12 @@ get_header(); ?>
                                 $i = 0;
                                 while ($the_query->have_posts()) :
                                     $the_query->the_post();
+                                    $post_id = $the_query->post->ID;
                                     set_query_var('count', $i);
+
+                                    $link = get_field('link_smi',$post_id );
+                                    set_query_var('link_smi', $link);
+
                                     get_template_part('inc/item', 'event');
 
                                     $i++;

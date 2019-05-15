@@ -72,7 +72,15 @@ get_header(); ?>
                                         $arg = array(
                                             'posts_per_page' => 2,
                                             'post_type' => 'events',
-                                            'status' => 'publish'
+                                            'status' => 'publish',
+                                            'tax_query' => array(
+                                                array(
+                                                    'taxonomy' => 'events_cats',
+                                                    'field'    => 'slug',
+                                                    'terms'    => 'edu_events',
+                                                    'operator' => 'NOT EXISTS'
+                                                )
+                                            )
                                         );
 
                                         $the_query = new WP_Query($arg);
@@ -353,8 +361,15 @@ get_header(); ?>
 
                                         $arg = array(
                                             'posts_per_page' => 3,
-                                            'post_type' => 'edu_events',
-                                            'status' => 'publish'
+                                            'post_type' => 'events',
+                                            'status' => 'publish',
+                                            'tax_query' => array(
+                                                array(
+                                                    'taxonomy' => 'events_cats',
+                                                    'field'    => 'slug',
+                                                    'terms'    => 'edu_events'
+                                                )
+                                            )
                                         );
 
                                         $the_query = new WP_Query($arg);
