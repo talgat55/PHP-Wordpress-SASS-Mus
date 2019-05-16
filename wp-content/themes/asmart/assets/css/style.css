@@ -1013,6 +1013,15 @@ section.partners {
     color: #557a46;
     text-decoration: none; }
 
+.page-articles .sub-title,
+.single-events .sub-title {
+  margin-top: 37px;
+  display: inline-block;
+  padding-right: 10px; }
+  .page-articles .sub-title.left:after,
+  .single-events .sub-title.left:after {
+    left: 100%; }
+
 .page-smi .sub-title {
   margin-top: 37px; }
   .page-smi .sub-title.left:after {
@@ -1109,13 +1118,6 @@ section.partners {
     .page-collection .arrow-collection li a {
       display: inline-block; }
 
-.page-articles .sub-title {
-  margin-top: 37px;
-  display: inline-block;
-  padding-right: 10px; }
-  .page-articles .sub-title.left:after {
-    left: 100%; }
-
 .page-articles .col-sm-8 .content {
   padding: 0 !important; }
   .page-articles .col-sm-8 .content .list-events li {
@@ -1127,6 +1129,113 @@ section.partners {
         width: auto;
         max-height: 400px;
         min-width: 100%; }
+
+.single-events .content {
+  padding: 0 !important;
+  background-color: #f1f1f1; }
+  .single-events .content .img-block {
+    position: relative; }
+    .single-events .content .img-block .date {
+      color: #fff;
+      position: absolute;
+      font-family: "Museo Sans Cyrl 100";
+      padding: 8px 15px;
+      background-color: #557a46;
+      top: 14px;
+      left: 14px; }
+    .single-events .content .img-block .single-news-image {
+      max-width: 100%; }
+  .single-events .content .link-to-back {
+    display: inline-block;
+    background-color: #383634;
+    padding: 22px;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .single-events .content .link-to-back i {
+      color: #fff;
+      border: 1.5px solid #fff;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      padding: 1px 5px;
+      vertical-align: bottom;
+      display: inline-block; }
+    .single-events .content .link-to-back p {
+      margin-bottom: 0;
+      display: inline-block;
+      font-family: "Museo Sans Cyrl 700";
+      text-transform: uppercase;
+      padding-left: 15px; }
+    .single-events .content .link-to-back:hover {
+      background-color: #557a46; }
+  .single-events .content .content-wrapper {
+    padding: 45px; }
+    .single-events .content .content-wrapper .heading-single {
+      color: #383634;
+      font-size: 16px;
+      font-family: "Museo Sans Cyrl 700";
+      text-transform: uppercase;
+      margin-bottom: 40px; }
+
+.single-events .contact-block .content {
+  background: transparent;
+  padding: 15px 0 0 70px !important; }
+
+.single-events .single-events-carousel-wrapper {
+  position: relative; }
+  .single-events .single-events-carousel-wrapper .single-events-carousel .item {
+    position: relative; }
+    .single-events .single-events-carousel-wrapper .single-events-carousel .item img {
+      width: 100%; }
+    .single-events .single-events-carousel-wrapper .single-events-carousel .item .link-full {
+      cursor: pointer; }
+    .single-events .single-events-carousel-wrapper .single-events-carousel .item a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      width: 100%; }
+      .single-events .single-events-carousel-wrapper .single-events-carousel .item a div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+            -ms-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%); }
+        .single-events .single-events-carousel-wrapper .single-events-carousel .item a div img {
+          margin: 0 auto;
+          width: auto; }
+        .single-events .single-events-carousel-wrapper .single-events-carousel .item a div p {
+          margin-bottom: 0;
+          font-size: 13px;
+          font-family: "Museo Sans Cyrl 700";
+          text-transform: uppercase;
+          color: #fff; }
+    .single-events .single-events-carousel-wrapper .single-events-carousel .item:hover a {
+      opacity: 1; }
+  .single-events .single-events-carousel-wrapper .single-arrow {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    .single-events .single-events-carousel-wrapper .single-arrow a {
+      padding: 30px 10px;
+      background-color: #b98d5e;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .single-events .single-events-carousel-wrapper .single-arrow a:hover {
+        background-color: #557a46; }
 
 header .content-block .top-block {
   margin: 25px 0 0 0;

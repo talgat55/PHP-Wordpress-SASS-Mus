@@ -798,6 +798,15 @@ section.partners
         text-decoration: none
 
 
+.page-articles,
+.single-events
+  .sub-title
+    margin-top: 37px
+    display: inline-block
+    padding-right: 10px
+    &.left:after
+      left: 100%
+
 
 //
 // Page SMI
@@ -905,12 +914,6 @@ section.partners
 // Articles
 //
 .page-articles
-  .sub-title
-    margin-top: 37px
-    display: inline-block
-    padding-right: 10px
-    &.left:after
-      left: 100%
   .col-sm-8
     .content
       padding: 0!important
@@ -925,3 +928,111 @@ section.partners
               max-height: 400px
               min-width: 100%
 
+//
+// Single
+//
+.single-events
+  .content
+    padding: 0!important
+    background-color: #f1f1f1
+    .img-block
+      position: relative
+      .date
+        color: #fff
+        position: absolute
+        font-family: $font_100
+        padding: 8px 15px
+        background-color: $main_color
+        top: 14px
+        left: 14px
+      .single-news-image
+        max-width: 100%
+    .link-to-back
+      display: inline-block
+      background-color: #383634
+      padding: 22px
+      color: #fff
+      text-decoration: none
+      transition: all .3s
+      i
+        color: #fff
+        border: 1.5px solid #fff
+        -webkit-border-radius: 50%
+        border-radius: 50%
+        padding: 1px 5px
+        vertical-align: bottom
+        display: inline-block
+      p
+        margin-bottom: 0
+        display: inline-block
+        font-family: $font_semibold
+        text-transform: uppercase
+        padding-left: 15px
+      &:hover
+        background-color: $main_color
+
+
+    .content-wrapper
+      padding: 45px
+      .heading-single
+        color: #383634
+        font-size: 16px
+        font-family: $font_semibold
+        text-transform: uppercase
+        margin-bottom: 40px
+
+  .contact-block
+    .content
+      background: transparent
+      padding: 15px 0 0 70px!important
+
+  .single-events-carousel-wrapper
+    position: relative
+    .single-events-carousel
+      .item
+        position: relative
+        img
+          width: 100%
+        .link-full
+          cursor: pointer
+        a
+          position: absolute
+          top: 0
+          left: 0
+          height: 100%
+          background: rgba(0,0,0,.5)
+          opacity: 0
+          transition: all .3s
+          width: 100%
+          div
+            position: absolute
+            top: 50%
+            left: 50%
+            text-align: center
+            transform: translateY(-50%) translateX(-50%)
+            img
+              margin: 0 auto
+              width: auto
+            p
+              margin-bottom: 0
+              font-size: 13px
+              font-family: $font_semibold
+              text-transform: uppercase
+              color: #fff
+        &:hover
+          a
+            opacity: 1
+
+    .single-arrow
+      position: absolute
+      top: 50%
+      right: -15px
+      transform: translateY(-50%)
+      a
+        padding: 30px 10px
+        background-color: #b98d5e
+        -webkit-transition: all .3s
+        -o-transition: all .3s
+        transition: all .3s
+        &:hover
+          background-color: $main_color

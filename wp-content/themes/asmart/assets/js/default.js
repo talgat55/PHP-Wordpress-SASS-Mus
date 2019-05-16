@@ -34,6 +34,8 @@ jQuery(document).ready(function () {
     carouselHistorry();
     galleryHistory();
     sliderCollectionPage();
+    carouselSinglePage();
+    gallerySinglePage();
 
     // end redy function
 });
@@ -339,4 +341,41 @@ function sliderCollectionPage() {
 
 }
 
+//----------------------------------
+//   Carousel in single page
+//---------------------------------------
+function carouselSinglePage() {
+    "use strict";
+    var carouselClass = jQuery('.single-events-carousel');
+    if (carouselClass.length) {
+        carouselClass.slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            nextArrow: jQuery('.single-arrow .next'),
+            prevArrow: jQuery('.arrow-collection .prev'),
+            dots: false,
 
+            //   autoplay: true,
+        });
+
+    }
+
+}
+
+
+
+//----------------------------------
+//   gallery single page
+//---------------------------------------
+function gallerySinglePage() {
+    "use strict";
+    var singleClass = jQuery('.single-events-carousel');
+    if (singleClass.length) {
+        singleClass.lightGallery({
+            selector: '.link-full'
+        });
+
+    }
+
+}
