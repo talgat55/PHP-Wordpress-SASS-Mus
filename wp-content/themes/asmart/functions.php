@@ -3,6 +3,7 @@
 * Require Image resize
 */
 load_theme_textdomain('light', get_template_directory() . '/languages');
+
 /*
 * Register nav menu
 */

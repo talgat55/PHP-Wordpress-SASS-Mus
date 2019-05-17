@@ -94,7 +94,7 @@
                                     </li>
 
                                 </ul>
-
+                                <?php get_search_form( 'true' ); ?>
                                 <ul class="bvi-controller">
                                     <li>
                                         <a href="#"  title="Версия для слабовидящих" >

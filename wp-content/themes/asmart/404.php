@@ -11,25 +11,33 @@
  */
 
 get_header(); ?>
-    <div id="primary" class="content-area  ">
-        <div class="bredscrumb">
-            <h1 class="page-title-main">
-                404
-            </h1>
-        </div>
+
+    <div id="primary" class="content-area  page-collection ">
+
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="start-content">
-                        <h2 class="spec-title-h2"><?php _e( 'Страница не найдена', 'light' ); ?></h2>
+            <div class="row flex">
+                <div class="col-sm-4 col-xs-12   ">
+                    <div class="background lazy   right"
+                         data-src="<?php echo get_theme_file_uri('/assets/images/bg-collection.jpg') ?>"></div>
+                    <h1 class="sub-title  left">
+                        404
+                    </h1>
+
+
+                </div>
+                <div class="col-sm-8 col-xs-12   ">
+                    <div class="content">
                         <p class="error-page-text">
-                            Добро пожаловать на страницу 404! Вы находитесь здесь, потому что ввели адрес страницы, которая уже не существует или была перемещена по другому адресу
+                        <?php _e('  Добро пожаловать на страницу 404! Вы находитесь здесь, потому что ввели адрес страницы, которая уже не существует или была перемещена по другому адресу ', 'light') ?>
                         </p>
                     </div>
+
                 </div>
+
+
             </div>
+
         </div>
-
+        <?php get_template_part('inc/form'); ?>
     </div>
-
 <?php get_footer();

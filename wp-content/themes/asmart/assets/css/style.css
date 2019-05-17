@@ -178,6 +178,84 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
       .pagination ul .link-next i {
         margin-left: 5px; }
 
+.error404 .sub-title.left:after {
+  width: 700%; }
+
+.search-form {
+  display: inline-block; }
+  .search-form .wrapper {
+    width: 93px;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+            justify-content: start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+            align-items: center; }
+    .search-form .wrapper:hover {
+      width: 265px; }
+    .search-form .wrapper input {
+      border: none;
+      padding: 5px 17px;
+      font-size: 15px;
+      font-family: "Museo Sans Cyrl 500";
+      color: #557a46; }
+      .search-form .wrapper input::-webkit-input-placeholder {
+        font-size: 15px;
+        font-family: "Museo Sans Cyrl 500";
+        color: #557a46; }
+      .search-form .wrapper input:-moz-placeholder {
+        font-size: 15px;
+        font-family: "Museo Sans Cyrl 500";
+        color: #557a46; }
+      .search-form .wrapper input::-moz-placeholder {
+        font-size: 15px;
+        font-family: "Museo Sans Cyrl 500";
+        color: #557a46; }
+      .search-form .wrapper input:-ms-input-placeholder {
+        font-size: 15px;
+        font-family: "Museo Sans Cyrl 500";
+        color: #557a46; }
+    .search-form .wrapper button {
+      background: #edece6;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      border: none;
+      padding: 3.5px 10px; }
+      .search-form .wrapper button:hover {
+        opacity: .5; }
+
+.list-search-result {
+  margin: 0;
+  padding: 0; }
+  .list-search-result li {
+    list-style: none; }
+    .list-search-result li a {
+      font-family: "Museo Sans Cyrl 300";
+      font-size: 17px;
+      color: #557a46; }
+
 .home .about .bg-block .col-sm-4 {
   background-color: #557a46; }
 

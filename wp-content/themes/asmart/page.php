@@ -16,26 +16,36 @@
  */
 
 get_header(); ?>
+    <div id="primary" class="content-area  page-collection ">
 
-    <div id="primary" class="content-area  ">
-        <div class="bredscrumb">
-            <h1 class="page-title-main">
-                <?php echo get_the_title(); ?>
-            </h1>
-        </div>
         <div class="container">
-            <div class="row">
-                <div class="start-content">
-                    <?php
-                    while (have_posts()) : the_post();
+            <div class="row flex">
+                <div class="col-sm-4 col-xs-12   ">
+                    <div class="background lazy   right"
+                         data-src="<?php echo get_theme_file_uri('/assets/images/bg-collection.jpg') ?>"></div>
+                    <h1 class="sub-title  left">
+                        <?= get_the_title(); ?>
+                    </h1>
 
-                        the_content();
 
-                    endwhile;
-                    ?>
                 </div>
-            </div>
-        </div>
+                <div class="col-sm-8 col-xs-12   ">
+                    <div class="content">
+                        <?php
+                        while (have_posts()) : the_post();
 
+                            the_content();
+
+                        endwhile;
+                        ?>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <?php get_template_part('inc/form'); ?>
     </div>
 <?php get_footer();

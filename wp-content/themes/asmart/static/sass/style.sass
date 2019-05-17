@@ -192,6 +192,67 @@ div
       i
         margin-left: 5px
 
+.error404
+  .sub-title.left:after
+    width: 700%
+//
+// Search
+//
+.search-form
+  display: inline-block
+  .wrapper
+    width: 93px
+    transition: all .3s ease-in-out
+    overflow: hidden
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+    -webkit-flex-wrap: nowrap
+    -ms-flex-wrap: nowrap
+    flex-wrap: nowrap
+    -webkit-justify-content: center
+    -ms-flex-pack: start
+    justify-content: start
+    -webkit-align-content: stretch
+    -ms-flex-line-pack: stretch
+    align-content: stretch
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+    &:hover
+      width: 265px
+    input
+      border: none
+      padding: 5px 17px
+      font-size: 15px
+      font-family: $font_500
+      color: $main_color
+      +placeholder
+        font-size: 15px
+        font-family: $font_500
+        color: $main_color
+    button
+      background: #edece6
+      transition: all .3s
+      border: none
+      padding: 3.5px 10px
+      &:hover
+        opacity: .5
+
+.list-search-result
+  margin: 0
+  padding: 0
+  li
+    list-style: none
+    a
+      font-family: $font_regular
+      font-size: 17px
+      color: $main_color
+
+
 
 //@media  (min-width: 1000px)
 

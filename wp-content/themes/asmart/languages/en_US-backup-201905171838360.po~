@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Light\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-17 17:05+0000\n"
-"PO-Revision-Date: 2019-05-17 17:06+0000\n"
+"POT-Creation-Date: 2019-05-17 18:14+0000\n"
+"PO-Revision-Date: 2019-05-17 18:14+0000\n"
 "Last-Translator: admin <lightx_design@yahoo.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -76,43 +76,20 @@ msgstr "For children and students"
 msgid "Контакты"
 msgstr "Contacts"
 
-#: front-page.php:530 page-about.php:58
-msgid "Адрес:"
-msgstr "Address:"
-
-#: front-page.php:533 page-about.php:60
-msgid " 644099, Россия, г. Омск, ул. Достоевского, 1"
-msgstr "644099, Russia, Omsk, st. Dostoevsky, 1"
-
-#: front-page.php:551 page-about.php:68
-msgid "Телефон:"
-msgstr "Phone:"
-
-#: front-page.php:555 page-about.php:72
+#: 404.php:31
 msgid ""
-"<span>  Время работы: </span>\n"
-"                                            <p>с 10.00 до 18.00 – без "
-"перерывов.<br>\n"
-"                                                Выходной – понедельник.</p>"
+"  Добро пожаловать на страницу 404! Вы находитесь здесь, потому что ввели "
+"адрес страницы, которая уже не существует или была перемещена по другому "
+"адресу "
 msgstr ""
-"<span> Working hours: </span>\n"
-"                                            <p>с 10.00 до 18.00 –without "
-"breaks.<br>\n"
-"                                              Closed on Monday.</p>"
-
-#: front-page.php:590 page-about.php:47
-msgid "Мы в соцсетях"
-msgstr "We are in social networks"
-
-#: 404.php:24
-msgid "Страница не найдена"
-msgstr ""
+"Welcome to 404! You are here because you have entered the address of a page "
+"that no longer exists or has been moved to a different address."
 
 #: single-exhibitions.php:24
 msgid "Архив Выставок"
 msgstr "Exhibition Archive"
 
-#: single-exhibitions.php:52 functions.php:434 single-events.php:52
+#: single-exhibitions.php:52 functions.php:435 single-events.php:52
 msgid "назад"
 msgstr "prev"
 
@@ -141,7 +118,7 @@ msgstr ""
 msgid "Сайт разработан IT-company <span>ASMART</span>"
 msgstr "Site developed by IT-company <span> ASMART </span>"
 
-#: functions.php:464
+#: functions.php:465
 msgid "далее"
 msgstr "next"
 
@@ -161,7 +138,7 @@ msgstr "Event archive"
 msgid "г. Омск, ул. Достоевского, 1"
 msgstr "Omsk, st. Dostoevsky, 1"
 
-#: header.php:128
+#: header.php:112
 msgid ""
 "Омский государственный литературный музей\n"
 "                                    <span>им. Ф.М. Достоевского</span>"
@@ -181,6 +158,11 @@ msgstr "Media page about us"
 #. Name of the template
 msgid "Страница контактов"
 msgstr ""
+
+#: searchform.php:17
+msgctxt "placeholder"
+msgid "ПОИСК"
+msgstr "SEARCH"
 
 #. Name of the template
 msgid "Страница Научная работа"
@@ -217,6 +199,30 @@ msgid ""
 " Возникли вопросы?<br>\n"
 "                                    Мы ответим на все, что Вас интересует"
 msgstr "Any questions? <br>We will answer everything that interests you."
+
+#: inc/info-list.php:11
+msgid "Адрес:"
+msgstr "Address:"
+
+#: inc/info-list.php:13
+msgid " 644099, Россия, г. Омск, ул. Достоевского, 1"
+msgstr "644099, Russia, Omsk, st. Dostoevsky, 1"
+
+#: inc/info-list.php:21
+msgid "Телефон:"
+msgstr "Phone:"
+
+#: inc/info-list.php:25
+msgid ""
+"<span>  Время работы: </span>\n"
+"                                            <p>с 10.00 до 18.00 – без "
+"перерывов.<br>\n"
+"                                                Выходной – понедельник.</p>"
+msgstr ""
+"<span> Working hours: </span>\n"
+"                                            <p>from 10.00 to 18.00 –without "
+"breaks.<br>\n"
+"                                              Closed on Monday.</p>"
 
 #: inc/item-articles.php:39 inc/item-event.php:48
 msgid "Читать далее"
