@@ -21,7 +21,7 @@ get_header(); ?>
                     <div class="background lazy   right"
                          data-src="<?php echo get_theme_file_uri('/assets/images/single-bg.jpg') ?>"></div>
                     <h2 class="sub-title  left">
-                        <?php _e(' Архив мероприятий', 'light'); ?>
+                        <?php _e('Архив Выставок', 'light'); ?>
                     </h2>
 
 
@@ -52,7 +52,7 @@ get_header(); ?>
                                 <?php _e('назад', 'light'); ?>
                             </p>
                         </a>
-                        <?php   $array_gallery = get_field('gallery_edu_events', get_the_ID());
+                        <?php   $array_gallery = get_field('gallery_exhibitions', get_the_ID());
 
                         if(!empty($array_gallery)){
                         ?>

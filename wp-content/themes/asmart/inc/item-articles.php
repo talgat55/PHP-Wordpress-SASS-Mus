@@ -36,7 +36,7 @@ $i = get_query_var( 'count' );
             <h3 class="title-event"><a href="'.get_the_permalink($id).'" title="Перейти на  детальную страницу " >'.$title.'</a></h3>
             <div class="date">'.$date.'</div>
             <div class="content">'.mb_strimwidth(strip_tags($content), 0, 280, "...").'</div>
-            <a href="'.get_the_permalink($id).'" class="link-more" title="Перейти на детальную страницу  " >Читать далее</a>
+            <a href="'.get_the_permalink($id).'" class="link-more" title="Перейти на детальную страницу  " >'.__('Читать далее', 'light').'</a>
         </div> 
     ';
 

@@ -1,0 +1,172 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Light\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-17 10:41+0000\n"
+"PO-Revision-Date: 2019-05-17 10:41+0000\n"
+"Last-Translator: admin <lightx_design@yahoo.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-4.9.9"
+
+#: front-page.php:5
+msgid "Главная страница"
+msgstr ""
+
+#: front-page.php:19
+msgid "наш музей"
+msgstr ""
+
+#: front-page.php:107
+msgid "события"
+msgstr ""
+
+#: front-page.php:111
+msgid " Читать больше"
+msgstr ""
+
+#: front-page.php:135
+msgid "Экспозиции"
+msgstr ""
+
+#: front-page.php:162
+msgid "Казарма Омского острога"
+msgstr ""
+
+#: front-page.php:165
+msgid "Достоевский и Сибирь"
+msgstr ""
+
+#: front-page.php:168
+msgid "Писатели - Омичи"
+msgstr ""
+
+#: front-page.php:319
+msgid ""
+"Действующие\n"
+"                                        выставки"
+msgstr ""
+
+#: front-page.php:324 front-page.php:361
+msgid "Показать еще"
+msgstr ""
+
+#: front-page.php:353
+msgid ""
+"Культурно —\n"
+"                                        образовательные\n"
+"                                        мероприятия"
+msgstr ""
+
+#: front-page.php:358
+msgid " Для школьников и студентов"
+msgstr ""
+
+#: front-page.php:397
+msgid "подробнее"
+msgstr ""
+
+#: front-page.php:518
+msgid "Контакты"
+msgstr ""
+
+#: front-page.php:523
+msgid "Адрес:"
+msgstr ""
+
+#: front-page.php:526
+msgid " 644099, Россия, г. Омск, ул. Достоевского, 1"
+msgstr ""
+
+#: front-page.php:544
+msgid "Телефон:"
+msgstr ""
+
+#: front-page.php:548
+msgid ""
+"<span>  Время работы: </span>\n"
+"                                            <p>с 10.00 до 18.00 – без "
+"перерывов.<br>\n"
+"                                                Выходной – понедельник.</p>"
+msgstr ""
+
+#: front-page.php:583
+msgid "Мы в соцсетях"
+msgstr ""
+
+#: 404.php:24
+msgid "Страница не найдена"
+msgstr ""
+
+#. Name of the template
+msgid "Страница  администрации"
+msgstr ""
+
+#. Name of the template
+msgid "Страница Колекции"
+msgstr ""
+
+#. Name of the template
+msgid "Страница документов"
+msgstr ""
+
+#: footer.php:8
+msgid "Сайт разработан IT-company <span>ASMART</span>"
+msgstr ""
+
+#. Name of the template
+msgid "Страница истории"
+msgstr ""
+
+#. Name of the template
+msgid "Страница Записей"
+msgstr ""
+
+#: header.php:53
+msgid "г. Омск, ул. Достоевского, 1"
+msgstr ""
+
+#: header.php:127
+msgid ""
+"Омский государственный литературный музей\n"
+"                                    <span>им. Ф.М. Достоевского</span>"
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Результаты поиска: %s"
+msgstr ""
+
+#. Name of the template
+msgid "Страница СМИ о нас"
+msgstr ""
+
+#. Name of the template
+msgid "Страница контактов"
+msgstr ""
+
+#. Name of the template
+msgid "Страница Научная работа"
+msgstr ""
+
+#. Name of the theme
+msgid "Light"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"With a focus on business sites, it features multiple sections on the front "
+"page as well as widgets, navigation and social menus, a logo, and more. "
+"Personalize its asymmetrical grid with a custom color scheme and showcase "
+"your multimedia content with post formats. Our default theme for 2017 works "
+"great in many languages, for any abilities, and on any device."
+msgstr ""
+
+#. Author of the theme
+msgid "Asmart"
+msgstr ""

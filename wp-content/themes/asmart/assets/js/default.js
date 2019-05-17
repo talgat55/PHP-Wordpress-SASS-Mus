@@ -36,6 +36,7 @@ jQuery(document).ready(function () {
     sliderCollectionPage();
     carouselSinglePage();
     gallerySinglePage();
+    changeLangByClick();
 
     // end redy function
 });
@@ -379,3 +380,28 @@ function gallerySinglePage() {
     }
 
 }
+//----------------------------------
+//  Change lang by click
+//------------------------------------
+function changeLangByClick(){
+    "use strict";
+    var linkClass = '.list-switch-lang a';
+
+    jQuery('body').on('click', linkClass,function(){
+        jQuery(linkClass).removeClass('active');
+        jQuery(this).addClass('active');
+        console.log(jQuery(this).attr('data-type'));
+        if(jQuery(this).attr('data-type') == 'en'){
+            var redylink = window.location.protocol + "//" + window.location.host + '/en';
+            //var redylink = window.location.protocol + "//" + window.location.host + '/en' + window.location.pathname;
+
+        }else{
+            var redylink = window.location.protocol + "//" + window.location.host;
+
+        }
+
+        window.location.href = redylink;
+        return false;
+    });
+}
+

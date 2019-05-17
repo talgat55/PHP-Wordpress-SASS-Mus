@@ -45,7 +45,7 @@ if(get_query_var( 'link_smi' )){
             <h3 class="title-event"><a  '.$redyTarget.'  href="'.$redyLink.'" title="'.$titleText.'" >'.$title.'</a></h3>
             <div class="date">'.$date.'</div>
             <div class="content">'.mb_strimwidth(strip_tags($content), 0, 280, "...").'</div>
-            <a  '.$redyTarget.'  href="'.$redyLink.'" class="link-more" title="'.$titleText.'" >Читать далее</a>
+            <a  '.$redyTarget.'  href="'.$redyLink.'" class="link-more" title="'.$titleText.'" >'.__('Читать далее', 'light').'</a>
         </div> 
     ';
 

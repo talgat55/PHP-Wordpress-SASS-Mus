@@ -24,44 +24,62 @@ get_header(); ?>
 
 
                             <?php
+
+
+
                             $template = get_field('template_articles');
                             if ($template == 'events') {
-
-                                $redy_type = 'events';
-                                $template = ['tax_query' => [
-                                        [
-                                            'taxonomy' => 'events_cats',
+                                $arg = [
+                                    'posts_per_page' => 4,
+                                    'post_type' => 'events',
+                                    'orderby' => 'date',
+                                    'order' => 'ASC',
+                                    'status' => 'publish',
+                                    'tax_query' => array(
+                                        [ 'taxonomy' => 'events_cats',
                                             'field' => 'slug',
                                             'terms' => 'edu_events',
                                             'operator' => 'NOT EXISTS'
                                         ]
-                                    ]
+                                    )
                                 ];
 
                             } elseif ($template == 'archive') {
 
-                                $redy_type = 'events';
-                                $template = '';
+                                $arg = [
+                                    'posts_per_page' => 4,
+                                    'post_type' => 'events',
+                                    'orderby' => 'date',
+                                    'order' => 'ASC',
+                                    'status' => 'publish',
+                                ];
 
-                            } else {
-                                $redy_type = 'events';
-                                $template =  ['tax_query' => [
-                                    [
-                                        'taxonomy' => 'events_cats',
-                                        'field'    => 'slug',
-                                        'terms'    => 'edu_events'
-                                    ]
-                                ]
+                            } else  if ($template == 'exhibitions') {
+
+                                $arg = [
+                                    'posts_per_page' => 4,
+                                    'post_type' => 'exhibitions',
+                                    'orderby' => 'date',
+                                    'order' => 'ASC',
+                                    'status' => 'publish'
+                                ];
+                            }else {
+
+
+                                $arg = [
+                                    'posts_per_page' => 4,
+                                    'post_type' => 'events',
+                                    'orderby' => 'date',
+                                    'order' => 'ASC',
+                                    'status' => 'publish',
+                                    'tax_query' => array(
+                                        [ 'taxonomy' => 'events_cats',
+                                            'field' => 'slug',
+                                            'terms' => 'edu_events'
+                                        ]
+                                    )
                                 ];
                             }
-                            $arg = [
-                                'posts_per_page' => 4,
-                                'post_type' => $redy_type,
-                                'orderby' => 'date',
-                                'order' => 'ASC',
-                                'status' => 'publish'
-                                    . $template
-                            ];
 
                             $the_query = new WP_Query($arg);
                             $i = 0;

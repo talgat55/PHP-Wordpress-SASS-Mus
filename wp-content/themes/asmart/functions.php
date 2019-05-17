@@ -2,6 +2,7 @@
 /*
 * Require Image resize
 */
+load_theme_textdomain('light', get_template_directory() . '/languages');
 /*
 * Register nav menu
 */
@@ -430,7 +431,7 @@ function wpbeginner_numeric_posts_nav() {
 
     /** Previous Post Link */
     if ( get_previous_posts_link() )
-        printf( '<li class="link-prev">%s</li>' . "\n", get_previous_posts_link('<span><i class="fas fa-angle-left"></i> назад</span>') );
+        printf( '<li class="link-prev">%s</li>' . "\n", get_previous_posts_link('<span><i class="fas fa-angle-left"></i>'.__("назад", "light" ).' </span>') );
 
     /** Link to first page, plus ellipses if necessary */
     if ( ! in_array( 1, $links ) ) {
@@ -460,8 +461,40 @@ function wpbeginner_numeric_posts_nav() {
 
     /** Next Post Link */
     if ( get_next_posts_link() )
-        printf( '<li class="link-next">%s</li>' . "\n", get_next_posts_link('<span> далее <i class="fas fa-angle-right"></i></span>') );
+        printf( '<li class="link-next">%s</li>' . "\n", get_next_posts_link('<span> '.__("далее", "light" ).'  <i class="fas fa-angle-right"></i></span>') );
 
     echo '</ul></div>' . "\n";
 
+}
+
+
+function changeUrls($page){
+    if (empty($page)) {
+        return;
+    }
+    if (get_locale() == 'en_US') {
+        $locale = true;
+    } else {
+        $locale = false;
+    }
+
+    if($page == 'home'){
+        $addpath = $locale ? '/en' : '/';
+
+    } else if($page == 'events'){
+        $addpath = $locale ? '/en/archive-of-events/' : '/arhiv-sobytij/';
+
+    }else if($page == 'about'){
+        $addpath = $locale ? '/en/museum-history/' : '/arhiv-sobytij/';
+
+    }else if($page == 'exhibitions'){
+        $addpath = $locale ? '/en/archive-exhebitions/' : '/arhiv-vystavok';
+
+    }else if($page == 'edu_events'){
+        $addpath = $locale ? '/en/archive-of-cultural-educational-activities/' : '/arhiv-kulturno-obrazovatelnyh-meropriyatij/';
+
+    }
+
+
+    return $addpath;
 }

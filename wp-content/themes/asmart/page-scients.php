@@ -54,15 +54,13 @@ get_header(); ?>
 
                         foreach ($redyArr as $key => $value){
                             if($key == 'catalog'){
-                                $redyTitle = '«Сибирь литературная. XVIII-XXI века» ';
-                                $redyText  = 'Материалы Всероссийской<br> научно-практической<br> конференции.';
+                                $redyTitle =  __("«Сибирь литературная. XVIII-XXI века»", "light" );
+                                $redyText  =  __("Материалы Всероссийской<br> научно-практической<br> конференции.", "light" );
                             }elseif ($key =='museum'){
-                                $redyTitle = 'Омский литературный музей';
-                                $redyText  = '  —Тексты<br>
-                                                —Материалы<br>
-                                                —Исследования';
+                                $redyTitle = __('Омский литературный музей', "light" );
+                                $redyText  =  __(' —Тексты<br> —Материалы<br> —Исследования', "light" );
                             }else{
-                                $redyTitle = 'Электронные каталоги';
+                                $redyTitle = __('Электронные каталоги', "light" );
                                 $redyText  = ' ';
                             }
 

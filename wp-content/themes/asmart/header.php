@@ -27,12 +27,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="wrap  <?=get_locale(); ?>">
 <header>
     <?php
     $phone = get_field('phone_theme', 'option');
-    $adress = get_field('adress_theme', 'option');
     $redyPhone = $phone ? pregPhone($phone) : '';
-    $redyAdress = $adress ? $adress : '';
 
 
     ?>
@@ -51,7 +50,8 @@
                                         <img src="<?php echo get_theme_file_uri('/assets/images/geo.png') ?>"
                                              alt="иконка"/>
                                         <p>
-                                            <?= $redyAdress ?>
+
+                                            <?php _e('г. Омск, ул. Достоевского, 1', 'light'); ?>
                                         </p>
                                     </a>
                                 </li>
@@ -72,13 +72,23 @@
                                  data-src="<?php echo get_theme_file_uri('/assets/images/slide.jpg') ?>"></div>
                             <div class="top-bar">
                                 <ul class="list-switch-lang">
+                                    <?php
+                                    if (get_locale() == 'en_US') {
+                                        $classEng = 'class="active"';
+                                        $classRu = '';
+                                    } else {
+                                        $classRu = 'class="active"';
+                                        $classEng = '';
+                                    }
+
+                                    ?>
                                     <li>
-                                        <a href="#" class="active"  title="Русская вресия сайта">
+                                        <a href="#"  <?=$classRu;?>  data-type="ru"  title="Русская вресия сайта">
                                             RU
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#"  title="Английская версия сайта">
+                                        <a href="#"  <?=$classEng;?> data-type="en" title="Английская версия сайта">
                                             ENG
                                         </a>
                                     </li>
@@ -95,37 +105,14 @@
 
                             </div>
                             <div class="main-content">
-                                <ul class="soс-links">
-                                    <li>
-                                        <a href="#" >
-                                            <i class="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
 
-                                    <li>
-                                        <a href="#" >
-                                            <i class="fab fa-vk"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" >
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" >
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="gos-catalog-link" >
-                                            госкаталог.рф
-                                        </a>
-                                    </li>
-                                </ul>
+                                <?php  get_template_part('inc/soc-links'); ?>
                                 <div class="description">
-                                    Омский государственный литературный музей
-                                    <span>им. Ф.М. Достоевского</span>
+                                    <?php
+                                    _e('Омский государственный литературный музей
+                                    <span>им. Ф.М. Достоевского</span>', 'light' );
+                                    ?>
+
 
                                 </div>
                             </div>

@@ -30,7 +30,8 @@ get_header(); ?>
                     </div>
                     <div class="bottom-block">
                             <h4 class="title">
-                                Наиболее крупные архивы
+                                <?php _e('Наиболее крупные архивы', 'light'); ?>
+
                             </h4>
                         <div class="slider-wrapper">
                             <ul class="slider-collection">

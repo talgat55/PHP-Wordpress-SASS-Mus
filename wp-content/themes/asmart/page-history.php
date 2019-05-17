@@ -25,7 +25,8 @@ get_header(); ?>
                                     <div>
                                         <img  src="<?php echo get_theme_file_uri('/assets/images/search.png') ?>"    />
                                         <p>
-                                            Увеличить
+
+                                            <?php _e('Увеличить', 'light'); ?>
                                         </p>
                                     </div>
                                 </a>

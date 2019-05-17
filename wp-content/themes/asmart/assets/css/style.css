@@ -63,7 +63,8 @@
   font-size: 30px;
   color: #fff;
   text-transform: uppercase;
-  position: relative; }
+  position: relative;
+  display: inline-block; }
   .sub-title.left:after {
     content: "";
     display: block;
@@ -72,7 +73,9 @@
     background-color: #fff;
     position: absolute;
     right: 0;
-    top: 19px; }
+    left: 100%;
+    top: 19px;
+    margin-left: 20px; }
   .sub-title.right:after {
     content: "";
     display: block;
@@ -80,8 +83,9 @@
     width: 50vh;
     background-color: #fff;
     position: absolute;
-    right: 180px;
-    top: 19px; }
+    right: 100%;
+    top: 19px;
+    margin-right: 20px; }
 
 .main section {
   overflow: hidden; }
@@ -94,7 +98,6 @@
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
   .content.vertical-align.left {
-    right: auto;
     left: 0; }
 
 .flex {
@@ -226,6 +229,9 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
 
+.home .exposure .sub-title.left:after {
+  width: 150%; }
+
 .home .exposure .list-exposures {
   margin: 0;
   padding: 0; }
@@ -265,17 +271,16 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
       background-color: #557a46; }
 
 .home .exposure .sub-title.left:after {
-  right: auto;
-  left: 229px; }
+  right: auto; }
 
 .home .exposure .col-sm-8 {
   padding: 0; }
 
+.en_US .exposure .list-exposures .item .top-block .title {
+  padding-left: 5px; }
+
 .exhibitions .col-sm-8 {
   padding: 0; }
-
-.exhibitions .sub-title.right:after {
-  right: 261px; }
 
 .exhibitions .content .link-events {
   margin: 60px 0 0 auto;
@@ -583,9 +588,6 @@ section.partners {
 
 .page-history .sub-title {
   margin-top: 30px; }
-  .page-history .sub-title.left:after {
-    left: 275px;
-    top: 18px; }
 
 .page-history .mobile-carousel {
   display: none; }
@@ -655,8 +657,6 @@ section.partners {
 
 .page-administration .sub-title {
   margin-top: 37px; }
-  .page-administration .sub-title.left:after {
-    left: 300px; }
 
 .page-administration .list-administrations {
   margin: 0;
@@ -690,8 +690,6 @@ section.partners {
 
 .page-docs .sub-title {
   margin-top: 37px; }
-  .page-docs .sub-title.left:after {
-    left: 230px; }
 
 .page-docs .list-docs {
   margin: 0;
@@ -829,8 +827,6 @@ section.partners {
 
 .page-scients-works .sub-title {
   margin-top: 37px; }
-  .page-scients-works .sub-title.left:after {
-    left: 285px; }
 
 .page-scients-works .content {
   padding: 0 !important; }
@@ -1024,8 +1020,6 @@ section.partners {
 
 .page-smi .sub-title {
   margin-top: 37px; }
-  .page-smi .sub-title.left:after {
-    left: 185px; }
 
 .page-smi .content-block .list-events li {
   margin-left: 0; }
@@ -1039,8 +1033,6 @@ section.partners {
 
 .page-collection .sub-title {
   margin-top: 37px; }
-  .page-collection .sub-title.left:after {
-    left: 185px; }
 
 .page-collection .bottom-block .slider-wrapper {
   position: relative; }

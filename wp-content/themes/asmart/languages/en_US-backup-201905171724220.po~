@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Light\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-17 17:05+0000\n"
+"PO-Revision-Date: 2019-05-17 17:06+0000\n"
+"Last-Translator: admin <lightx_design@yahoo.com>\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-4.9.9"
+
+#: front-page.php:5
+msgid "Главная страница"
+msgstr "Home page"
+
+#: front-page.php:19
+msgid "наш музей"
+msgstr "our museum"
+
+#: front-page.php:112
+msgid "события"
+msgstr "events"
+
+#: front-page.php:117
+msgid " Читать больше"
+msgstr "Read more"
+
+#: front-page.php:141
+msgid "Экспозиции"
+msgstr "Exposure"
+
+#: front-page.php:168
+msgid "Казарма Омского острога"
+msgstr "The barracks of Omsk prison"
+
+#: front-page.php:171
+msgid "Достоевский и Сибирь"
+msgstr "Dostoevsky and Siberia"
+
+#: front-page.php:174
+msgid "Писатели - Омичи"
+msgstr "Writers - Omsk"
+
+#: front-page.php:280 front-page.php:404
+msgid "подробнее"
+msgstr "more"
+
+#: front-page.php:325
+msgid "Действующие<br>выставки"
+msgstr "Current<br> exhibitions"
+
+#: front-page.php:330 front-page.php:368
+msgid "Показать еще"
+msgstr "show more"
+
+#: front-page.php:359
+msgid ""
+"Культурно —\n"
+"                                        образовательные\n"
+"                                        мероприятия"
+msgstr ""
+"Cultural -\n"
+"                                        educational\n"
+"                                        activity"
+
+#: front-page.php:364
+msgid " Для школьников и студентов"
+msgstr "For children and students"
+
+#: front-page.php:525
+msgid "Контакты"
+msgstr "Contacts"
+
+#: front-page.php:530 page-about.php:58
+msgid "Адрес:"
+msgstr "Address:"
+
+#: front-page.php:533 page-about.php:60
+msgid " 644099, Россия, г. Омск, ул. Достоевского, 1"
+msgstr "644099, Russia, Omsk, st. Dostoevsky, 1"
+
+#: front-page.php:551 page-about.php:68
+msgid "Телефон:"
+msgstr "Phone:"
+
+#: front-page.php:555 page-about.php:72
+msgid ""
+"<span>  Время работы: </span>\n"
+"                                            <p>с 10.00 до 18.00 – без "
+"перерывов.<br>\n"
+"                                                Выходной – понедельник.</p>"
+msgstr ""
+"<span> Working hours: </span>\n"
+"                                            <p>с 10.00 до 18.00 –without "
+"breaks.<br>\n"
+"                                              Closed on Monday.</p>"
+
+#: front-page.php:590 page-about.php:47
+msgid "Мы в соцсетях"
+msgstr "We are in social networks"
+
+#: 404.php:24
+msgid "Страница не найдена"
+msgstr ""
+
+#: single-exhibitions.php:24
+msgid "Архив Выставок"
+msgstr "Exhibition Archive"
+
+#: single-exhibitions.php:52 functions.php:434 single-events.php:52
+msgid "назад"
+msgstr "prev"
+
+#: single-exhibitions.php:67 page-history.php:29 single-events.php:67
+msgid "Увеличить"
+msgstr "Zoom"
+
+#. Name of the template
+msgid "Страница  администрации"
+msgstr "Administration page"
+
+#. Name of the template
+msgid "Страница Колекции"
+msgstr ""
+
+#: page-collection.php:33
+msgid "Наиболее крупные архивы"
+msgstr ""
+"Largest archives\n"
+
+#. Name of the template
+msgid "Страница документов"
+msgstr ""
+
+#: footer.php:8
+msgid "Сайт разработан IT-company <span>ASMART</span>"
+msgstr "Site developed by IT-company <span> ASMART </span>"
+
+#: functions.php:464
+msgid "далее"
+msgstr "next"
+
+#. Name of the template
+msgid "Страница истории"
+msgstr ""
+
+#. Name of the template
+msgid "Страница Записей"
+msgstr ""
+
+#: single-events.php:24
+msgid " Архив мероприятий"
+msgstr "Event archive"
+
+#: header.php:54
+msgid "г. Омск, ул. Достоевского, 1"
+msgstr "Omsk, st. Dostoevsky, 1"
+
+#: header.php:128
+msgid ""
+"Омский государственный литературный музей\n"
+"                                    <span>им. Ф.М. Достоевского</span>"
+msgstr ""
+"Omsk State Literary Museum\n"
+"<span>them. F.M. Dostoevsky</span>"
+
+#: search.php:19
+#, php-format
+msgid "Результаты поиска: %s"
+msgstr ""
+
+#. Name of the template
+msgid "Страница СМИ о нас"
+msgstr "Media page about us"
+
+#. Name of the template
+msgid "Страница контактов"
+msgstr ""
+
+#. Name of the template
+msgid "Страница Научная работа"
+msgstr ""
+
+#: page-scients.php:57
+msgid "«Сибирь литературная. XVIII-XXI века»"
+msgstr "«Siberia is literary. XVIII-XXI century»"
+
+#: page-scients.php:58
+msgid "Материалы Всероссийской<br> научно-практической<br> конференции."
+msgstr "Materials of the Russian<br> scientific-practical<br>  conference."
+
+#: page-scients.php:60
+msgid "Омский литературный музей"
+msgstr "Omsk Literary Museum"
+
+#: page-scients.php:61
+msgid " —Тексты<br> —Материалы<br> —Исследования"
+msgstr "—Texts <br> —Materials <br> —Studies"
+
+#: page-scients.php:63
+msgid "Электронные каталоги"
+msgstr "Electronic catalogs"
+
+#: inc/form.php:27
+msgid ""
+"СВЯЖИТЕСЬ<br>\n"
+"                                    С НАМИ"
+msgstr "CONTACT <br>WITH US"
+
+#: inc/form.php:31
+msgid ""
+" Возникли вопросы?<br>\n"
+"                                    Мы ответим на все, что Вас интересует"
+msgstr "Any questions? <br>We will answer everything that interests you."
+
+#: inc/item-articles.php:39 inc/item-event.php:48
+msgid "Читать далее"
+msgstr "Read more"
+
+#. Name of the theme
+msgid "Light"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"With a focus on business sites, it features multiple sections on the front "
+"page as well as widgets, navigation and social menus, a logo, and more. "
+"Personalize its asymmetrical grid with a custom color scheme and showcase "
+"your multimedia content with post formats. Our default theme for 2017 works "
+"great in many languages, for any abilities, and on any device."
+msgstr ""
+
+#. Author of the theme
+msgid "Asmart"
+msgstr ""

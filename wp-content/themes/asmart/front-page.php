@@ -2,7 +2,7 @@
 
 
 get_header(); ?>
-    <h1 class="hide-title">Главная страница</h1>
+    <h1 class="hide-title"><?php _e('Главная страница', 'light'); ?></h1>
     <div class="main">
         <section class="about">
 
@@ -15,18 +15,20 @@ get_header(); ?>
                                      data-src="<?php echo get_theme_file_uri('/assets/images/bg2.jpg') ?>"></div>
                                 <div class="content">
                                     <h2 class="sub-title  left">
-                                        наш музей
+
+                                        <?php _e('наш музей', 'light'); ?>
                                     </h2>
                                     <div class="about">
-                                        <?php
-                                        $text = get_field('text_about_home', 'option');
-                                        echo $text;
-                                        ?>
 
+                                        <?php if (get_locale() == 'en_US') {  ?>
+                                            <?= get_field('text_about_home_en', 'option'); ?>
+                                        <?php }else{  ?>
+                                            <?= get_field('text_about_home', 'option'); ?>
+                                        <?php } ?>
                                     </div>
 
 
-                                    <a href="#" class="link-about" title="Перейти на страницу Нашего музея">
+                                    <a href="<?=changeUrls('about');?>" class="link-about" title="Перейти на страницу Нашего музея">
                                         <img src="<?php echo get_theme_file_uri('/assets/images/about-img.jpg') ?>"
                                              alt="картинка"/>
 
@@ -45,7 +47,12 @@ get_header(); ?>
                                         ?>
                                     </div>
                                     <div class="description">
-                                        <?= get_field('text2_about_home', 'option'); ?>
+                                        <?php if (get_locale() == 'en_US') {  ?>
+                                            <?= get_field('text2_about_home_en', 'option'); ?>
+                                        <?php }else{  ?>
+                                            <?= get_field('text2_about_home', 'option'); ?>
+                                        <?php } ?>
+
                                     </div>
                                 </div>
                             </div>
@@ -100,12 +107,14 @@ get_header(); ?>
                             <div class="col-sm-3 col-xs-12">
                                 <div class="background lazy"
                                      data-src="<?php echo get_theme_file_uri('/assets/images/bg3.jpg') ?>"></div>
-                                <div class="content">
+                                <div class="content text-right">
                                     <h2 class="sub-title  right">
-                                        события
+                                        <?php _e('события', 'light'); ?>
                                     </h2>
-                                    <a href="#" class="link-events" title="Перейти на страницу Событий">
-                                        Читать больше
+                                    <div class="clear"></div>
+                                    <a href="<?=changeUrls('events');?>" class="link-events" title="Перейти на страницу Событий">
+
+                                        <?php _e(' Читать больше', 'light'); ?>
                                     </a>
                                 </div>
 
@@ -126,9 +135,10 @@ get_header(); ?>
                             <div class="col-sm-4 col-xs-12">
                                 <div class="background lazy   right"
                                      data-src="<?php echo get_theme_file_uri('/assets/images/bg4.jpg') ?>"></div>
-                                <div class="content vertical-align left">
+                                <div class="content vertical-align left text-left">
                                     <h2 class="sub-title  left">
-                                        Экспозиции
+
+                                        <?php _e('Экспозиции', 'light'); ?>
                                     </h2>
 
 
@@ -155,13 +165,13 @@ get_header(); ?>
                                             $typeArray      = get_field('type_explosure', $post_id);
                                             switch ($typeArray):
                                                 case 'barracks':
-                                                    $redyTopblock = 'Казарма Омского острога';
+                                                    $redyTopblock = __('Казарма Омского острога', 'light');
                                                     break;
                                                 case 'dostsib':
-                                                    $redyTopblock = 'Достоевский и Сибирь';
+                                                    $redyTopblock = __('Достоевский и Сибирь', 'light');
                                                     break;
                                                 case 'writeomsk':
-                                                    $redyTopblock = 'Писатели - Омичи';
+                                                    $redyTopblock = __('Писатели - Омичи', 'light');
                                                     break;
                                                 default:
                                                     $redyTopblock = '';
@@ -170,6 +180,8 @@ get_header(); ?>
 
 
                                             ?>
+
+
                                             <li class="item  col-sm-4 col-xs-12">
                                                 <div class="top-block">
 
@@ -265,7 +277,7 @@ get_header(); ?>
 
                                                                 <div class="overlay-link">
                                                                 <a href="' . get_the_permalink($post_id) . '" class="link" >
-                                                                    подробнее
+                                                                    '.__('подробнее' , 'light').'
                                                                 </a>
                                                                 </div>
                                                                 
@@ -307,13 +319,16 @@ get_header(); ?>
                             <div class="col-sm-4 col-xs-12">
                                 <div class="background lazy   left"
                                      data-src="<?php echo get_theme_file_uri('/assets/images/bg5.jpg') ?>"></div>
-                                <div class="content vertical-align left">
+                                <div class="content vertical-align right">
                                     <h2 class="sub-title text-right  right">
-                                        Действующие
-                                        выставки
+
+                                        <?php _e('Действующие<br>выставки', 'light'); ?>
                                     </h2>
-                                    <a href="#" class="link-events" title="Перейти на страницу Событий">
-                                        Показать еще
+
+                                    <a href="<?=changeUrls('exhibitions');?>" class="link-events" title="Перейти на страницу выставок">
+
+                                        <?php _e('Показать еще', 'light'); ?>
+
                                     </a>
 
 
@@ -340,15 +355,17 @@ get_header(); ?>
                                      data-src="<?php echo get_theme_file_uri('/assets/images/bg6.jpg') ?>"></div>
                                 <div class="content vertical-align left">
                                     <h2 class="sub-title  left">
-                                        Культурно —
+
+                                        <?php _e('Культурно —
                                         образовательные
-                                        мероприятия
+                                        мероприятия', 'light'); ?>
                                     </h2>
                                     <p>
-                                        Для школьников и студентов
+                                        <?php _e(' Для школьников и студентов', 'light'); ?>
                                     </p>
-                                    <a href="#" class="link-events" title="Перейти на страницу Событий">
-                                        Показать еще
+
+                                    <a href="<?=changeUrls('edu_events');?>" class="link-events" title="Перейти на страницу Событий">
+                                        <?php _e('Показать еще', 'light'); ?>
                                     </a>
 
                                 </div>
@@ -384,7 +401,7 @@ get_header(); ?>
                                             <li class="item  col-sm-4 col-xs-12 relative">
                                                 <div class="overlay-link">
                                                     <a href="<?= get_the_permalink($post_id); ?>" class="link">
-                                                        подробнее
+                                                        <?php _e('подробнее', 'light'); ?>
                                                     </a>
                                                 </div>
                                                 <div class="carousel-exposure">
@@ -505,61 +522,11 @@ get_header(); ?>
                         <div class="col-sm-6 colxs-12 ">
                             <div class="contact-info-block">
                                 <h2 class="sub-title   ">
-                                    Контакты
+                                    <?php _e('Контакты', 'light'); ?>
                                 </h2>
                                 <div class="wrapper">
-                                    <ul class="list-info">
-                                        <li>
-                                            <span> Адрес: </span>
-                                            <p>
-                                                644099, Россия, г. Омск, ул. Достоевского, 1
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <span> E-mail: </span>
-                                            <a href="mailto:lit-museum@mail.ru">lit-museum@mail.ru</a>
-                                        </li>
-                                        <li>
-                                            <span> Телефон: </span>
-                                            <a href="tel: +73812242965"> +7 (3812) 24-29-65</a>
-                                        </li>
-                                        <li>
-                                            <span>  Время работы: </span>
-                                            <p>с 10.00 до 18.00 – без перерывов.<br>
-                                                Выходной – понедельник.</p>
-                                        </li>
-                                    </ul>
-                                    <ul class="soс-links">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fab fa-youtube"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#">
-                                                <i class="fab fa-vk"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="gos-catalog-link">
-                                                госкаталог.рф
-                                            </a>
-                                        </li>
-                                        <li class="last-soc-title">
-                                            Мы в соцсетях
-                                        </li>
-                                    </ul>
+                                    <?php  get_template_part('inc/info-list'); ?>
+                                    <?php  get_template_part('inc/soc-links'); ?>
 
                                 </div>
 
