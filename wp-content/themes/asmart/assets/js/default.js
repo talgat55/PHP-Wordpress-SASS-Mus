@@ -5,8 +5,7 @@
 jQuery(document).ready(function () {
     "use strict";
 
-
-    //
+     //
     //  fixed footer on bottom
     //
     var hh = jQuery('header').height(); // берем высоту шапки и суем в переменную hh

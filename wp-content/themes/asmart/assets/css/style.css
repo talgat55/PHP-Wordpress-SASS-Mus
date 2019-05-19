@@ -256,6 +256,48 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
       font-size: 17px;
       color: #557a46; }
 
+.bvi-body .history-arrow {
+  top: 16px; }
+
+.bvi-body .search-submit,
+.bvi-body #arrow-history-down {
+  background: #000 !important; }
+  .bvi-body .search-submit img,
+  .bvi-body #arrow-history-down img {
+    background: transparent !important; }
+
+.bvi-body .link-to-back i,
+.bvi-body .page-contacts #map,
+.bvi-body .page-collection .bottom-block,
+.bvi-body .page-articles .list-events .item.even .triangle,
+.bvi-body .page-smi .content-block .list-events .item.even .triangle,
+.bvi-body .home .events .list-events .item.even .triangle,
+.bvi-body .scients-life-block .img-block,
+.bvi-body .page-docs .img-block {
+  display: none !important; }
+
+.bvi-body .exposure {
+  display: none; }
+
+.bvi-body .exhibitions .overlay-link,
+.bvi-body .edu-events .overlay-link {
+  opacity: 1 !important; }
+
+.bvi-body input {
+  color: #000 !important; }
+  .bvi-body input::-webkit-input-placeholder {
+    color: #000 !important; }
+  .bvi-body input:-moz-placeholder {
+    color: #000 !important; }
+  .bvi-body input::-moz-placeholder {
+    color: #000 !important; }
+  .bvi-body input:-ms-input-placeholder {
+    color: #000 !important; }
+
+.bvi-body .pagination .link-prev i,
+.bvi-body .pagination .link-next i {
+  display: none !important; }
+
 .home .about .bg-block .col-sm-4 {
   background-color: #557a46; }
 

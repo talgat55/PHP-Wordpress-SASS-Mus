@@ -39,7 +39,7 @@ get_header(); ?>
                         ?>
                     </div>
                     <div class="history-arrow">
-                        <a href="#" class="next">
+                        <a id="arrow-history-down" href="#" class="next">
                             <img src="<?php echo get_theme_file_uri('/assets/images/arr-partners.png') ?>"
                                  alt="иконка"/>
                         </a>

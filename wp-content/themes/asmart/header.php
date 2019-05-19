@@ -97,7 +97,7 @@
                                 <?php get_search_form( 'true' ); ?>
                                 <ul class="bvi-controller">
                                     <li>
-                                        <a href="#"  title="Версия для слабовидящих" >
+                                        <a href="#" class="bvi-link bvi-open" title="Версия для слабовидящих">
                                             <i class="fas fa-eye"></i>
                                         </a>
                                     </li>
