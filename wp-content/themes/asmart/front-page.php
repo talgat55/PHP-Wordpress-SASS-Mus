@@ -68,9 +68,24 @@ get_header(); ?>
 
             <div class="clearfix">
                 <div class="content-block">
+
                     <div class="container">
                         <div class="row flex">
+                            <div class="mobile-block  col-xs-12">
+                                <div class="background lazy"
+                                     data-src="<?php echo get_theme_file_uri('/assets/images/bg3.jpg') ?>"></div>
+                                <div class="content text-right">
+                                    <h2 class="sub-title  right">
+                                        <?php _e('события', 'light'); ?>
+                                    </h2>
+                                    <div class="clear"></div>
+                                    <a href="<?=changeUrls('events');?>" class="link-events" title="Перейти на страницу Событий">
 
+                                        <?php _e(' Читать больше', 'light'); ?>
+                                    </a>
+                                </div>
+
+                            </div>
                             <div class="col-sm-9 col-xs-12 relative">
                                 <div class="content">
                                     <ul class="list-events clearfix relative">
@@ -104,7 +119,7 @@ get_header(); ?>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-3 col-xs-12">
+                            <div class="col-sm-3 col-xs-12 hidden-mobile">
                                 <div class="background lazy"
                                      data-src="<?php echo get_theme_file_uri('/assets/images/bg3.jpg') ?>"></div>
                                 <div class="content text-right">
@@ -245,6 +260,24 @@ get_header(); ?>
                 <div class="content-block">
                     <div class="container">
                         <div class="row flex">
+                            <div class="col-sm-4 col-xs-12 mobile-block">
+                                <div class="background lazy   left"
+                                     data-src="<?php echo get_theme_file_uri('/assets/images/bg5.jpg') ?>"></div>
+                                <div class="content vertical-align right">
+                                    <h2 class="sub-title text-right  right">
+
+                                        <?php _e('Действующие<br>выставки', 'light'); ?>
+                                    </h2>
+
+                                    <a href="<?=changeUrls('exhibitions');?>" class="link-events" title="Перейти на страницу выставок">
+
+                                        <?php _e('Показать еще', 'light'); ?>
+
+                                    </a>
+
+
+                                </div>
+                            </div>
                             <div class="col-sm-8 col-xs-12 relative">
                                 <div class="content">
                                     <ul class="list-exposures clearfix relative">
@@ -316,7 +349,7 @@ get_header(); ?>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12 hidden-mobile">
                                 <div class="background lazy   left"
                                      data-src="<?php echo get_theme_file_uri('/assets/images/bg5.jpg') ?>"></div>
                                 <div class="content vertical-align right">
@@ -333,7 +366,6 @@ get_header(); ?>
 
 
                                 </div>
-
                             </div>
 
                         </div>
@@ -470,11 +502,14 @@ get_header(); ?>
                         while ($the_query->have_posts()) :
                             $the_query->the_post();
                             $post_id = $the_query->post->ID;
-
+                            $url     = get_field('url_partner', $post_id);
                             ?>
                             <li class="item">
-                                <img src="<?= wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "partners-img")[0]; ?>"
-                                     alt="Изображение"/>
+                                <a target="_blank" href="<?=$url; ?>">
+                                    <img src="<?= wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "partners-img")[0]; ?>"
+                                         alt="Изображение"/>
+                                </a>
+
                             </li>
                         <?php
                         endwhile;
@@ -505,14 +540,10 @@ get_header(); ?>
         </section>
         <section class="maps-section relative">
             <div class="row">
-                <div class="col-sm-6 colxs-12 ">
+                <div class="col-sm-6 col-xs-12 ">
                     <div id="map"></div>
                 </div>￼
-
-
-                <div class="col-sm-6 colxs-12 bg-maps ">
-
-                </div>
+                <div class="col-sm-6 col-xs-12 bg-maps "></div>
             </div>
             <div class="content">
                 <div class="container">

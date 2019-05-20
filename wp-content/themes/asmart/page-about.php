@@ -10,7 +10,7 @@ get_header(); ?>
 
         <div class="container">
             <div class="row flex">
-                <div class="col-sm-4 col-xs-1  ">
+                <div class="col-sm-4 col-xs-12  ">
                     <div class="background lazy   right"
                          data-src="<?php echo get_theme_file_uri('/assets/images/bg-map.jpg') ?>"></div>
                     <h1 class="sub-title  left">

@@ -8,10 +8,16 @@
 ?>
 <ul class="list-info">
     <li>
+
+
         <span> <?php _e('Адрес:', 'light'); ?> </span>
         <p>
+            <a target="_blank" href="https://2gis.ru/omsk/search/%D0%A3%D0%BB.%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%201/firm/282003257698811?queryState=center%2F73.368585%2C54.983613%2Fzoom%2F18" >
+
             <?php _e(' 644099, Россия, г. Омск, ул. Достоевского, 1', 'light'); ?>
+            </a>
         </p>
+
     </li>
     <li>
         <span> E-mail: </span>

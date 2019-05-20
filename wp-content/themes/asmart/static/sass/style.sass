@@ -286,11 +286,256 @@ div
     .link-next
       i
         display: none!important
+.list-events .display-on-mobile,
+.mobile-block
+  display: none
 
+div.wpcf7-mail-sent-ok
+  color: #fff!important
+@media  (max-width: 1230px)
+  .page-articles .list-events li,
+  .page-smi .content-block .list-events li,
+  .home .events .list-events li
+    margin-left: 0!important
+    img
+      width: 100%!important
+@media  (max-width: 1200px)
+  .page-administration
+    .row.flex .col-sm-8 > .content
+      padding: 55px 15px 35px
+  .list-administrations li.item .text
+    padding: 0 15px!important
 
-//@media  (min-width: 1000px)
+@media  (max-width: 1024px)
+  footer
+    .footer-main-container li
+      padding-left: 0!important
+      padding-right: 30px
+      a
+        line-height: 30px
 
+  .about
+    .content-block
+      .col-sm-4
+        img
+          width: 100%
+  .exhibitions,
+  .events
+    .mobile-block
+      display: block
+      overflow: hidden
+      .content.text-right
+        text-align: center
+    .sub-title
+      margin-top: 20px
+      &.right:after
+        display: none
+    .hidden-mobile
+      display: none
+
+    .col-sm-9
+      width: 100%
+    .content .link-events
+      margin-top: 10px
+      z-index: 5
+      position: relative
+      margin-bottom: 30px
+  .edu-events,
+  .exhibitions,
+  .events,
+  .exposure
+    .row.flex
+      display: block
+  .edu-events,
+  .exhibitions,
+  .exposure
+    .col-sm-4,
+    .col-sm-8
+      width: 100%
+    .col-sm-4
+      overflow: hidden
+    .content.vertical-align
+      position: relative
+      transform: none!important
+      top: 0
+      text-align: center
+    .sub-title
+      margin: 20px 0
+      &.left:after
+        display: none
+
+  .edu-events,
+  .exhibitions
+    .sub-title
+      text-align: center
+    .content .link-events
+      margin: 0px auto 30px auto!important
+      display: table
+    .overlay-link
+      opacity: 1!important
+  .edu-events
+    .overlay-link
+      background: transparent!important
+      .link
+        color: #000!important
+        border-color: #000!important
+    .sub-title
+      margin-bottom: 10px!important
+    .content p
+      margin-bottom: 20px!important
+  .col-sm-8 .item-carousel img
+    width: auto!important
+    height: 360px!important
+    object-fit: cover
+    margin: 0 auto
+  .page-history
+    .history-carousel
+      padding-left: 0!important
+    .history-arrow
+      padding-left: 0!important
+      width: 100%!important
+  .history-carousel
+    .item
+      img
+        width: 100%!important
+      .link-full
+        width: 100%!important
+        img
+          width: auto!important
+
+  .page-administration
+    .list-administrations
+      li.item
+        display: block!important
+  .list-administrations li.item .text
+    padding: 15px!important
+  .page-articles,
+  .page-administration,
+  .page-smi
+    .row.flex
+      display: block!important
+    .sub-title.left:after
+      display: none!important
+    .sub-title
+      width: 100%
+      text-align: center
+    .col-sm-4,
+    .col-sm-8
+      width: 100%!important
+      overflow: hidden!important
+
+  .page-scients-works
+    .scients-life-block
+      height: auto!important
+      &.flex
+        display: block!important
+      .text,
+      .title-block
+        width: 100%!important
+    .row.flex .col-sm-8
+      padding-right: 0!important
+  .page-articles,
+  .page-smi
+    .row.flex
+      display: block!important
+    .col-sm-4,
+    .col-sm-8
+      width: 100%!important
+      overflow: hidden!important
+      padding-right: 0!important
+
+@media  (max-width: 768px)
+  .list-events
+    .display-on-mobile
+      display: block!important
+    .hide-on-mobile
+      display: none!important
+
+  #mobile-toggle
+    display: inline-block!important
+  header
+
+    .content-block
+      #menu-main
+        display: none!important
+      .row.flex
+        display: block
+      .top-block
+        margin: 15px 0 15px 0!important
+        li
+          text-align: center
+
+      .top-bar
+        .search-form
+          display: none
+  .contact-section
+    .contact-block
+      .content
+        text-align: center
+        padding-left: 0!important
+  .maps-section .content
+    top: 450px!important
+
+  footer .footer-main-container
+    width: 90%!important
+    margin: 0 auto!important
+    li
+      text-align: center
+      float: left
+      width: 50%
+      padding-right: 0!important
+
+  .single-events,
+  .page-template,
+  .page-history
+    .row.flex
+      display: block!important
+    .sub-title.left:after
+      display: none!important
+    .sub-title
+      width: 100%
+      text-align: center
+    .history-carousel
+      padding-top: 0!important
+
+  .single-events .col-sm-8
+    padding-right: 0!important
+  .page-collection .col-sm-8
+    padding-right: 0!important
+
+  .page-contacts .soс-links
+    text-align: center!important
+  .page-contacts .soс-links li
+    display: inline-block!important
+@media  (max-width: 600px)
+
+  .page-collection .bottom-block .slider-collection li .flex
+    display: block!important
+  .maps-section
+    .content
+      .wrapper
+        display: block!important
+
+    .soс-links li
+      display: inline-block
+      a
+        margin-left: 0!important
+        margin-right: 10px!important
+        height: 24px
+  .home .about .col-sm-8 .content .images img
+    width: 100%!important
+    margin: 0 0 10px 0 !important
+  .maps-section .soс-links
+    text-align: left!important
+  .content-area .row.flex .col-sm-8 > .content
+    padding: 55px 15px 35px
 
 @import "main.sass"
 @import "header.sass"
 @import "footer.sass"
+@media  (max-width: 600px)
+  .page-contacts
+    .col-sm-8
+      padding-right: 0!important
+    .content
+      padding: 44px 20px !important

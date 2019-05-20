@@ -54,10 +54,16 @@ $i = get_query_var( 'count' );
             <?=$text; ?>
         </div>
     <?php } else {  ?>
+        <div class="<?=$imgClass; ?> col-sm-5 col-xs-12 display-on-mobile ">
+            <a href="<?=get_the_permalink($id); ?>"  title="Перейти на детальную страницу" >
+                <?=$image; ?>
+            </a>
+            <span class="triangle"></span>
+        </div>
         <div class="<?=$textClass; ?>  col-sm-7 col-xs-12">
             <?=$text; ?>
         </div>
-        <div class="<?=$imgClass; ?> col-sm-5 col-xs-12">
+        <div class="<?=$imgClass; ?> col-sm-5 col-xs-12 hide-on-mobile">
             <a href="<?=get_the_permalink($id); ?>"  title="Перейти на детальную страницу" >
                 <?=$image; ?>
             </a>

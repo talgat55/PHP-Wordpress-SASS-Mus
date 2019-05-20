@@ -35,6 +35,11 @@
 
 
     ?>
+    <div class="mobile-bar">
+        <?php wp_nav_menu('container=div&menu_id=menu-main&menu_class=mobile-main-container clearfix&theme_location=top_menu'); ?>
+        <?php get_search_form( 'true' ); ?>
+
+    </div>
     <div class="clearfix relative">
 
         <div class="clearfix">
@@ -42,11 +47,16 @@
                 <div class="container">
                     <div class="row flex">
                         <div class="col-sm-4 col-xs-12">
+                            <a id="mobile-toggle" href="#menu" class="mobile-toggle hamburger hamburger--collapse hamburger--3dx  ">
+                                 <span class="hamburger-box">
+                                     <span class="hamburger-inner"></span>
+                                 </span>
+                            </a>
                             <div class="header-bg-one lazy"
                                  data-src="<?php echo get_theme_file_uri('/assets/images/bg1.jpg') ?>"></div>
                             <ul class="top-block">
                                 <li>
-                                    <a href="">
+                                    <a target="_blank" href="https://2gis.ru/omsk/search/%D0%A3%D0%BB.%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%201/firm/282003257698811?queryState=center%2F73.368585%2C54.983613%2Fzoom%2F18">
                                         <img src="<?php echo get_theme_file_uri('/assets/images/geo.png') ?>"
                                              alt="иконка"/>
                                         <p>

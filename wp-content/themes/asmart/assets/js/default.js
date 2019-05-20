@@ -35,10 +35,19 @@ jQuery(document).ready(function () {
     sliderCollectionPage();
     carouselSinglePage();
     gallerySinglePage();
+    mobileMenu();
     changeLangByClick();
+    phoneMask();
+
 
     // end redy function
 });
+
+jQuery( window ).load(function() {
+    scrollToAnimate();
+});
+
+
 //
 //  Modal
 //
@@ -141,7 +150,31 @@ function carouselParthers() {
             slidesToScroll: 1,
             nextArrow: jQuery('.partner-arrow .next'),
             prevArrow: jQuery('.partner-arrow .prev'),
-            dots: true
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+
+            ]
 
             //   autoplay: true,
         });
@@ -293,8 +326,35 @@ function carouselHistorry() {
             dots: false,
             lazyLoad: 'ondemand',
             vertical: true,
-            verticalSwiping: true
+            verticalSwiping: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        vertical: false,
+                        verticalSwiping: false
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        vertical: false,
+                        verticalSwiping: false
+                    }
+                }
 
+            ]
             //   autoplay: true,
         });
 
@@ -402,5 +462,47 @@ function changeLangByClick(){
         window.location.href = redylink;
         return false;
     });
+}
+
+//----------------------------------
+//  Mobile Menu
+//------------------------------------
+function mobileMenu(){
+    "use strict";
+    var linkClass = '#mobile-toggle';
+    var mobileClass = '.mobile-bar';
+
+    jQuery('body').on('click', linkClass,function(){
+        jQuery(this).toggleClass('is-active');
+        jQuery(mobileClass).toggleClass('is-active');
+        return false;
+    });
+}
+
+//----------------------------------
+//  Input phone field Mask
+//------------------------------------
+function phoneMask(){
+    "use strict";
+    let phone_class = jQuery('.phone-input');
+    if(phone_class.length){
+        phone_class.inputmask({"mask": "+7 (999) 999-9999"});
+
+    }
+}
+
+//----------------------------------
+//  scroll to element
+//------------------------------------
+function scrollToAnimate(){
+    "use strict";
+    let homeClass = jQuery('.home');
+    if(homeClass.length == 0){
+
+        jQuery('html, body').animate({
+            scrollTop: jQuery("#primary").offset().top
+        }, 800);
+    }
+
 }
 
