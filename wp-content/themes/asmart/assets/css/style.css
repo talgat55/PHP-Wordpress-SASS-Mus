@@ -398,7 +398,7 @@ div.wpcf7-mail-sent-ok {
   .exhibitions .overlay-link {
     opacity: 1 !important; }
   .edu-events .overlay-link {
-    background: transparent !important; }
+    background: rgba(255, 255, 255, 0.5) !important; }
     .edu-events .overlay-link .link {
       color: #000 !important;
       border-color: #000 !important; }
@@ -541,7 +541,15 @@ div.wpcf7-mail-sent-ok {
   .maps-section .soс-links {
     text-align: left !important; }
   .content-area .row.flex .col-sm-8 > .content {
-    padding: 55px 15px 35px; } }
+    padding: 55px 15px 35px; }
+  header .content-block .main-content .soс-links li a {
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 10px !important; }
+  .edu-events .col-sm-4 {
+    padding: 0 !important; }
+  .edu-events .sub-title {
+    width: 100% !important; } }
 
 .home .about .bg-block .col-sm-4 {
   background-color: #557a46; }
@@ -1760,7 +1768,7 @@ header .content-block nav {
   position: fixed;
   top: 20px;
   display: none;
-  left: 20px;
+  left: 10px;
   -webkit-transition: all .6s;
   -o-transition: all .6s;
   transition: all .6s;

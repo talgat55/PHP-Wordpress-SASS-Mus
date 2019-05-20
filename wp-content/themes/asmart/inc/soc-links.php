@@ -25,7 +25,8 @@
     </li>
     <li>
         <a target="_blank" href="https://www.instagram.com/litmuseum/" >
-            <i class="fab fa-instagram"></i>
+            <img class="main" src="<?php echo get_theme_file_uri('/assets/images/izi_treval.png') ?>"  alt="иконка"/>
+            <img class="hover" src="<?php echo get_theme_file_uri('/assets/images/izi_treval_hover.png') ?>"  alt="иконка"/>
         </a>
     </li>
     <li>

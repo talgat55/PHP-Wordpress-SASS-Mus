@@ -94,7 +94,6 @@ function lasyLoad() {
 //   Carousel Expouse
 //---------------------------------------
 
-
 function exposureCarousel() {
     "use strict";
     var carouselClass = '.carousel-exposure';
@@ -309,6 +308,7 @@ function map() {
 
     }
 }
+
 
 //----------------------------------
 //   Carousel in history page
