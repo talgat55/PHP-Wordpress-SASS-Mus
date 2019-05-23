@@ -132,6 +132,9 @@
 div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
   color: #fff; }
 
+.page-collection.page-main .sub-title.left {
+  word-break: break-all !important; }
+
 .pagination {
   margin: 0;
   padding: 0;
@@ -322,6 +325,10 @@ div.wpcf7-mail-sent-ok {
     padding: 0 15px !important; } }
 
 @media (max-width: 1024px) {
+  .content-block .main-content .soс-links li a {
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 10px !important; }
   footer .footer-main-container li {
     padding-left: 0 !important;
     padding-right: 30px; }
@@ -354,11 +361,14 @@ div.wpcf7-mail-sent-ok {
     z-index: 5;
     position: relative;
     margin-bottom: 30px; }
+  .page-main .row.flex,
   .edu-events .row.flex,
   .exhibitions .row.flex,
   .events .row.flex,
   .exposure .row.flex {
     display: block; }
+  .page-main .col-sm-4,
+  .page-main .col-sm-8,
   .edu-events .col-sm-4,
   .edu-events .col-sm-8,
   .exhibitions .col-sm-4,
@@ -366,10 +376,12 @@ div.wpcf7-mail-sent-ok {
   .exposure .col-sm-4,
   .exposure .col-sm-8 {
     width: 100%; }
+  .page-main .col-sm-4,
   .edu-events .col-sm-4,
   .exhibitions .col-sm-4,
   .exposure .col-sm-4 {
     overflow: hidden; }
+  .page-main .content.vertical-align,
   .edu-events .content.vertical-align,
   .exhibitions .content.vertical-align,
   .exposure .content.vertical-align {
@@ -379,10 +391,12 @@ div.wpcf7-mail-sent-ok {
             transform: none !important;
     top: 0;
     text-align: center; }
+  .page-main .sub-title,
   .edu-events .sub-title,
   .exhibitions .sub-title,
   .exposure .sub-title {
     margin: 20px 0; }
+    .page-main .sub-title.left:after,
     .edu-events .sub-title.left:after,
     .exhibitions .sub-title.left:after,
     .exposure .sub-title.left:after {
@@ -542,14 +556,12 @@ div.wpcf7-mail-sent-ok {
     text-align: left !important; }
   .content-area .row.flex .col-sm-8 > .content {
     padding: 55px 15px 35px; }
-  header .content-block .main-content .soс-links li a {
-    margin-bottom: 10px !important;
-    margin-left: 0 !important;
-    margin-right: 10px !important; }
   .edu-events .col-sm-4 {
     padding: 0 !important; }
   .edu-events .sub-title {
-    width: 100% !important; } }
+    width: 100% !important; }
+  .page-contacts .soс-links li a {
+    height: 23px; } }
 
 .home .about .bg-block .col-sm-4 {
   background-color: #557a46; }
@@ -892,7 +904,7 @@ section.partners {
     section.partners .list-partners .slick-dots {
       right: 196px;
       width: auto;
-      bottom: -20px; }
+      bottom: -23px; }
       section.partners .list-partners .slick-dots li {
         width: 6px;
         height: 6px; }
@@ -1165,6 +1177,9 @@ section.partners {
       .page-contacts .soс-links li .gos-catalog-link:hover,
       .maps-section .soс-links li .gos-catalog-link:hover {
         color: #fff; }
+      .page-contacts .soс-links li .gos-catalog-link span,
+      .maps-section .soс-links li .gos-catalog-link span {
+        text-transform: lowercase; }
   .page-contacts .soс-links li.last-soc-title,
   .maps-section .soс-links li.last-soc-title {
     text-transform: uppercase;
@@ -1676,20 +1691,27 @@ header .content-block .main-content {
         margin-left: 12px;
         -webkit-transition: all .3s;
         -o-transition: all .3s;
-        transition: all .3s; }
+        transition: all .3s;
+        height: 22px; }
         header .content-block .main-content .soс-links li a:hover {
           background-color: #557a46; }
         header .content-block .main-content .soс-links li a i {
           color: #000;
-          font-size: 18px;
+          font-size: 14px;
           padding: 3px;
           vertical-align: middle; }
+        header .content-block .main-content .soс-links li a i.fab.fa-facebook-f {
+          padding: 3px 8px; }
+      header .content-block .main-content .soс-links li .image-ext {
+        padding: 0 6px; }
       header .content-block .main-content .soс-links li .gos-catalog-link {
         text-decoration: none;
         color: #000;
         text-transform: uppercase;
         font-family: "Museo Sans Cyrl 700";
         padding: 0 8px; }
+        header .content-block .main-content .soс-links li .gos-catalog-link span {
+          text-transform: lowercase; }
     header .content-block .main-content .soс-links li:first-child a {
       margin-left: 0; }
   header .content-block .main-content .description {
@@ -1789,7 +1811,7 @@ header .content-block nav {
         font-size: 18px;
         font-family: "Museo Sans Cyrl 300"; }
   #mobile-toggle.is-active {
-    left: 0 !important; }
+    left: 10px !important; }
 
 .hamburger-box {
   position: relative;
@@ -1805,7 +1827,7 @@ header .content-block nav {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: #fff;
   -webkit-border-radius: 4px;
           border-radius: 4px;
   position: absolute;
@@ -1865,13 +1887,13 @@ header .content-block nav {
 .hamburger.is-active:hover {
   opacity: 0.7; }
 
+.hamburger-inner, .hamburger-inner::after,
+.hamburger-inner::before {
+  background-color: #fff; }
+
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000; }
-
-.hamburger-inner, .hamburger-inner::after,
-.hamburger-inner::before {
   background-color: #000; }
 
 .hamburger--3dx .hamburger-box {

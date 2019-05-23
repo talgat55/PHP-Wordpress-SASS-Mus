@@ -13,7 +13,7 @@
 get_header(); ?>
 
 
-    <div id="primary" class="content-area  page-collection ">
+    <div id="primary" class="content-area  page-collection  page-main">
 
         <div class="container">
             <div class="row flex">

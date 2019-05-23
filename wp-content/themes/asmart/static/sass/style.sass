@@ -144,6 +144,9 @@ div
   &.wpcf7-validation-errors,
   &.wpcf7-acceptance-missing
     color: #fff
+.page-collection.page-main
+  .sub-title.left
+    word-break: break-all!important
 //
 // Pagination
 //
@@ -307,6 +310,13 @@ div.wpcf7-mail-sent-ok
     padding: 0 15px!important
 
 @media  (max-width: 1024px)
+  header
+  .content-block
+    .main-content
+      .soс-links li a
+        margin-bottom: 10px!important
+        margin-left: 0!important
+        margin-right: 10px!important
   footer
     .footer-main-container li
       padding-left: 0!important
@@ -340,12 +350,14 @@ div.wpcf7-mail-sent-ok
       z-index: 5
       position: relative
       margin-bottom: 30px
+  .page-main,
   .edu-events,
   .exhibitions,
   .events,
   .exposure
     .row.flex
       display: block
+  .page-main,
   .edu-events,
   .exhibitions,
   .exposure
@@ -529,18 +541,14 @@ div.wpcf7-mail-sent-ok
     text-align: left!important
   .content-area .row.flex .col-sm-8 > .content
     padding: 55px 15px 35px
-  header
-    .content-block
-      .main-content
-        .soс-links li a
-          margin-bottom: 10px!important
-          margin-left: 0!important
-          margin-right: 10px!important
+
   .edu-events
     .col-sm-4
       padding: 0!important
     .sub-title
       width: 100%!important
+  .page-contacts .soс-links li a
+    height: 23px
 
 @import "main.sass"
 @import "header.sass"

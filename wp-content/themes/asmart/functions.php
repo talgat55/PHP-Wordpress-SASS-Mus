@@ -489,10 +489,10 @@ function changeUrls($page){
         $addpath = $locale ? '/en' : '/';
 
     } else if($page == 'events'){
-        $addpath = $locale ? '/en/archive-of-events/' : '/arhiv-sobytij/';
+        $addpath = $locale ? '/en/museum-history/' : '/stranicza-istorii/';
 
     }else if($page == 'about'){
-        $addpath = $locale ? '/en/museum-history/' : '/arhiv-sobytij/';
+        $addpath = $locale ? '/en/museum-history/' : '/stranicza-istorii/';
 
     }else if($page == 'exhibitions'){
         $addpath = $locale ? '/en/archive-exhebitions/' : '/arhiv-vystavok';

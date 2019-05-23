@@ -32,4 +32,10 @@
                                             <p>с 10.00 до 18.00 – без перерывов.<br>
                                                 Выходной – понедельник.</p>', 'light'); ?>
     </li>
+    <?php  if (  is_page_template('page-about.php')) {  ?>
+        <li>
+            <span> <?php _e('Прейскурант музея:', 'light'); ?> </span>
+            <a href="<?= get_field('file_price', 'option'); ?>">скачать</a>
+        </li>
+    <?php } ?>
 </ul>

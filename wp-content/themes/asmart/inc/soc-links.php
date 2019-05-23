@@ -12,7 +12,6 @@
             <i class="fab fa-youtube"></i>
         </a>
     </li>
-
     <li>
         <a target="_blank" href="https://vk.com/museum.dostoevsky" >
             <i class="fab fa-vk"></i>
@@ -23,10 +22,20 @@
             <i class="fab fa-twitter"></i>
         </a>
     </li>
+       <li>
+        <a target="_blank" href="https://www.facebook.com/litmuseum.omsk" >
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </li>
+
     <li>
-        <a target="_blank" href="https://www.instagram.com/litmuseum/" >
-            <img class="main" src="<?php echo get_theme_file_uri('/assets/images/izi_treval.png') ?>"  alt="иконка"/>
-            <img class="hover" src="<?php echo get_theme_file_uri('/assets/images/izi_treval_hover.png') ?>"  alt="иконка"/>
+        <a target="_blank" href="https://izi.travel/ru/bead-omskiy-gosudarstvennyy-literaturnyy-muzey-imeni-f-m-dostoevskogo/ru" class="gos-catalog-link" >
+            <span>izi</span>.TRAVEL
+        </a>
+    </li>
+     <li>
+        <a target="_blank" href="https://www.culture.ru/institutes/10374/omskii-gosuda"  class="gos-catalog-link" >
+            КУЛЬТУРА.РФ
         </a>
     </li>
     <li>
@@ -35,3 +44,4 @@
         </a>
     </li>
 </ul>
+

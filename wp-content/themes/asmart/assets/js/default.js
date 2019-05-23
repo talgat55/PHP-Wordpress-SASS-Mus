@@ -234,43 +234,7 @@ function map() {
                     "featureType": "all",
                     "elementType": "labels.icon",
                     "stylers": [{"visibility": "off"}]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"color": "#fefefe"}, {"lightness": 20}]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
-                }, {
-                    "featureType": "landscape",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#f5f5f5"}, {"lightness": 20}]
-                }, {
-                    "featureType": "landscape.natural",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"saturation": "0"}]
-                }, {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#f5f5f5"}, {"lightness": 21}]
-                }, {
-                    "featureType": "poi.park",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#dedede"}, {"lightness": 21}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"color": "#ffffff"}, {"lightness": 17}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{"color": "#ffffff"}, {"lightness": 29}, {"weight": 0.2}]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#ffffff"}, {"lightness": 18}]
-                }, {
+                },   {
                     "featureType": "road.local",
                     "elementType": "geometry",
                     "stylers": [{"color": "#ffffff"}, {"lightness": 16}]
@@ -497,12 +461,21 @@ function phoneMask(){
 function scrollToAnimate(){
     "use strict";
     let homeClass = jQuery('.home');
-    if(homeClass.length == 0){
-
-        jQuery('html, body').animate({
-            scrollTop: jQuery("#primary").offset().top
-        }, 800);
-    }
+    // if(homeClass.length == 0){
+    //
+    //
+    //
+    //     jQuery(window).scroll(function() {
+    //         var height = jQuery(window).scrollTop();
+    //         console.log(height);
+    //         if(height == 0) {
+    //             jQuery('html, body').animate({
+    //                 scrollTop: jQuery("#primary").offset().top
+    //             }, 800).stop();
+    //         }
+    //     });
+    //
+    // }
 
 }
 
