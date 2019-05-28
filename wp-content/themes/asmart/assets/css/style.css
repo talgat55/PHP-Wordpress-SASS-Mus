@@ -308,6 +308,24 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
 div.wpcf7-mail-sent-ok {
   color: #fff !important; }
 
+.row-arrow-next {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  right: -22px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer; }
+  .row-arrow-next a {
+    padding: 30px 10px;
+    background-color: #b98d5e;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+  .row-arrow-next:hover a {
+    background-color: #333; }
+
 @media (max-width: 1230px) {
   .page-articles .list-events li,
   .page-smi .content-block .list-events li,
@@ -325,6 +343,8 @@ div.wpcf7-mail-sent-ok {
     padding: 0 15px !important; } }
 
 @media (max-width: 1024px) {
+  .row-arrow-next {
+    right: 0 !important; }
   .content-block .main-content .soс-links li a {
     margin-bottom: 10px !important;
     margin-left: 0 !important;
@@ -685,6 +705,10 @@ div.wpcf7-mail-sent-ok {
     -webkit-background-size: cover !important;
             background-size: cover !important;
     position: relative; }
+    .exhibitions .content .list-exposures .item-carousel img {
+      -o-object-fit: cover !important;
+         object-fit: cover !important;
+      height: 100%; }
 
 .edu-events .sub-title.left:after {
   display: none; }

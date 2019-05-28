@@ -15,16 +15,9 @@ jQuery(document).ready(function () {
     jQuery('.site-content').css('min-height', сh); // применяем посчитанную высоту
 
 
-    // jQuery('.lightgallery .carousel').lightGallery({
-    //     thumbnail:true
-    // });
-    /*
-    * Input telephone mask
-    */
-
-    // jQuery('.one-but-phone, #billing_phone, #tel').inputmask({"mask": "+7 (999) 999-9999"});
 
 
+    galleryExposure();
     exposureCarousel();
     lasyLoad();
     modal();
@@ -38,6 +31,7 @@ jQuery(document).ready(function () {
     mobileMenu();
     changeLangByClick();
     phoneMask();
+    carouselRow();
 
 
     // end redy function
@@ -102,6 +96,7 @@ function exposureCarousel() {
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
+            draggable: false,
             arrows: false,
             dots: false
 
@@ -341,6 +336,20 @@ function galleryHistory() {
     }
 
 }
+//----------------------------------
+//   gallery for home page exposure
+//---------------------------------------
+function galleryExposure() {
+    "use strict";
+    var exposureClass = jQuery('.selector2');
+    if (exposureClass.length) {
+        exposureClass.lightGallery({
+            selector: '.selector2'
+        });
+
+    }
+
+}
 
 
 //----------------------------------
@@ -476,6 +485,109 @@ function scrollToAnimate(){
     //     });
     //
     // }
+
+}
+//----------------------------------
+//   Carousel Row
+//---------------------------------------
+function carouselRow() {
+    "use strict";
+    let exhibitionsClass        = jQuery('.exhibitions .list-exposures');
+    let eduClass                = jQuery('.edu-events .list-exposures');
+    let exarrowClass            = jQuery('.exhibitions .row-arrow-next');
+    let edarrowClass            = jQuery('.edu-events .row-arrow-next');
+
+    if (eduClass.length) {
+        setTimeout(function(){
+            if(exhibitionsClass.find('li').length > 3){
+                edarrowClass.fadeIn();
+
+            }
+        }, 200);
+
+        eduClass.slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+
+            ]
+
+        });
+
+    }
+
+    if (exhibitionsClass.length) {
+
+        if(exhibitionsClass.find('li').length > 2){
+            exarrowClass.fadeIn();
+        }
+
+        exhibitionsClass.slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+
+            ]
+
+            //   autoplay: true,
+        });
+
+    }
+
+
+    //  arrow
+    jQuery('body').on('click', '.row-arrow-next a' ,function(){
+        jQuery(this).parent().parent().find('.list-exposures').slick('slickNext');
+        return false;
+    });
 
 }
 

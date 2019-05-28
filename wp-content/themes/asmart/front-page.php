@@ -209,12 +209,11 @@ get_header(); ?>
 
                                                 <div class="carousel-exposure">
                                                     <?php
-
                                                     foreach ($imagesArray as $item) {
-
-                                                        echo '<div class="item-carousel lazy"   data-src="' . $item["url"] . '"> </div>';
+                                                        echo '<div class="item-carousel lazy" data-src="' . $item["url"] . '"> 
+                                                                  
+                                                                </div>';
                                                     }
-
                                                     ?>
                                                 </div>
                                                 <div class="custom-pagination">
@@ -284,7 +283,7 @@ get_header(); ?>
                                         <?php
 
                                         $arg = array(
-                                            'posts_per_page' => 2,
+                                            'posts_per_page' => 4,
                                             'post_type' => 'exhibitions',
                                             'status' => 'publish'
                                         );
@@ -306,8 +305,8 @@ get_header(); ?>
 
                                                     foreach ($imagesArray as $item) {
 
-                                                        echo '<div class="item-carousel lazy"   data-src="' . $item["url"] . '"> 
-
+                                                        echo '<div class="item-carousel  "   > 
+                                                                <img src="' . $item["url"] . '"/>
                                                                 <div class="overlay-link">
                                                                 <a href="' . get_the_permalink($post_id) . '" class="link" >
                                                                     '.__('подробнее' , 'light').'
@@ -347,6 +346,12 @@ get_header(); ?>
                                         wp_reset_query();
                                         ?>
                                     </ul>
+                                    <div class="row-arrow-next" style="display: none"  >
+                                        <a href="#" class="next">
+                                            <img src="<?php echo get_theme_file_uri('/assets/images/arr-partners.png') ?>"
+                                                 alt="иконка"/>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-4 col-xs-12 hidden-mobile">
@@ -409,7 +414,7 @@ get_header(); ?>
                                         <?php
 
                                         $arg = array(
-                                            'posts_per_page' => 3,
+                                            'posts_per_page' => 4,
                                             'post_type' => 'events',
                                             'status' => 'publish',
                                             'tax_query' => array(
@@ -441,7 +446,8 @@ get_header(); ?>
 
                                                     foreach ($imagesArray as $item) {
 
-                                                        echo '<div class="item-carousel " ><img  class="lazy" data-src="' . $item["url"] . '" alt="Изображение" />
+                                                        echo '<div class="item-carousel " >
+                                                            <img src="' . $item["url"] . '" alt="Изображение" />
                                                                 
                                                             </div>';
                                                     }
@@ -476,6 +482,12 @@ get_header(); ?>
                                         wp_reset_query();
                                         ?>
                                     </ul>
+                                    <div class="row-arrow-next" style="display: none"  >
+                                        <a href="#" class="next">
+                                            <img src="<?php echo get_theme_file_uri('/assets/images/arr-partners.png') ?>"
+                                                 alt="иконка"/>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

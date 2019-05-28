@@ -295,6 +295,25 @@ div
 
 div.wpcf7-mail-sent-ok
   color: #fff!important
+
+.row-arrow-next
+  position: absolute
+  z-index: 10
+  top: 50%
+  right: -22px
+  transform: translateY(-50%)
+  cursor: pointer
+  a
+    padding: 30px 10px
+    background-color: #b98d5e
+    transition: all .3s
+  &:hover
+    a
+      background-color: #333
+
+
+
+
 @media  (max-width: 1230px)
   .page-articles .list-events li,
   .page-smi .content-block .list-events li,
@@ -310,6 +329,8 @@ div.wpcf7-mail-sent-ok
     padding: 0 15px!important
 
 @media  (max-width: 1024px)
+  .row-arrow-next
+    right: 0!important
   header
   .content-block
     .main-content
