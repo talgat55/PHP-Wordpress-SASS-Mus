@@ -33,7 +33,7 @@ get_header(); ?>
 
                             <div class="img-block">
                                 <div class="date">
-                                    <?=  get_the_date('j F Y, в H:i' )  ?>
+                                    <?=  get_the_date('j F Y, H:i' )  ?>
                                 </div>
                                 <img class="single-news-image"
                                      src="<?= wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]; ?>"

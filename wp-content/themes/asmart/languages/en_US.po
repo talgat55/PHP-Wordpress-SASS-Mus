@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Light\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-17 18:37+0000\n"
-"PO-Revision-Date: 2019-05-17 18:38+0000\n"
+"POT-Creation-Date: 2019-05-28 16:48+0000\n"
+"PO-Revision-Date: 2019-05-28 16:54+0000\n"
 "Last-Translator: admin <lightx_design@yahoo.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -12,90 +12,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.2.2; wp-4.9.9"
+"X-Loco-Version: 2.2.2; wp-4.9.10"
 
-#: front-page.php:5
-msgid "Главная страница"
-msgstr "Home page"
+#: searchform.php:17
+msgctxt "placeholder"
+msgid "ПОИСК"
+msgstr "SEARCH"
 
-#: front-page.php:19
-msgid "наш музей"
-msgstr "our museum"
-
-#: front-page.php:112
-msgid "события"
-msgstr "events"
-
-#: front-page.php:117
-msgid " Читать больше"
-msgstr "Read more"
-
-#: front-page.php:141
-msgid "Экспозиции"
-msgstr "Exposure"
-
-#: front-page.php:168
-msgid "Казарма Омского острога"
-msgstr "The barracks of Omsk prison"
-
-#: front-page.php:171
-msgid "Достоевский и Сибирь"
-msgstr "Dostoevsky and Siberia"
-
-#: front-page.php:174
-msgid "Писатели - Омичи"
-msgstr "Writers - Omsk"
-
-#: front-page.php:280 front-page.php:404
-msgid "подробнее"
-msgstr "more"
-
-#: front-page.php:325
-msgid "Действующие<br>выставки"
-msgstr "Current<br> exhibitions"
-
-#: front-page.php:330 front-page.php:368
-msgid "Показать еще"
-msgstr "show more"
-
-#: front-page.php:359
-msgid ""
-"Культурно —\n"
-"                                        образовательные\n"
-"                                        мероприятия"
+#. Name of the template
+msgid "Страница Записей"
 msgstr ""
-"Cultural -\n"
-"                                        educational\n"
-"                                        activity"
 
-#: front-page.php:364
-msgid " Для школьников и студентов"
-msgstr "For children and students"
+#: header.php:64
+msgid "г. Омск, ул. Достоевского, 1"
+msgstr "Omsk, st. Dostoevsky, 1"
 
-#: front-page.php:525
-msgid "Контакты"
-msgstr "Contacts"
-
-#: 404.php:31
+#: header.php:122
 msgid ""
-"  Добро пожаловать на страницу 404! Вы находитесь здесь, потому что ввели "
-"адрес страницы, которая уже не существует или была перемещена по другому "
-"адресу "
+"Омский государственный литературный музей\n"
+"                                    <span>им. Ф.М. Достоевского</span>"
 msgstr ""
-"Welcome to 404! You are here because you have entered the address of a page "
-"that no longer exists or has been moved to a different address."
+"Omsk State Literary Museum\n"
+"<span>them. F.M. Dostoevsky</span>"
+
+#. Name of the template
+msgid "Страница контактов"
+msgstr ""
+
+#: single-edu_events.php:24
+msgid " Архив КУЛЬТУРНО — ОБРАЗОВАТЕЛЬНЫХ МЕРОПРИЯТИЙ"
+msgstr "Archive of CULTURAL - EDUCATIONAL ACTIVITIES"
+
+#: single-edu_events.php:52 single-events.php:52 single-exhibitions.php:52
+#: functions.php:435
+msgid "назад"
+msgstr "prev"
+
+#: single-edu_events.php:67 single-events.php:67 single-exhibitions.php:67
+#: page-history.php:29
+msgid "Увеличить"
+msgstr "Zoom"
+
+#: single-events.php:24
+msgid " Архив мероприятий"
+msgstr "Event archive"
 
 #: single-exhibitions.php:24
 msgid "Архив Выставок"
 msgstr "Exhibition Archive"
 
-#: single-exhibitions.php:52 functions.php:435 single-events.php:52
-msgid "назад"
-msgstr "prev"
-
-#: single-exhibitions.php:67 page-history.php:29 single-events.php:67
-msgid "Увеличить"
-msgstr "Zoom"
+#: search.php:24
+#, php-format
+msgid "Результаты поиска: %s"
+msgstr "Results search: %s"
 
 #. Name of the template
 msgid "Страница  администрации"
@@ -111,58 +80,115 @@ msgstr ""
 "Largest archives\n"
 
 #. Name of the template
-msgid "Страница документов"
+msgid "Страница новостей"
+msgstr ""
+
+#: page-news.php:39
+msgid "ссылка на новость"
+msgstr ""
+
+#: page-news.php:68
+msgid "Предыдущая страница"
+msgstr ""
+
+#: page-news.php:69
+msgid "Следующая страница"
+msgstr ""
+
+#: page-news.php:72
+msgid " "
 msgstr ""
 
 #: footer.php:8
 msgid "Сайт разработан IT-company <span>ASMART</span>"
 msgstr "Site developed by IT-company <span> ASMART </span>"
 
-#: functions.php:465
-msgid "далее"
-msgstr "next"
+#. Name of the template
+msgid "Страница документов"
+msgstr ""
 
 #. Name of the template
 msgid "Страница истории"
 msgstr ""
 
-#. Name of the template
-msgid "Страница Записей"
-msgstr ""
+#: functions.php:465
+msgid "далее"
+msgstr "next"
 
-#: single-events.php:24
-msgid " Архив мероприятий"
-msgstr "Event archive"
-
-#: header.php:54
-msgid "г. Омск, ул. Достоевского, 1"
-msgstr "Omsk, st. Dostoevsky, 1"
-
-#: header.php:112
+#: 404.php:31
 msgid ""
-"Омский государственный литературный музей\n"
-"                                    <span>им. Ф.М. Достоевского</span>"
+"  Добро пожаловать на страницу 404! Вы находитесь здесь, потому что ввели "
+"адрес страницы, которая уже не существует или была перемещена по другому "
+"адресу "
 msgstr ""
-"Omsk State Literary Museum\n"
-"<span>them. F.M. Dostoevsky</span>"
-
-#: search.php:24
-#, php-format
-msgid "Результаты поиска: %s"
-msgstr "Results search: %s"
+"Welcome to 404! You are here because you have entered the address of a page "
+"that no longer exists or has been moved to a different address."
 
 #. Name of the template
 msgid "Страница СМИ о нас"
 msgstr "Media page about us"
 
-#. Name of the template
-msgid "Страница контактов"
-msgstr ""
+#: front-page.php:5
+msgid "Главная страница"
+msgstr "Home page"
 
-#: searchform.php:17
-msgctxt "placeholder"
-msgid "ПОИСК"
-msgstr "SEARCH"
+#: front-page.php:19
+msgid "наш музей"
+msgstr "our museum"
+
+#: front-page.php:79 front-page.php:119
+msgid "события"
+msgstr "events"
+
+#: front-page.php:84 front-page.php:124
+msgid " Читать больше"
+msgstr "Read more"
+
+#: front-page.php:148
+msgid "Экспозиции"
+msgstr "Exposure"
+
+#: front-page.php:175
+msgid "Казарма Омского острога"
+msgstr "The barracks of Omsk prison"
+
+#: front-page.php:178
+msgid "Достоевский и Сибирь"
+msgstr "Dostoevsky and Siberia"
+
+#: front-page.php:181
+msgid "Писатели - Омичи"
+msgstr "Writers - Omsk"
+
+#: front-page.php:260 front-page.php:355
+msgid "Действующие<br>выставки"
+msgstr "Current<br> exhibitions"
+
+#: front-page.php:265 front-page.php:360 front-page.php:397
+msgid "Показать еще"
+msgstr "show more"
+
+#: front-page.php:304 front-page.php:426
+msgid "подробнее"
+msgstr "more"
+
+#: front-page.php:388
+msgid ""
+"Культурно —\n"
+"                                        образовательные\n"
+"                                        мероприятия"
+msgstr ""
+"Cultural -\n"
+"                                        educational\n"
+"                                        activity"
+
+#: front-page.php:393
+msgid " Для школьников и студентов"
+msgstr "For children and students"
+
+#: front-page.php:553
+msgid "Контакты"
+msgstr "Contacts"
 
 #. Name of the template
 msgid "Страница Научная работа"
@@ -200,19 +226,23 @@ msgid ""
 "                                    Мы ответим на все, что Вас интересует"
 msgstr "Any questions? <br>We will answer everything that interests you."
 
-#: inc/info-list.php:11
+#: inc/item-event.php:48 inc/item-articles.php:39
+msgid "Читать далее"
+msgstr "Read more"
+
+#: inc/info-list.php:13
 msgid "Адрес:"
 msgstr "Address:"
 
-#: inc/info-list.php:13
+#: inc/info-list.php:17
 msgid " 644099, Россия, г. Омск, ул. Достоевского, 1"
 msgstr "644099, Russia, Omsk, st. Dostoevsky, 1"
 
-#: inc/info-list.php:21
+#: inc/info-list.php:27
 msgid "Телефон:"
 msgstr "Phone:"
 
-#: inc/info-list.php:25
+#: inc/info-list.php:35
 msgid ""
 "<span>  Время работы: </span>\n"
 "                                            <p>с 10.00 до 18.00 – без "
@@ -224,9 +254,9 @@ msgstr ""
 "breaks.<br>\n"
 "                                              Closed on Monday.</p>"
 
-#: inc/item-articles.php:39 inc/item-event.php:48
-msgid "Читать далее"
-msgstr "Read more"
+#: inc/info-list.php:41
+msgid "Прейскурант музея:"
+msgstr ""
 
 #. Name of the theme
 msgid "Light"

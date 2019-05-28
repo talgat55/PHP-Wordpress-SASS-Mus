@@ -21,7 +21,7 @@ get_header(); ?>
                     <div class="background lazy   right"
                          data-src="<?php echo get_theme_file_uri('/assets/images/single-bg.jpg') ?>"></div>
                     <h2 class="sub-title  left">
-                        <?php _e(' Архив мероприятий', 'light'); ?>
+                        <?php _e(' Архив КУЛЬТУРНО — ОБРАЗОВАТЕЛЬНЫХ МЕРОПРИЯТИЙ', 'light'); ?>
                     </h2>
 
 

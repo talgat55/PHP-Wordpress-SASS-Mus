@@ -341,13 +341,26 @@ function galleryHistory() {
 //---------------------------------------
 function galleryExposure() {
     "use strict";
-    var exposureClass = jQuery('.selector2');
+    var exposureClass = jQuery('.link-zoom-expouse');
     if (exposureClass.length) {
-        exposureClass.lightGallery({
-            selector: '.selector2'
+
+        exposureClass.click(function (e) {
+            e.preventDefault();
+            let images = jQuery(this).parent().parent().parent().parent().parent().parent().attr('data-images');
+            let redyArray = images.split(',');
+            jQuery(this).lightGallery({
+                dynamic: true,
+                dynamicEl:  redyArray.map(function(name) {
+                    return {  'src' : name };
+                })
+            })
         });
 
     }
+
+
+
+
 
 }
 

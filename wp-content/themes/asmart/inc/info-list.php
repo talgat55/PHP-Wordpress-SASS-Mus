@@ -39,7 +39,7 @@
     <?php  if (  is_page_template('page-about.php')) {  ?>
         <li>
             <span> <?php _e('Прейскурант музея:', 'light'); ?> </span>
-            <a href="<?= get_field('file_price', 'option'); ?>">скачать</a>
+            <a target="_blank" href="<?= get_field('file_price', 'option'); ?>">скачать</a>
         </li>
     <?php } ?>
 </ul>

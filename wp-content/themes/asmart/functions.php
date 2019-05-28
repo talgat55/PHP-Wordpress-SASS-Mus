@@ -132,40 +132,7 @@ function post_type_events()
     );
     register_post_type('events', $args);
 }
-add_action('init', 'create_events_taxonomy', 0);
 
-function create_events_taxonomy()
-{
-
-// Labels part for the GUI
-
-    $labels = array(
-        'name' => _x('Категории', 'light'),
-        'singular_name' => _x('Категории', 'light'),
-        'search_items' => __('Поиск Категории'),
-        'popular_items' => __('Популярные Категории'),
-        'all_items' => __('Все Категории'),
-        'parent_item' => null,
-        'parent_item_colon' => null,
-        'edit_item' => __('Редактировать Категорию'),
-        'update_item' => __('Обновить Категорию'),
-        'add_new_item' => __('Добавить новую Категорию'),
-        'new_item_name' => __('Категория'),
-        'menu_name' => __('Категории'),
-    );
-
-// Now register the non-hierarchical taxonomy like tag
-
-    register_taxonomy('events_cats', 'events', array(
-        'hierarchical' => true,
-        'labels' => $labels,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'update_count_callback' => '_update_post_term_count',
-        'query_var' => true,
-        'rewrite' => array('slug' => 'events_cats'),
-    ));
-}
 
 /*
 *  Register Post Type  Exposure
@@ -309,6 +276,33 @@ function post_type_dpcuments()
     );
     register_post_type('docs', $args);
 }
+/*
+*  Register Post Type  Educations Events
+*/
+add_action('init', 'post_type_educations_events');
+function post_type_educations_events()
+{
+    $labels = array(
+        'name' => 'Образовательные мероприятия',
+        'singular_name' => 'Образовательные мероприятия',
+        'all_items' => 'Образовательные мероприятия',
+        'menu_name' => 'Образовательные мероприятия' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "edu_events",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+    register_post_type('edu_events', $args);
+}
+
 /*
 *  Register Post Type Scientific work
 */
@@ -489,7 +483,8 @@ function changeUrls($page){
         $addpath = $locale ? '/en' : '/';
 
     } else if($page == 'events'){
-        $addpath = $locale ? '/en/museum-history/' : '/stranicza-istorii/';
+
+        $addpath = $locale ? '/en/archive-of-events/' : '/arhiv-sobytij/';
 
     }else if($page == 'about'){
         $addpath = $locale ? '/en/museum-history/' : '/stranicza-istorii/';

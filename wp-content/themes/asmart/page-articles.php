@@ -3,7 +3,11 @@
  * Template Name: Страница Записей
  */
 
-get_header(); ?>
+get_header();
+
+$template = get_field('template_articles');
+
+?>
 
     <div id="primary" class="content-area  page-articles">
 
@@ -12,7 +16,7 @@ get_header(); ?>
                 <div class="col-sm-4 col-xs-12   ">
                     <div class="background lazy   right"
                          data-src="<?php echo get_theme_file_uri('/assets/images/bg-articles.jpg') ?>"></div>
-                    <h1 class="sub-title  left">
+                    <h1 class="sub-title  left  <?=$template; ?>">
                         <?= get_the_title(); ?>
                     </h1>
 
@@ -24,24 +28,13 @@ get_header(); ?>
 
 
                             <?php
-
-
-
-                            $template = get_field('template_articles');
                             if ($template == 'events') {
                                 $arg = [
                                     'posts_per_page' => 4,
                                     'post_type' => 'events',
                                     'orderby' => 'date',
                                     'order' => 'ASC',
-                                    'status' => 'publish',
-                                    'tax_query' => array(
-                                        [ 'taxonomy' => 'events_cats',
-                                            'field' => 'slug',
-                                            'terms' => 'edu_events',
-                                            'operator' => 'NOT EXISTS'
-                                        ]
-                                    )
+                                    'status' => 'publish'
                                 ];
 
                             } elseif ($template == 'archive') {
@@ -68,16 +61,11 @@ get_header(); ?>
 
                                 $arg = [
                                     'posts_per_page' => 4,
-                                    'post_type' => 'events',
+                                    'post_type' => 'edu_events',
                                     'orderby' => 'date',
                                     'order' => 'ASC',
                                     'status' => 'publish',
-                                    'tax_query' => array(
-                                        [ 'taxonomy' => 'events_cats',
-                                            'field' => 'slug',
-                                            'terms' => 'edu_events'
-                                        ]
-                                    )
+
                                 ];
                             }
 

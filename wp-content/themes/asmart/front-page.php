@@ -94,15 +94,7 @@ get_header(); ?>
                                         $arg = array(
                                             'posts_per_page' => 2,
                                             'post_type' => 'events',
-                                            'status' => 'publish',
-                                            'tax_query' => array(
-                                                array(
-                                                    'taxonomy' => 'events_cats',
-                                                    'field'    => 'slug',
-                                                    'terms'    => 'edu_events',
-                                                    'operator' => 'NOT EXISTS'
-                                                )
-                                            )
+                                            'status' => 'publish'
                                         );
 
                                         $the_query = new WP_Query($arg);
@@ -193,11 +185,17 @@ get_header(); ?>
                                                     break;
                                             endswitch;
 
+                                                            $redyArrLightGallery ='';
+                                                            foreach ($imagesArray as  $key => $lightValue){
+
+                                                                $separator =  ($key  != '0') ?  ','  : '';
+                                                                $redyArrLightGallery .= $separator . $lightValue['url'];
+                                                            }
 
                                             ?>
 
 
-                                            <li class="item  col-sm-4 col-xs-12">
+                                            <li class="item  col-sm-4 col-xs-12" data-images="<?= $redyArrLightGallery; ?>">
                                                 <div class="top-block">
 
                                                     <img src="<?php echo get_theme_file_uri('/assets/images/exposure-icon.png') ?>"
@@ -211,7 +209,15 @@ get_header(); ?>
                                                     <?php
                                                     foreach ($imagesArray as $item) {
                                                         echo '<div class="item-carousel lazy" data-src="' . $item["url"] . '"> 
-                                                                  
+                                                                        <div  class="link-zoom-expouse-block" >
+                                                                        <a href="#" class="link-zoom-expouse"    >
+                                                                        <img  src="'.get_theme_file_uri("/assets/images/search.png").'"    />
+                                                                                <p>
+                                        
+                                                                                    '.__("Увеличить", "light").'
+                                                                                </p></a>
+                                                                        </div>
+                                                                        
                                                                 </div>';
                                                     }
                                                     ?>
@@ -415,15 +421,8 @@ get_header(); ?>
 
                                         $arg = array(
                                             'posts_per_page' => 4,
-                                            'post_type' => 'events',
-                                            'status' => 'publish',
-                                            'tax_query' => array(
-                                                array(
-                                                    'taxonomy' => 'events_cats',
-                                                    'field'    => 'slug',
-                                                    'terms'    => 'edu_events'
-                                                )
-                                            )
+                                            'post_type' => 'edu_events',
+                                            'status' => 'publish'
                                         );
 
                                         $the_query = new WP_Query($arg);
