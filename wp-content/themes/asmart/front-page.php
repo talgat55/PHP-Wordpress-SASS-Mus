@@ -222,6 +222,7 @@ get_header(); ?>
                                                     }
                                                     ?>
                                                 </div>
+                                            <?php  if(count($imagesArray) > 1 ){ ?>
                                                 <div class="custom-pagination">
                                                     <div class="arrow">
                                                         <a href="#" class="prev  disable">
@@ -241,6 +242,7 @@ get_header(); ?>
                                                         </a>
                                                     </div>
                                                 </div>
+                                            <?php  } ?>
 
                                             </li>
 
@@ -324,6 +326,7 @@ get_header(); ?>
 
                                                     ?>
                                                 </div>
+                                            <?php  if(count($imagesArray) > 1 ){ ?>
                                                 <div class="custom-pagination">
                                                     <div class="arrow">
                                                         <a href="#" class="prev  disable">
@@ -343,6 +346,7 @@ get_header(); ?>
                                                         </a>
                                                     </div>
                                                 </div>
+                                            <?php } ?>
 
                                             </li>
 
@@ -453,6 +457,7 @@ get_header(); ?>
 
                                                     ?>
                                                 </div>
+                                                <?php  if(count($imagesArray) > 1 ){ ?>
                                                 <div class="custom-pagination">
                                                     <div class="arrow">
                                                         <a href="#" class="prev  disable">
@@ -472,6 +477,7 @@ get_header(); ?>
                                                         </a>
                                                     </div>
                                                 </div>
+                                            <?php   } ?>
 
                                             </li>
 
