@@ -37,6 +37,11 @@ jQuery(document).ready(function () {
     // end redy function
 });
 
+jQuery( window ).resize(function() {
+    dinamicWidthMap();
+});
+
+
 jQuery( window ).load(function() {
     scrollToAnimate();
 });
@@ -181,12 +186,25 @@ function carouselParthers() {
 //----------------------------------
 // Map
 //------------------------------------
+// set width  for map in home page
+function dinamicWidthMap(){
+    "use strict";
+    var $mapHome = jQuery('#map');
+    if(jQuery('body').hasClass('home')){
+
+        $mapHome.css('width', jQuery(window).width()/2);
+
+    }
+
+}
 function map() {
     "use strict";
+
     let $map = jQuery('#map');
 
 
     if ($map.length) {
+        dinamicWidthMap();
 
 
         function init() {

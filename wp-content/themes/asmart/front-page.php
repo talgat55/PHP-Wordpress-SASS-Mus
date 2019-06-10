@@ -556,18 +556,14 @@ get_header(); ?>
             </div>
         </section>
         <section class="maps-section relative">
-            <div class="row">
-                <div class="col-sm-6 col-xs-12 ">
-                    <div id="map"></div>
-                </div>￼
-                <div class="col-sm-6 col-xs-12 bg-maps "></div>
-            </div>
+
             <div class="content">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 colxs-12 ">
+                            <div id="map"></div>
                         </div>
-                        <div class="col-sm-6 colxs-12 ">
+                        <div class="col-sm-6 colxs-12 bg-maps ">
                             <div class="contact-info-block">
                                 <h2 class="sub-title   ">
                                     <?php _e('Контакты', 'light'); ?>

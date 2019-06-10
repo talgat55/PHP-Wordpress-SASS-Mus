@@ -229,7 +229,7 @@ div
       width: 265px
     input
       border: none
-      padding: 5px 17px
+      padding: 6px 17px
       font-size: 15px
       font-family: $font_500
       color: $main_color
@@ -502,7 +502,11 @@ div.wpcf7-mail-sent-ok
       width: 100%!important
       overflow: hidden!important
       padding-right: 0!important
-
+@media  (min-width: 769px)
+  .maps-section
+    #map
+      position: absolute!important
+      right: 0
 @media  (max-width: 768px)
   .list-events
     .display-on-mobile
@@ -566,6 +570,16 @@ div.wpcf7-mail-sent-ok
     text-align: center!important
   .page-contacts .soс-links li
     display: inline-block!important
+
+  .maps-section
+    #map
+      position: relative!important
+      right: auto!important
+      width: 100%!important
+    .content
+      top: auto!important
+      height: auto!important
+
 @media  (max-width: 600px)
 
   .page-collection .bottom-block .slider-collection li .flex
